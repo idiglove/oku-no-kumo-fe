@@ -5,12 +5,11 @@ export default function Header() {
     <Container>
       <header>
         <h1>AIN'T BOARD</h1>
-        <button>Search Board Game</button>
-        <button>Login</button>
-        <button>Join Us!</button>
-        <h3>Events</h3>
-        <h3>FAQ</h3>
-        <h3>Boardgames</h3>
+        <div>
+          <Button>Search Board Game</Button>
+          <Button>Login</Button>
+          <Button>Join Us!</Button>
+        </div>
       </header>
     </Container>
   );
@@ -19,6 +18,7 @@ export default function Header() {
 const Container = styled.header`
   header {
     background: #353535;
+    display: flex;
     position: absolute;
     width: 1440px;
     height: 204px;
@@ -27,6 +27,8 @@ const Container = styled.header`
     position: absolute;
     width: 227.77px;
     height: 34.34px;
+    margin-right: 80px;
+    margin-left: 20px;
   }
   h3 {
     position: absolute;
@@ -38,9 +40,16 @@ const Container = styled.header`
     font-size: 24px;
     line-height: 30px;
     /* identical to box height */
-
     letter-spacing: 0.025em;
-
     color: black;
   }
+`;
+
+const Button = styled.button`
+  color: black;
+  font-size: 1em;
+  margin: 1em;
+  margin-left: 330px;
+  padding: 0.25em 1em;
+  border: 2px palevioletred;
 `;

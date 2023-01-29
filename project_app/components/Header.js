@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SearchIcon from "@mui/icons-material/Search";
+import Box from "@mui/material/Box";
 
 export default function Header() {
   return (
@@ -7,7 +8,10 @@ export default function Header() {
       <section>
         <h1>Ain't Board</h1>
         <div className="buttons">
-          <button style={{ width: "488px", height: "49.08px" }}>
+          <button
+            style={{ width: "488px", height: "49.08px", marginLeft: "100px" }}
+          >
+            <input style={{ width: "400px", height: "30px" }} />
             <SearchIcon />
           </button>
           <button>Login</button>

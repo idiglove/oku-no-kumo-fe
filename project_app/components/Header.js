@@ -20,10 +20,13 @@ export default function Header() {
               style={{ width: "400px", height: "30px" }}
             />
             <SearchIcon />
-
-            <h3>Events</h3>
-            <h3>FAQ</h3>
-            <h3>Boardgames</h3>
+            <div className="buttons">
+              {" "}
+              <button>Events</button>
+              <button>FAQ</button>
+              <button>About Us</button>
+              <button>Game Night</button>
+            </div>
           </button>
           <button style={{ marginRight: "30px" }}>Login</button>
           <button>Join Us!</button>
@@ -44,6 +47,13 @@ const Container = styled.div`
     display: flex;
     padding-left: 200px;
     margin-top: 15px;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.025em;
+    color: #ffffff;
   }
   section {
     width: 1440px;

@@ -1,78 +1,84 @@
+import React from "react";
+import AppBar from "@mui/material/AppBar";
 import styled from "styled-components";
-import SearchIcon from "@mui/icons-material/Search";
-import Vector from "../assets/Vector.svg";
+import Button from "@mui/material/Button";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
 
-export default function Header() {
+function Header() {
   return (
-    <Container>
-      <section>
-        <h1>Ain't Board</h1>
-        <div className="buttons">
-          <button
-            style={{
-              width: "488px",
-              height: "49.08px",
-              marginLeft: "100px",
-              marginRight: "60px",
-            }}
-          >
-            <input placeholder="Search board game" />
-            <SearchIcon />
-          </button>
-          <div className="buttonTypes">
-            <button>Events</button>
-            <button>FAQ</button>
-            <button>About Us</button>
-            <button>Game Night</button>
+    <AppBar
+      style={{ height: "312px", backgroundColor: "#353535", width: "1440px" }}
+    >
+      <Container maxWidth="xl">
+        <h1 className="u-text--center">AIN'T BOARD</h1>
+        <section>
+          <Button>Login</Button>
+          <Button>Join Us!</Button>
+          <input placeholder="Search Board Game" />
+          <div>
+            <Stack direction="row" spacing={3}>
+              <Chip label="Events" variant="outlined" />
+              <Chip label="FAQ" variant="outlined" />
+              <Chip label="About Us" variant="outlined" />
+              <Chip label="Game night" variant="outlined" />
+            </Stack>
           </div>
 
-          <button style={{ marginRight: "30px" }}>Login</button>
-          <button>Join Us!</button>
-        </div>
-      </section>
-    </Container>
+          <h3>Interactive BoardGame Community</h3>
+        </section>
+      </Container>
+    </AppBar>
   );
 }
 
 const Container = styled.div`
   h1 {
-    font-size: 24px;
-    color: #ffffff;
-    padding-left: 60px;
-    text-transform: uppercase;
+    position: absolute;
+    width: 227.77px;
+    height: 34.34px;
+    left: 50px;
+    top: 50px;
+    color: white;
+  }
+  section {
+    color: white;
+    text-align: center;
+    align: center;
   }
   input {
-    position: absolute;
-    width: 318px;
-    height: 31px;
-    font-family: "Quicksand";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.065em;
-    border-style: none;
-    color: #afa5a5;
-  }
-  .buttons {
-    display: flex;
-    padding-left: 200px;
-    margin-top: 15px;
-    font-family: "Rubik";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.025em;
-    color: #ffffff;
-  }
-
-  .buttonTypes {
     box-sizing: border-box;
     position: absolute;
-    display: flex;
+    width: 614px;
+    height: 67px;
+    left: 413px;
+    top: 137px;
+    backgroundcolor: #ffffff;
+  }
+  Button {
+    width: 182px;
+    height: 47px;
+    left: 500px;
+    top: 50px;
+    background: #ffffff;
+    border-radius: 10px;
+    color: black;
+  }
+  Box {
+    box-sizing: border-box;
+    position: absolute;
+    width: 84px;
+    height: 22px;
+    left: 387px;
+    top: 217px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    backgroundcolor: blue;
+  }
+
+  Stack {
+    box-sizing: border-box
+    position: absolute;
     width: 124px;
     height: 44px;
     left: 387px;
@@ -80,17 +86,20 @@ const Container = styled.div`
     border: 2px solid #ffffff;
     border-radius: 10px;
   }
-  section {
-    width: 1440px;
-    height: 204px;
-    background: #353535;
-    position: absolute;
-    display: flex;
-  }
-  button {
-    width: 162px;
-    height: 47px;
-    background: #ffffff;
-    border-radius: 10px;
+  h3{   
+width: 521px;
+height: 86px;
+left: 486px;
+top: 368px;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 43px;
+text-align: center;
+text-transform: uppercase;
+color: #FFFFFF;
   }
 `;
+
+export default Header;

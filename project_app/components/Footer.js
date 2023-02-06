@@ -3,6 +3,8 @@ import Paper from "@mui/material/Paper";
 import MenuList from "@mui/material/MenuList";
 import MenuItem from "@mui/material/MenuItem";
 import ListItemText from "@mui/material/ListItemText";
+import Card from "@mui/material/Card";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -18,6 +20,9 @@ export default function Footer() {
           <ListItemText inset>Double</ListItemText>
         </MenuItem>
       </MenuList>
+      <Card>
+        <Image src="/Vector.jpg" width={520} height={280} />
+      </Card>
     </Paper>
   );
 }

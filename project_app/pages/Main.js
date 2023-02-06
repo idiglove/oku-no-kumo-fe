@@ -1,47 +1,100 @@
-import * as React from "react";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import Image from "next/image";
+import styled from "styled-components";
 
-export default function StandardImageList() {
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+const theme = createTheme();
+
+export default function Main() {
   return (
-    <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-          <img
-            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-            alt={item.title}
-            loading="lazy"
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <Container maxWidth="lg">
+          <Image
+            src="/path94.jpg"
+            alt="Some alt text"
+            width={150}
+            height={150}
+            style={{
+              background: "#4AA4D8",
+              position: "absolute",
+              left: "0%",
+              right: "92.8%",
+              top: "48.41%",
+              bottom: "40.47%",
+            }}
           />
-        </ImageListItem>
-      ))}
-    </ImageList>
+
+          <Grid container spacing={4}>
+            {cards.map((card) => (
+              <Grid item key={card} xs={12} sm={6} md={4}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "220px",
+                    height: "500px",
+                    border: "2px solid #000000",
+                    borderRadius: "10px",
+                    boxSizing: "border-box",
+                    left: "0px",
+                    top: "0px",
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="https://source.unsplash.com/random"
+                    alt="random"
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small">View</Button>
+                    <Button size="small">Edit</Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Wrapper>
+    </ThemeProvider>
   );
 }
 
-const itemData = [
-  {
-    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-    title: "Breakfast",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-    title: "Burger",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-    title: "Camera",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-    title: "Coffee",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Hats",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-    title: "Honey",
-  },
-];
+const Wrapper = styled.section`
+  width: 1440px;
+  height: 2700px;
+  left: 0px;
+  top: 529px;
+  background: #234c4c;
+`;
+
+const Typography = styled.h2`
+  width: 152px;
+  height: 86px;
+  left: 34px;
+  top: 169px;
+  text-align: center;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+`;

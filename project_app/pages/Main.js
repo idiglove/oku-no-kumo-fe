@@ -5,12 +5,12 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import Image from "next/image";
 import styled from "styled-components";
+import Image from "next/image";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
 const theme = createTheme();
 
@@ -19,24 +19,9 @@ export default function Main() {
     <ThemeProvider theme={theme}>
       <Wrapper>
         <Container maxWidth="lg">
-          <Image
-            src="/path94.jpg"
-            alt="Some alt text"
-            width={150}
-            height={150}
-            style={{
-              background: "#4AA4D8",
-              position: "absolute",
-              left: "0%",
-              right: "92.8%",
-              top: "48.41%",
-              bottom: "40.47%",
-            }}
-          />
-
-          <Grid container spacing={4}>
+          <Grid container spacing={8}>
             {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+              <Grid item key={card} xs={8} sm={6} md={3}>
                 <Card
                   sx={{
                     display: "flex",
@@ -64,8 +49,17 @@ export default function Main() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                    <Image
+                      src="/Rectangle.jpg"
+                      alt="alt text"
+                      width={35}
+                      height={35}
+                      style={{
+                        border: "1px solid #A69084",
+                      }}
+                    />
+
+                    <Button size="small">Strategy</Button>
                   </CardActions>
                 </Card>
               </Grid>
@@ -85,7 +79,7 @@ const Wrapper = styled.section`
   background: #234c4c;
 `;
 
-const Typography = styled.h2`
+const Typography = styled.text`
   width: 152px;
   height: 86px;
   left: 34px;

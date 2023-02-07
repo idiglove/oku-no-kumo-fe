@@ -1,44 +1,50 @@
 import React from "react";
 import AppBar from "@mui/material/AppBar";
-import Image from "next/image";
 import styled from "styled-components";
 import Button from "@mui/material/Button";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
-import Card from "@mui/material/Card";
+import Image from "next/image";
 
 function Header() {
   return (
     <>
       <AppBar
-        style={{ height: "412px", backgroundColor: "#353535", width: "1440px" }}
+        style={{
+          height: "412px",
+          backgroundColor: "#353535",
+          width: "1440px",
+          position: "absolute",
+        }}
       >
         <Container maxWidth="xl">
-          <h1 className="u-text--center">AIN'T BOARD</h1>
+          <h1>AIN'T BOARD</h1>
           <section>
             <Button>Login</Button>
             <Button>Join Us!</Button>
             <input placeholder="Search Board Game" />
             <Stack
               direction="row"
-              spacing={3}
-              style={{ padding: "140px", borderRadius: "100px" }}
+              spacing={4}
+              style={{
+                padding: "140px",
+                borderRadius: "100px",
+              }}
             >
               <Chip label="Events" variant="outlined" />
               <Chip label="FAQ" variant="outlined" />
               <Chip label="About Us" variant="outlined" />
               <Chip label="Game night" variant="outlined" />
-
               <div>
                 <h3>Interactive BoardGame Community</h3>
               </div>
             </Stack>
+
+            <Image src="/Vector.jpg" width={520} height={280} alt="image" />
+            <Image src="/trees.jpg" width={520} height={280} alt="image" />
           </section>
         </Container>
       </AppBar>
-      <Card>
-        <Image src="/Vector.jpg" width={520} height={280} alt="image" />
-      </Card>
     </>
   );
 }

@@ -15,7 +15,6 @@ export const Typography = styled.text`
 `;
 
 export const Card = styled.div`
-
   flexdirection: column;
   width: 220px;
   height: 560px;
@@ -26,3 +25,19 @@ export const Card = styled.div`
   top: 0px;
   background: white;
 `;
+
+export const Text= styled.p`
+position: absolute;
+width: 47px;
+height: 13px;
+left: 145px;
+top: 270px;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 13px;
+display: flex;
+align-items: center;
+color: #251300;
+`

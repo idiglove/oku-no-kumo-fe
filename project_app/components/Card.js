@@ -19,7 +19,9 @@ function CardGame() {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex
         </Typography>
+        <p>Strategy</p>
       </CardContent>
+
       <CardActions>
         <Image
           src="/Rectangle.jpg"
@@ -30,7 +32,11 @@ function CardGame() {
             border: "1px solid #A69084",
           }}
         />
-        <p>Strategy</p>
+
+        <Image src="/chat.jpg" alt="love" width={10} height={10} />
+        <p>403</p>
+        <Image src="/love.jpg" alt="love" width={10} height={10} />
+        <p>2,540</p>
       </CardActions>
     </Card>
   );

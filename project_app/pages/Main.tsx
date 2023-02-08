@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import styled from "styled-components";
-import CardGame from "../components/Card";
+import ReviewCard from "../components/ReviewCard";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
@@ -16,7 +16,7 @@ export default function Main() {
           <Grid container spacing={8}>
             {cards.map((card) => (
               <Grid item key={card} xs={8} sm={6} md={3}>
-                <CardGame />
+                <ReviewCard />
               </Grid>
             ))}
           </Grid>

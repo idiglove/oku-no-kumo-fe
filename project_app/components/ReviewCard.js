@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Image from "next/image";
 import { Card, Typography } from "./styled";
 
-function CardGame() {
+function ReviewCard() {
   return (
     <Card sx={{}}>
       <CardMedia
@@ -42,4 +42,4 @@ function CardGame() {
   );
 }
 
-export default CardGame;
+export default ReviewCard;

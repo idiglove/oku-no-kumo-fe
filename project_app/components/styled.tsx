@@ -42,8 +42,21 @@ top: 0px;
 background: rgba(249, 218, 108, 0.1);
 border: 2px solid #000000;
 border-radius: 10px;
+background-image: url('/background.jpg');
 }
+
 `;
+
+export const Container= styled.div`
+Image{
+position: absolute;
+width: 220px;
+height: 105px;
+left: 0px;
+top: 0px;
+background-image: url('/epic.jpg');
+}
+`
 
 export const CardActions = styled.div`
 p{

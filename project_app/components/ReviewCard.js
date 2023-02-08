@@ -3,14 +3,23 @@
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import Image from "next/image";
-import { Card, CardContent, CardActions } from "./styled";
+import { Card, CardContent, CardActions, Container } from "./styled";
 
 function ReviewCard() {
   return (
     <Card sx={{}}>
-      <CardMedia>
-        <Image src="/background.jpg" alt="dont know" width={220} height={330} />
-      </CardMedia>
+      <Container>
+        <Image src="/epic.jpg" alt="dont know" width={220} height={105} />
+      </Container>
+      {/* <CardMedia>
+        <Image
+          src="/background.jpg"
+          alt="dont know"
+          width={220}
+          height={330}
+          quality={100}
+        />
+      </CardMedia> */}
       <CardContent sx={{ flexGrow: 1 }}>
         <Typography gutterBottom variant="h5" component="h2">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

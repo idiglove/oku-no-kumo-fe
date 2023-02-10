@@ -3,7 +3,6 @@ import Button from "@mui/material/Button";
 import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import SearchIconWrapper from "@mui/icons-material/Search";
 import { Container, AppBar, Wrapper, Typography } from "./styled";
 import Image from "next/image";
 
@@ -12,17 +11,18 @@ function Header() {
     <>
       <AppBar>
         <Container maxWidth="xl">
-          <Image src="/logo.svg" width={227.77} height={100} alt="image" />
-
-          <div
-            style={{
-              marginLeft: "540px",
-              alignItems: "center",
-            }}
-          >
+          <div style={{ position: "absolute", marginLeft: "540px" }}>
             <Button>Login</Button>
             <Button>Join Us!</Button>
           </div>
+          <Image
+            src="/logo.svg"
+            width={227.77}
+            height={150}
+            left={50}
+            right={50}
+            alt="image"
+          />
 
           <input
             placeholder="Search Board Game"
@@ -40,9 +40,9 @@ function Header() {
           <div
             style={{
               display: "flex",
-              padding: "10px",
-              marginRight: "400px",
+              marginRight: "500px",
               alignItems: "center",
+              backgroundColor: "#353535",
             }}
           >
             <Button label="Events">Events</Button>
@@ -53,22 +53,24 @@ function Header() {
         </Container>
         <>
           <Wrapper>
-            <Typography style={{ alignItems: "center" }}>
-              Interactive BoardGame Community
-            </Typography>
-            <Image src="/Vector.jpg" width={200} height={400} alt="image" />
-            <Image src="/trees.jpg" width={200} height={463} alt="image" />
-            <Image src="/tent3.jpg" width={100} height={200} alt="image" />
-            <Image src="/tent.jpg" width={100} height={200} alt="image" />
+            <Typography>Interactive BoardGame Community</Typography>
             <Image
-              src="/trees.jpg"
-              width={200.18}
-              height={422.36}
+              style={{ background: "#353535" }}
+              src="/Group2.jpg"
+              width={486.05}
+              height={460.51}
               alt="image"
             />
-            <Image src="/Vector.jpg" width={200} height={380} alt="image" />
-            <Image src="/trees.jpg" width={200} height={380} alt="image" />
-            <Image src="/trees.jpg" width={200} height={380} alt="image" />
+
+            <Image src="/tent4.jpg" width={264} height={250} alt="image" />
+
+            <Image src="/Fire.jpg" width={92.37} height={105.71} alt="image" />
+            <Image
+              src="/Group.jpg"
+              width={590.27}
+              height={468.65}
+              alt="image"
+            />
           </Wrapper>
         </>
       </AppBar>

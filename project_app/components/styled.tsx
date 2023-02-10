@@ -8,17 +8,7 @@ left: 0px;
 top: 0px;
 background: #353535;
 `
-
 export const Container = styled.div`
-  
-  h1 {
-position: absolute;
-width: 227.77px;
-height: 34.34px;
-left: 50px;
-top: 50px;
-background: #FFFFFF;
-  }
   Button {
     width: 182px;
     margin: 10px;
@@ -46,9 +36,11 @@ input{
 
  export const Wrapper= styled.div`
 background: #353535;
+
 `
 
 export const Typography = styled.p`
+position:absolute;
 width: 521px;
 height: 86px;
 left: 486px;

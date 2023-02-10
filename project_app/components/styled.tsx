@@ -10,18 +10,7 @@ background: #353535;
 `
 
 export const Container = styled.div`
-  input {
-    box-sizing: border-box;
-    position:absolute;
-    width: 614px;
-    height: 67px;
-    left: 413px;
-    top: 137px;
-    backgroundcolor: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-  }
+  
   h1 {
 position: absolute;
 width: 227.77px;
@@ -40,7 +29,18 @@ background: #FFFFFF;
     border-radius: 10px;
     color: black;
   }
-
+input{
+  box-sizing: border-box;
+    position:absolute;
+    width: 614px;
+    height: 67px;
+    left: 413px;
+    top: 137px;
+    backgroundcolor: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
 
 `;
 
@@ -62,4 +62,3 @@ text-align: center;
 text-transform: uppercase;
 color: #FFFFFF;
 `
-

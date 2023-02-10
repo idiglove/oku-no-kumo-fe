@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
+import InputAdornment from "@material-ui/core/InputAdornment";
 import SearchIconWrapper from "@mui/icons-material/Search";
 import { Container, AppBar, Wrapper, Typography } from "./styled";
 import Image from "next/image";
@@ -10,7 +12,8 @@ function Header() {
     <>
       <AppBar>
         <Container maxWidth="xl">
-          <h1>AIN'T BOARD</h1>
+          <Image src="/logo.svg" width={227.77} height={100} alt="image" />
+
           <div
             style={{
               marginLeft: "540px",
@@ -21,14 +24,23 @@ function Header() {
             <Button>Join Us!</Button>
           </div>
 
-          <input placeholder="Search Board Game" />
-          <SearchIconWrapper>
-            <SearchIcon />
-          </SearchIconWrapper>
+          <input
+            placeholder="Search Board Game"
+            InputProps={{
+              endAdornment: (
+                <InputAdornment>
+                  <IconButton>
+                    <SearchIcon />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+
           <div
             style={{
               display: "flex",
-              padding: "60px",
+              padding: "10px",
               marginRight: "400px",
               alignItems: "center",
             }}

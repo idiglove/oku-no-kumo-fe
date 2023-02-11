@@ -1,4 +1,4 @@
-import { Box, Text } from "./styled";
+import { Box,Text,Wrapper } from "./styled";
 import Image from "next/image";
 
 export default function Footer() {
@@ -10,13 +10,21 @@ export default function Footer() {
         <Text>Contact Us</Text>
         <Text>Give Feedback</Text>
       </div>
-      
-      <div style={{paddingTop:"20px"}}>
-         <Image src="/bush.jpg" alt="love" width={238.2} height={106.1} style={{marginRight:"962px"}}/>
-          <Image src="/bush2.jpg" alt="love" width={238.2} height={106.1} />
-        <Image src="/footer.jpg" alt="love" width={1440} height={43.6} />
-        <Image src="/footer2.jpg" alt="love" width={1440} height={43.6} />
-      </div>
+    
+ <div style={{marginLeft:"1100px",
+width: "227.77px",
+height: "34.34px",
+left: "1085.14px",
+top: "2800.5px"}}>
+           <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
+           <p style={{
+}}>@ Copyright 2023</p>
+          </div>
+     <Wrapper>
+       <Image src="/main.jpg" alt="love" width={1440} height={161} />
+       
+     </Wrapper>
+
     </Box>
   );
 }

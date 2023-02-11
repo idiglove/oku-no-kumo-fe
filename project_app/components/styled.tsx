@@ -34,17 +34,12 @@ input{
 
 `;
 
- export const Wrapper= styled.div`
-background: #353535;
-
-`
-
 export const Typography = styled.p`
 position:absolute;
 width: 521px;
 height: 86px;
 left: 486px;
-top: 368px;
+top: 260px;
 font-family: 'Rubik';
 font-style: normal;
 font-weight: 700;
@@ -52,5 +47,6 @@ font-size: 36px;
 line-height: 43px;
 text-align: center;
 text-transform: uppercase;
-color: #FFFFFF;
+color: white;
 `
+

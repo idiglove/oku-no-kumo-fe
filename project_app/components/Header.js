@@ -28,15 +28,15 @@ function Header() {
             placeholder="Search Board Game"
             InputProps={{
               endAdornment: (
-                <InputAdornment>
-                  <IconButton>
-                    <SearchIcon />
-                  </IconButton>
-                </InputAdornment>
+                <Image
+                  src="/icons8.svg"
+                  width={227.77}
+                  height={150}
+                  alt="image"
+                />
               ),
             }}
           />
-
           <div
             style={{
               display: "flex",
@@ -52,26 +52,12 @@ function Header() {
           </div>
         </Container>
         <>
-          <Wrapper>
-            <Typography>Interactive BoardGame Community</Typography>
-            <Image
-              style={{ background: "#353535" }}
-              src="/Group2.jpg"
-              width={486.05}
-              height={460.51}
-              alt="image"
-            />
-
-            <Image src="/tent4.jpg" width={264} height={250} alt="image" />
-
-            <Image src="/Fire.jpg" width={92.37} height={105.71} alt="image" />
-            <Image
-              src="/Group.jpg"
-              width={590.27}
-              height={468.65}
-              alt="image"
-            />
-          </Wrapper>
+          <Typography>Interactive BoardGame Community</Typography>
+          <Image src="/Group2.jpg" width={486.05} height={460.51} alt="image" />
+          <Image src="/tent4.jpg" width={226} height={260} alt="image" />
+          <Image src="/people.svg" width={134} height={100} alt="image" />
+          <Image src="/Fire.jpg" width={92.37} height={105.71} alt="image" />
+          <Image src="/Group.jpg" width={500.27} height={420.65} alt="image" />
         </>
       </AppBar>
     </>

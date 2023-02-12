@@ -53,11 +53,63 @@ function Header() {
         </Container>
         <>
           <Typography>Interactive BoardGame Community</Typography>
-          <Image src="/Group2.jpg" width={486.05} height={460.51} alt="image" />
-          <Image src="/tent4.jpg" width={226} height={260} alt="image" />
-          <Image src="/people.svg" width={134} height={100} alt="image" />
-          <Image src="/Fire.jpg" width={92.37} height={105.71} alt="image" />
-          <Image src="/Group.jpg" width={500.27} height={420.65} alt="image" />
+          <div
+            style={{
+              position: "absolute",
+              width: "629px",
+              height: "471px",
+              top: "215px",
+              left: "0",
+            }}
+          >
+            <Image src="/bella.png" fill="absolute" alt="image" />
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              width: "296px",
+              height: "250px",
+              left: "412.31px",
+              top: "422px",
+            }}
+          >
+            <Image src="/Tent.png" fill="absolute" alt="image" />
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              width: "244px",
+              height: "109px",
+              left: "477px",
+              top: "550px",
+            }}
+          >
+            <Image src="/people2.png" fill="absolute" alt="image" />
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              width: "90.37px",
+              height: "105.71px",
+              left: "708.46px",
+              top: "557.57px",
+            }}
+          >
+            <Image src="/Finalfire.png" fill="absolute" alt="image" />
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              width: "629px",
+              height: "471px",
+              bottom: "0",
+              top: "217px",
+              right: "0",
+              zIndex: "0",
+            }}
+          >
+            <Image src="/finalT.png" fill="absolute" alt="image" />
+          </div>
         </>
       </AppBar>
     </>

@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const AppBar = styled.div`
 position: absolute;
 width: 1440px;
-height: 624px;
-left: 0px;
+height: 700px;
+left: -4px;
 top: 0px;
 background: #353535;
 `
@@ -48,5 +48,6 @@ line-height: 43px;
 text-align: center;
 text-transform: uppercase;
 color: white;
+z-index:1;
 `
 

@@ -14,7 +14,7 @@ padding-top:20px
 width: 92px;
 height: 20px;
 left: 117px;
-top: 2760px;
+top: 2770px;
 font-family: 'Rubik';
 font-style: normal;
 font-weight: 500;
@@ -31,5 +31,6 @@ right: 0%;
 top: 94.65%;
 bottom: 2.11%;
 background: #76AAA4;
+
 `;
 

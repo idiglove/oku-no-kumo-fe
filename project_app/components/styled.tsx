@@ -10,10 +10,10 @@ background: #353535;
 `
 export const Container = styled.div`
   Button {
-    width: 182px;
-    margin: 10px;
-    height: 47px;
-    left: 500px;
+    width: 144px;
+    margin: 20px;
+    height: 44px;
+    left: 380px;
     top: 50px;
     background: #ffffff;
     border-radius: 10px;

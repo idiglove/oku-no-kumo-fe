@@ -1,9 +1,6 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import IconButton from "@material-ui/core/IconButton";
-import SearchIcon from "@mui/icons-material/Search";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import { Container, AppBar, Wrapper, Typography } from "./styled";
+import { Container, AppBar, Typography } from "./styled";
 import Image from "next/image";
 
 function Header() {
@@ -11,7 +8,7 @@ function Header() {
     <>
       <AppBar>
         <Container maxWidth="xl">
-          <div style={{ position: "absolute", marginLeft: "540px" }}>
+          <div style={{ position: "absolute", marginLeft: "700px" }}>
             <Button>Login</Button>
             <Button>Join Us!</Button>
           </div>
@@ -21,7 +18,7 @@ function Header() {
             height={150}
             left={50}
             right={50}
-            alt="image"
+            alt="Ain't Board Logo"
           />
 
           <input
@@ -40,7 +37,8 @@ function Header() {
           <div
             style={{
               display: "flex",
-              marginRight: "500px",
+              zIndex: "1",
+              borderRadius: "10px",
               alignItems: "center",
               backgroundColor: "#353535",
             }}
@@ -90,7 +88,7 @@ function Header() {
             style={{
               position: "absolute",
               width: "90.37px",
-              height: "105.71px",
+              height: "120.71px",
               left: "708.46px",
               top: "557.57px",
             }}
@@ -101,9 +99,9 @@ function Header() {
             style={{
               position: "absolute",
               width: "629px",
-              height: "471px",
+              height: "472px",
               bottom: "0",
-              top: "217px",
+              top: "228px",
               right: "0",
               zIndex: "0",
             }}

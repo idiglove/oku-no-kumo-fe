@@ -1,5 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import ButtonGroup from "@mui/material/ButtonGroup";
 import { Container, AppBar, Typography } from "./styled";
 import Image from "next/image";
 
@@ -34,23 +36,24 @@ function Header() {
               ),
             }}
           />
-          <div
-            style={{
-              display: "flex",
-              zIndex: "1",
-              borderRadius: "10px",
-              alignItems: "center",
-              backgroundColor: "#353535",
-            }}
-          >
-            <Button label="Events">Events</Button>
-            <Button label="FAQ">FAQ</Button>
-            <Button label="About Us">About Us</Button>
-            <Button label="Game night">Game Night</Button>
+          <div>
+            <IconButton label="Events">
+              <p>Events</p>
+            </IconButton>
+            <IconButton label="FAQ">
+              <p>FAQ</p>
+            </IconButton>
+            <IconButton label="About Us">
+              <p>About Us</p>
+            </IconButton>
+            <IconButton label="Game night">
+              <p>Game Night</p>
+            </IconButton>
           </div>
         </Container>
         <>
           <Typography>Interactive BoardGame Community</Typography>
+
           <div
             style={{
               position: "absolute",
@@ -62,6 +65,7 @@ function Header() {
           >
             <Image src="/bella.png" fill="absolute" alt="image" />
           </div>
+
           <div
             style={{
               position: "absolute",

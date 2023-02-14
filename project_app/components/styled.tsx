@@ -9,8 +9,8 @@ top: 0px;
 background: #353535;
 `
 export const Container = styled.div`
-  Button {
-    width: 144px;
+ Button{
+  width: 144px;
     margin: 20px;
     height: 44px;
     left: 380px;
@@ -18,7 +18,9 @@ export const Container = styled.div`
     background: #ffffff;
     border-radius: 10px;
     color: black;
-  }
+ }
+   
+ 
 input{
   box-sizing: border-box;
     position:absolute;
@@ -30,6 +32,30 @@ input{
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
+}
+
+IconButton{
+  display: flex,
+  zIndex: 1,
+  borderRadius: 10px,
+  alignItems: center,
+  backgroundColor: #353535,
+}
+p{
+  font-family: 'Rubik';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: 0.025em;
+
+left: 418px;
+top: 227px;
+}
+
+ButtonGroup{
+   position: absolute;
+    margin-left: 700px 
 }
 
 `;
@@ -50,4 +76,9 @@ text-transform: uppercase;
 color: white;
 z-index:1;
 `
+
+// export const Wrapper = styled.button` 
+  
+    
+// `;
 

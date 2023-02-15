@@ -1,4 +1,7 @@
 import React from "react";
+import styled from "styled-components";
+
+//import IconButton from "@mui/material/IconButton";
 
 function ButtonGroup() {
   return (
@@ -19,4 +22,12 @@ function ButtonGroup() {
   );
 }
 
+const IconButton = styled.div`
+ display: flex,
+  position:absolute,
+  zIndex: 1,
+  borderRadius: 10px,
+  alignItems: center,
+  backgroundColor: #353535,
+  `;
 export default ButtonGroup;

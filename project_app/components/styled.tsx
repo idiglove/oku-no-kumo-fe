@@ -39,18 +39,11 @@ font-weight: 500;
 font-size: 20px;
 line-height: 24px;
 letter-spacing: 0.025em;
-
 left: 418px;
 top: 227px;
 }
 
-ButtonGroup{
-   display: flex,
-  zIndex: 1,
-  borderRadius: 10px,
-  alignItems: center,
-  backgroundColor: #353535,
-}
+
 
 `;
 
@@ -70,4 +63,14 @@ text-transform: uppercase;
 color: white;
 z-index:1;
 `
+
+// export const ButtonGroup = styled.div`
+//  display: flex,
+//   position:absolute,
+//   zIndex: 1,
+//   borderRadius: 10px,
+//   alignItems: center,
+//   backgroundColor: #353535,
+//   `
+
 

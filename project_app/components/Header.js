@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
+import ButtonGroup from "./ButtonGroup";
+import ToolBar from "./ToolBar";
 import { Container, AppBar, Typography } from "./styled";
 import Image from "next/image";
 
@@ -21,27 +22,15 @@ function Header() {
             right={50}
             alt="Ain't Board Logo"
           />
-
-          <input
-            placeholder="Search Board Game"
-            InputProps={{
-              endAdornment: (
-                <Image
-                  src="/icons8.svg"
-                  width={227.77}
-                  height={150}
-                  alt="image"
-                />
-              ),
-            }}
-          />
+          <div>
+            <ToolBar />
+          </div>
           <div>
             <ButtonGroup />
           </div>
         </Container>
         <>
           <Typography>Interactive BoardGame Community</Typography>
-
           <div
             style={{
               position: "absolute",

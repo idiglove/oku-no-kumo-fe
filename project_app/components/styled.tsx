@@ -4,7 +4,7 @@ export const AppBar = styled.div`
 position: absolute;
 width: 1440px;
 height: 700px;
-left: -4px;
+left: 0px;
 top: 0px;
 background: #353535;
 `
@@ -52,7 +52,7 @@ position:absolute;
 width: 521px;
 height: 86px;
 left: 486px;
-top: 260px;
+top: 368px;
 font-family: 'Rubik';
 font-style: normal;
 font-weight: 700;
@@ -63,14 +63,5 @@ text-transform: uppercase;
 color: white;
 z-index:1;
 `
-
-// export const ButtonGroup = styled.div`
-//  display: flex,
-//   position:absolute,
-//   zIndex: 1,
-//   borderRadius: 10px,
-//   alignItems: center,
-//   backgroundColor: #353535,
-//   `
 
 

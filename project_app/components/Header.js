@@ -38,6 +38,7 @@ function Header() {
               height: "471px",
               top: "215px",
               left: "0",
+              bottom: "0",
             }}
           >
             <Image src="/trees_left.png" fill="absolute" alt="image" />

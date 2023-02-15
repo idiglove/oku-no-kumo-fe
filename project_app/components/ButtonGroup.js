@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-
-//import IconButton from "@mui/material/IconButton";
+import IconButton from "@mui/material/IconButton";
 
 function ButtonGroup() {
   return (
-    <div>
+    <Container>
       <IconButton label="Events">
         <p>Events</p>
       </IconButton>
@@ -18,16 +17,28 @@ function ButtonGroup() {
       <IconButton label="Game night">
         <p>Game Night</p>
       </IconButton>
-    </div>
+    </Container>
   );
 }
 
-const IconButton = styled.div`
- display: flex,
-  position:absolute,
-  zIndex: 1,
-  borderRadius: 10px,
-  alignItems: center,
-  backgroundColor: #353535,
-  `;
+const Container = styled.div`
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  width: 652px;
+  height: 24px;
+  left: 18px;
+  top: 169px;
+
+  IconButton {
+    z-index: 1;
+    width: 153px;
+    height: 44px;
+    left: 934px;
+    top: 217px;
+    background: #353535;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+  }
+`;
 export default ButtonGroup;

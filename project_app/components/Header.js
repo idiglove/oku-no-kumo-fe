@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import { Container, AppBar, Typography } from "./styled";
 import Image from "next/image";
@@ -37,18 +36,7 @@ function Header() {
             }}
           />
           <div>
-            <IconButton label="Events">
-              <p>Events</p>
-            </IconButton>
-            <IconButton label="FAQ">
-              <p>FAQ</p>
-            </IconButton>
-            <IconButton label="About Us">
-              <p>About Us</p>
-            </IconButton>
-            <IconButton label="Game night">
-              <p>Game Night</p>
-            </IconButton>
+            <ButtonGroup />
           </div>
         </Container>
         <>
@@ -63,7 +51,7 @@ function Header() {
               left: "0",
             }}
           >
-            <Image src="/bella.png" fill="absolute" alt="image" />
+            <Image src="/trees_left.png" fill="absolute" alt="image" />
           </div>
 
           <div
@@ -86,7 +74,7 @@ function Header() {
               top: "550px",
             }}
           >
-            <Image src="/people2.png" fill="absolute" alt="image" />
+            <Image src="/people.png" fill="absolute" alt="image" />
           </div>
           <div
             style={{
@@ -97,7 +85,7 @@ function Header() {
               top: "557.57px",
             }}
           >
-            <Image src="/Finalfire.png" fill="absolute" alt="image" />
+            <Image src="/fire.png" fill="absolute" alt="image" />
           </div>
           <div
             style={{
@@ -110,7 +98,7 @@ function Header() {
               zIndex: "0",
             }}
           >
-            <Image src="/finalT.png" fill="absolute" alt="image" />
+            <Image src="/trees_right.png" fill="absolute" alt="image" />
           </div>
         </>
       </AppBar>

@@ -19,8 +19,6 @@ export const Container = styled.div`
     border-radius: 10px;
     color: black;
  }
-   
- 
 input{
   box-sizing: border-box;
     position:absolute;
@@ -34,13 +32,6 @@ input{
     border-radius: 10px;
 }
 
-IconButton{
-  display: flex,
-  zIndex: 1,
-  borderRadius: 10px,
-  alignItems: center,
-  backgroundColor: #353535,
-}
 p{
   font-family: 'Rubik';
 font-style: normal;
@@ -54,8 +45,11 @@ top: 227px;
 }
 
 ButtonGroup{
-   position: absolute;
-    margin-left: 700px 
+   display: flex,
+  zIndex: 1,
+  borderRadius: 10px,
+  alignItems: center,
+  backgroundColor: #353535,
 }
 
 `;
@@ -76,9 +70,4 @@ text-transform: uppercase;
 color: white;
 z-index:1;
 `
-
-// export const Wrapper = styled.button` 
-  
-    
-// `;
 

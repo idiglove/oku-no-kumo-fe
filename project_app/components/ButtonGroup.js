@@ -27,15 +27,15 @@ const Container = styled.div`
   display: flex;
   width: 652px;
   height: 24px;
-  left: 18px;
+  left: -1px;
   top: 169px;
 
   IconButton {
     z-index: 1;
     width: 153px;
     height: 44px;
-    left: 934px;
-    top: 217px;
+    left: 930px;
+    top: 216px;
     background: #353535;
     border: 2px solid #ffffff;
     border-radius: 10px;

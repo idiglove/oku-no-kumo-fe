@@ -7,22 +7,15 @@ export const Box = styled.div`
   left: -4px;
   top: 2712px;
   background: #353535;
+
+  section{
+width: 229.86px;
+height: 68.5px;
+left: 1085.14px;
+top: 2819.5px;
+  }
 `;
-export const Text = styled.div`
-padding:20px;
-padding-top:20px
-width: 92px;
-height: 20px;
-left: 117px;
-top: 2770px;
-font-family: 'Rubik';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
-letter-spacing: 0.025em;
-color: #FFFFFF;
-`;
+
 
 export const Wrapper = styled.div`
 position: absolute;
@@ -34,3 +27,22 @@ background: #76AAA4;
 
 `;
 
+export const Container = styled.div`
+width: 146px;
+height: 153px;
+left: 117px;
+top: 2777px;
+`;
+export const Text = styled.div`
+width: 92px;
+height: 24px;
+left: 117px;
+top: 2777px;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: 0.025em;
+color: #FFFFFF;
+`

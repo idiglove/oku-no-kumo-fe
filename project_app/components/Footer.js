@@ -1,14 +1,16 @@
-import { Box, Text, Wrapper } from "./styled";
+import { Box, Wrapper, Container, Text } from "./styled";
 import Image from "next/image";
 
 export default function Footer() {
   return (
     <Box>
-      <div>
+      <Container>
         <Text>About Us</Text>
         <Text>FAQ</Text>
         <Text>Contact Us</Text>
         <Text>Give Feedback</Text>
+      </Container>
+      <section>
         <div
           style={{
             width: "227.77px",
@@ -18,6 +20,7 @@ export default function Footer() {
             height: "34.34px",
             left: "1085.14px",
             top: "2800.5px",
+            bottom: "100px",
           }}
         >
           <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
@@ -39,36 +42,8 @@ export default function Footer() {
             @ Copyright 2023
           </p>
         </div>
-      </div>
-      {/* <div
-        style={{
-          marginLeft: "1100px",
+      </section>
 
-          width: "227.77px",
-          height: "34.34px",
-          left: "1085.14px",
-          top: "2800.5px",
-        }}
-      >
-        <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
-        <p
-          style={{
-            width: "145px",
-            height: "23px",
-            left: "1170px",
-            top: "2800px",
-            fontFamily: "Quicksand",
-            fontStyle: "normal",
-            fontWeight: "400",
-            fontSize: "18px",
-            lineHeight: "22px",
-            letterSpacing: "0.025em",
-            color: "#CECECE",
-          }}
-        >
-          @ Copyright 2023
-        </p>
-      </div> */}
       <div
         style={{
           zIndex: "1",

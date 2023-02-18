@@ -35,7 +35,7 @@ position:absolute;
     margin: 20px;
     height: 46px;
     left: 310px;
-    top: 190px;
+    top: 200px;
     text-transform:capitalize;
     background-color: #353535;
     font-family: 'Rubik'

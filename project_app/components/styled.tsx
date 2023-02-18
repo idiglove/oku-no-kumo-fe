@@ -16,6 +16,7 @@ export const Container = styled.div`
     left: 380px;
     top: 50px;
     background: #ffffff;
+    text-transform:capitalize;
     border-radius: 10px;
     color: black;
  }
@@ -33,7 +34,8 @@ input{
 }
 
 p{
-  font-family: 'Rubik';
+
+  font-family: Rubik,
 font-style: normal;
 font-weight: 500;
 font-size: 20px;

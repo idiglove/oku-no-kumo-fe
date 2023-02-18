@@ -39,6 +39,7 @@ font-weight: 500;
 font-size: 20px;
 line-height: 24px;
 letter-spacing: 0.025em;
+text-transform:capitalize;
 left: 418px;
 top: 227px;
 }
@@ -59,7 +60,7 @@ font-weight: 700;
 font-size: 36px;
 line-height: 43px;
 text-align: center;
-text-transform: uppercase;
+text-transform:uppercase;
 color: white;
 z-index:1;
 `

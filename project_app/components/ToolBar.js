@@ -7,7 +7,7 @@ function ToolBar() {
       <div className="search">
         <div>
           <input />
-          <h1>Search Board Game </h1>
+          <h1>Search board game </h1>
           <div
             style={{
               position: "absolute",
@@ -39,20 +39,20 @@ const Container = styled.div`
   }
 
   h1 {
-    position: absolute;
+    position:absolute;
     width: 273px;
-    height: 27px;
-    left: 421px;
-    top: 140px;
-    font-family: "Rubik";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 28px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.065em;
-    color: #afa5a5;
+height: 27px;
+left: 460px;
+top: 140px;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+letter-spacing: 0.065em;
+color: #AFA5A5;
   }
   Image{
    

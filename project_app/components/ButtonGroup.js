@@ -1,44 +1,64 @@
 import React from "react";
 import styled from "styled-components";
-import IconButton from "@mui/material/IconButton";
+import Button from "@mui/material/Button";
 
 function ButtonGroup() {
   return (
     <Container>
-      <IconButton label="Events">
+      <Button label="Events">
         <p>Events</p>
-      </IconButton>
-      <IconButton label="FAQ">
+      </Button>
+      <Button label="FAQ">
         <p>FAQ</p>
-      </IconButton>
-      <IconButton label="About Us">
+      </Button>
+      <Button label="About Us">
         <p>About Us</p>
-      </IconButton>
-      <IconButton label="Game night">
+      </Button>
+      <Button label="Game night">
         <p>Game Night</p>
-      </IconButton>
+      </Button>
     </Container>
   );
 }
 
 const Container = styled.div`
-  position: absolute;
+position:absolute;
+ box-sizing: border-box;
   z-index: 1;
-  display: flex;
-  width: 652px;
-  height: 24px;
-  left: -1px;
-  top: 169px;
+  height: 30px;
+  left: 70px;
+  top: 1px;
+ 
 
-  IconButton {
-    z-index: 1;
-    width: 153px;
-    height: 44px;
-    left: 930px;
-    top: 216px;
-    background: #353535;
+  Button {
+    width: 144px;
+    margin: 20px;
+    height: 46px;
+    left: 300px;
+    top: 200px;
+    text-transform:capitalize;
+    background-color: #353535;
+    font-family: 'Rubik'
+    text-transform:capitalize;
+    color: #FFFFFF
+    font-style: normal;
     border: 2px solid #ffffff;
-    border-radius: 10px;
+    border-radius: 8px;
+  }
+  p{
+
+height: 24px;
+left: 418px;
+top: 227px;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+text-transform:lowercase;
+line-height: 24px;
+letter-spacing: 0.025em;
+text-transform:capitalize;
+color: #FFFFFF;
   }
 `;
 export default ButtonGroup;

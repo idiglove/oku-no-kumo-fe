@@ -34,14 +34,14 @@ function Header() {
           <div
             style={{
               position: "absolute",
-              width: "629px",
-              height: "471px",
-              top: "215px",
+              width: "629.05px",
+              height: "471.51px",
+              top: "194px",
               left: "0",
               bottom: "0",
             }}
           >
-            <Image src="/trees_left.png" fill="absolute" alt="image" />
+            <Image src="/trees_left.png" fill="none" alt="image" />
           </div>
 
           <div
@@ -61,7 +61,9 @@ function Header() {
               width: "244px",
               height: "109px",
               left: "477px",
-              top: "550px",
+              top: "560px",
+              bottom: "78.57%",
+              zIndex: "0",
             }}
           >
             <Image src="/people.png" fill="absolute" alt="image" />
@@ -70,7 +72,7 @@ function Header() {
             style={{
               position: "absolute",
               width: "90.37px",
-              height: "120.71px",
+              height: "105.71px",
               left: "708.46px",
               top: "557.57px",
             }}
@@ -80,15 +82,16 @@ function Header() {
           <div
             style={{
               position: "absolute",
-              width: "629px",
-              height: "472px",
+              width: "651.27px",
+              height: "464.65px",
+              left: "789.04px",
               bottom: "0",
-              top: "228px",
+              top: "217.54px",
               right: "0",
               zIndex: "0",
             }}
           >
-            <Image src="/trees_right.png" fill="absolute" alt="image" />
+            <Image src="/trees_right.png" fill="none" alt="image" />
           </div>
         </>
       </AppBar>

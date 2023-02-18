@@ -31,11 +31,11 @@ position:absolute;
  
 
   Button {
-    width: 144px;
+    width: 140px;
     margin: 20px;
     height: 46px;
-    left: 300px;
-    top: 200px;
+    left: 310px;
+    top: 190px;
     text-transform:capitalize;
     background-color: #353535;
     font-family: 'Rubik'
@@ -52,8 +52,8 @@ left: 418px;
 top: 227px;
 font-family: 'Rubik';
 font-style: normal;
-font-weight: 400;
-font-size: 16px;
+font-weight: 500;
+font-size: 20px;
 text-transform:lowercase;
 line-height: 24px;
 letter-spacing: 0.025em;

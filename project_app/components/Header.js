@@ -36,7 +36,7 @@ function Header() {
               position: "absolute",
               width: "629.05px",
               height: "471.51px",
-              top: "194px",
+              top: "204px",
               left: "0",
               bottom: "0",
             }}

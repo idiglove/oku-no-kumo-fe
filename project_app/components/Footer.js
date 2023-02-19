@@ -80,47 +80,20 @@ export default function Footer() {
           </li>
         </ul>
       </Container>
-      <section
+
+      <div
         style={{
-          zIndex: "0",
-          display: "block",
           width: "229.86px",
           height: "67.5px",
+          left: "1085.14px",
           top: "2819.5px",
-          bottom: "100px",
-          marginBottom: "100px",
+          marginTop: "40px",
+          boxSizing: "border-box",
         }}
       >
-        <div
-          style={{
-            width: "227.77px",
-            marginBottom: "800px",
-            zIndex: "1",
-            marginLeft: "1100px",
-            height: "34.34px",
-            left: "1085.14px",
-          }}
-        >
-          <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
-          <p
-            style={{
-              width: "145px",
-              height: "23px",
-              left: "1170px",
-              top: "3000px",
-              fontFamily: "Quicksand",
-              fontStyle: "normal",
-              fontWeight: "400",
-              fontSize: "18px",
-              lineHeight: "22px",
-              letterSpacing: "0.025em",
-              color: "#CECECE",
-            }}
-          >
-            @ Copyright 2023
-          </p>
-        </div>
-      </section>
+        <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
+        <h6>@ Copyright 2023</h6>
+      </div>
 
       <div
         style={{

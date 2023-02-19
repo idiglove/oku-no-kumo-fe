@@ -7,12 +7,28 @@ export const Box = styled.div`
   left: -4px;
   top: 2712px;
   background: #353535;
+  box-sizing:border-box;
+  display:flex;
+  justify-content:space-between;
+  }
+  h6{
 
-  section{
-width: 229.86px;
-height: 68.5px;
-left: 1085.14px;
-top: 2819.5px;
+   display:block;
+    font-family: Quicksand-Regular;
+    text-align: right;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    width: 145px;
+height: 23px;
+left: "1090.14px",
+top: 2864px;
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+letter-spacing: 0.025em;
+color: #CECECE;
   }
 `;
 
@@ -33,16 +49,4 @@ height: 153px;
 left: 117px;
 top: 2777px;
 `;
-export const Text = styled.div`
-width: 92px;
-height: 24px;
-left: 117px;
-top: 2777px;
-font-family: 'Rubik';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
-letter-spacing: 0.025em;
-color: #FFFFFF;
-`
+

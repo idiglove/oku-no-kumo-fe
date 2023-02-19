@@ -14,18 +14,18 @@ export const Box = styled.div`
   h6{
 
    display:block;
-    font-family: Quicksand-Regular;
+    
     text-align: right;
-    margin-top: 0.5rem;
-    font-weight: bold;
-    width: 145px;
+    margin-top: 0.1rem;
+   
+    width: 140px;
 height: 23px;
 left: "1090.14px",
 top: 2864px;
-font-family: 'Quicksand';
+font-family: 'Quicksand', sans-serif;
 font-style: normal;
 font-weight: 400;
-font-size: 18px;
+font-size: 0.67em;
 line-height: 22px;
 letter-spacing: 0.025em;
 color: #CECECE;

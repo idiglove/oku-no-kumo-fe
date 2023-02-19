@@ -24,11 +24,10 @@ export default function Footer() {
               width: "146px",
               height: "24px",
               fontWeight: "500",
-              fontSize: "20px",
+              fontSize: "16px",
               top: "2906px",
               letterSpacing: "0.025em",
               lineHeight: "24px",
-              fontFamily: "Rubik",
             }}
           >
             About Us
@@ -38,12 +37,10 @@ export default function Footer() {
               marginTop: "10px",
               width: "146px",
               height: "24px",
-              fontWeight: "500",
-              fontSize: "20px",
+              fontSize: "16px",
               top: "2906px",
               letterSpacing: "0.025em",
               lineHeight: "24px",
-              fontFamily: "Rubik",
             }}
           >
             FAQ
@@ -53,12 +50,10 @@ export default function Footer() {
               marginTop: "10px",
               width: "146px",
               height: "24px",
-              fontWeight: "500",
-              fontSize: "20px",
+              fontSize: "16px",
               top: "2906px",
               letterSpacing: "0.025em",
               lineHeight: "24px",
-              fontFamily: "Rubik",
             }}
           >
             Contact Us
@@ -69,11 +64,10 @@ export default function Footer() {
               width: "146px",
               height: "24px",
               fontWeight: "500",
-              fontSize: "20px",
+              fontSize: "16px",
               top: "2906px",
               letterSpacing: "0.025em",
               lineHeight: "24px",
-              fontFamily: "Rubik",
             }}
           >
             Give Feedback
@@ -85,16 +79,16 @@ export default function Footer() {
         style={{
           width: "229.86px",
           height: "67.5px",
-          left: "1085.14px",
+          left: "1090px",
+          right: "20px",
           top: "2819.5px",
-          marginTop: "40px",
+          marginTop: "50px",
           boxSizing: "border-box",
         }}
       >
         <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
         <h6>@ Copyright 2023</h6>
       </div>
-
       <div
         style={{
           zIndex: "1",

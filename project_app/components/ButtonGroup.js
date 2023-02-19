@@ -35,10 +35,10 @@ position:absolute;
     margin: 20px;
     height: 46px;
     left: 310px;
-    top: 200px;
+    top: 190px;
     text-transform:capitalize;
     background-color: #353535;
-    font-family: 'Rubik'
+    font-family: 'Rubik', sans-serif;
     text-transform:capitalize;
     color: #FFFFFF
     font-style: normal;
@@ -50,7 +50,7 @@ position:absolute;
 height: 24px;
 left: 418px;
 top: 227px;
-font-family: 'Rubik';
+font-family: 'Rubik', sans-serif;
 font-style: normal;
 font-weight: 500;
 font-size: 20px;

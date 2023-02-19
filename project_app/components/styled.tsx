@@ -16,6 +16,8 @@ export const Container = styled.div`
     left: 380px;
     top: 50px;
     background: #ffffff;
+    font-family: 'Rubik', sans-serif;
+    font-weight:400;
     text-transform:capitalize;
     border-radius: 10px;
     color: black;

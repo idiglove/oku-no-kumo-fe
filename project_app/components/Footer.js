@@ -1,26 +1,104 @@
-import { Box, Wrapper, Container, Text } from "./styled";
+import { Box, Wrapper, Container } from "./styled";
 import Image from "next/image";
 
 export default function Footer() {
   return (
     <Box>
       <Container>
-        <Text>About Us</Text>
-        <Text>FAQ</Text>
-        <Text>Contact Us</Text>
-        <Text>Give Feedback</Text>
+        <ul
+          style={{
+            marginTop: "40px",
+            width: "146px",
+            left: "117px",
+            top: "2777px",
+            listStyle: "none",
+            fontFamily: "Quicksand-Regular",
+            color: "white",
+            display: "block",
+            fontWeight: "500px",
+            boxSizing: "border-box",
+          }}
+        >
+          <li
+            style={{
+              width: "146px",
+              height: "24px",
+              fontWeight: "500",
+              fontSize: "20px",
+              top: "2906px",
+              letterSpacing: "0.025em",
+              lineHeight: "24px",
+              fontFamily: "Rubik",
+            }}
+          >
+            About Us
+          </li>
+          <li
+            style={{
+              marginTop: "10px",
+              width: "146px",
+              height: "24px",
+              fontWeight: "500",
+              fontSize: "20px",
+              top: "2906px",
+              letterSpacing: "0.025em",
+              lineHeight: "24px",
+              fontFamily: "Rubik",
+            }}
+          >
+            FAQ
+          </li>
+          <li
+            style={{
+              marginTop: "10px",
+              width: "146px",
+              height: "24px",
+              fontWeight: "500",
+              fontSize: "20px",
+              top: "2906px",
+              letterSpacing: "0.025em",
+              lineHeight: "24px",
+              fontFamily: "Rubik",
+            }}
+          >
+            Contact Us
+          </li>
+          <li
+            style={{
+              marginTop: "10px",
+              width: "146px",
+              height: "24px",
+              fontWeight: "500",
+              fontSize: "20px",
+              top: "2906px",
+              letterSpacing: "0.025em",
+              lineHeight: "24px",
+              fontFamily: "Rubik",
+            }}
+          >
+            Give Feedback
+          </li>
+        </ul>
       </Container>
-      <section>
+      <section
+        style={{
+          zIndex: "0",
+          display: "block",
+          width: "229.86px",
+          height: "67.5px",
+          top: "2819.5px",
+          bottom: "100px",
+          marginBottom: "100px",
+        }}
+      >
         <div
           style={{
             width: "227.77px",
-            paddingBottom: "1000px",
+            marginBottom: "800px",
             zIndex: "1",
             marginLeft: "1100px",
             height: "34.34px",
             left: "1085.14px",
-            top: "2800.5px",
-            bottom: "100px",
           }}
         >
           <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
@@ -29,7 +107,7 @@ export default function Footer() {
               width: "145px",
               height: "23px",
               left: "1170px",
-              top: "2800px",
+              top: "3000px",
               fontFamily: "Quicksand",
               fontStyle: "normal",
               fontWeight: "400",

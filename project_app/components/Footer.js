@@ -87,7 +87,7 @@ export default function Footer() {
         }}
       >
         <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
-        <h6>@ Copyright 2023</h6>
+        <h6>Copyright @2023</h6>
       </div>
       <div
         style={{

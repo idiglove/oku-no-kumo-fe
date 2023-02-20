@@ -91,12 +91,13 @@ export default function Footer() {
       </div>
       <div
         style={{
-          zIndex: "1",
+          zIndex: "0",
           top: "250px",
           position: "absolute",
+          bottom: "0",
         }}
       >
-        <Image src="/together.png" width={296} height={110} alt="image" />
+        <Image src="/together.png" width={296} height={120} alt="image" />
       </div>
       <div
         style={{
@@ -104,9 +105,10 @@ export default function Footer() {
           top: "210px",
           position: "absolute",
           zIndex: "1",
+          bottom: "0",
         }}
       >
-        <Image src="/right.png" alt="love" width={312} height={150.37} />
+        <Image src="/right.png" alt="love" width={312} height={160} />
       </div>
       <Wrapper>
         <Image src="/end.png" alt="love" width={1440} height={72.7} />

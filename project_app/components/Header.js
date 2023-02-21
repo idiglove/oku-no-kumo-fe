@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup from "./ButtonGroup";
 import ToolBar from "./ToolBar";
-import { Container, AppBar, Typography } from "./styled";
+import { Container, AppBar, Typography, StyledText } from "./styled";
 import Image from "next/image";
 
 function Header() {
@@ -12,7 +12,9 @@ function Header() {
         <Container maxWidth="xl">
           <div style={{ position: "absolute", marginLeft: "700px" }}>
             <Button>Login</Button>
-            <Button>Join Us!</Button>
+            <Button style={{ backgroundColor: "rgb(250, 250, 235)" }}>
+              Join Us!
+            </Button>
           </div>
           <Image
             src="/logo.svg"
@@ -31,6 +33,15 @@ function Header() {
         </Container>
         <>
           <Typography>Interactive BoardGame Community</Typography>
+          {/* <div>
+            <StyledText>
+              Be a part of the best boardgame community.
+              <br />
+              Make reviews and strategies. Join challenges and earn powerups to
+              get new avatars.
+            </StyledText>
+          </div> */}
+
           <div
             style={{
               position: "absolute",

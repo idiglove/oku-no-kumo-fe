@@ -48,8 +48,6 @@ left: 418px;
 top: 227px;
 }
 
-
-
 `;
 
 export const Typography = styled.p`
@@ -70,3 +68,10 @@ z-index:1;
 `
 
 
+export const StyledText= styled.h1`
+font-size: 1rem;
+   position:absolute;
+    font-family: Quicksand-Regular;
+    text-align:center;
+    margin-top:4rem;
+`

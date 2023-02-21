@@ -6,7 +6,7 @@ function ToolBar() {
     <Container>
       <div className="search">
         <div>
-          <input />
+          <input type="text" />
           <h1>Search board game </h1>
           <div
             style={{

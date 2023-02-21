@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.section`
+export const Container = styled.section`
 
 width: 1440px;
 height: 2562px;

@@ -1,12 +1,12 @@
-import Image from "next/image";
-import { Card } from "./styled";
+import { Paper, Box } from "./styled";
 
-function ReviewCard() {
+export default function ReviewCard() {
   return (
-    <Card>
-      <Image src="/Card.png" alt="dont know" width={220} height={330} />
-    </Card>
+    <Box>
+      <Paper />
+      <Paper />
+      <Paper />
+      <Paper />
+    </Box>
   );
 }
-
-export default ReviewCard;

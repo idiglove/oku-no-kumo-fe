@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-
 import Button from "@mui/material/Button";
 
-function ButtonGroup() {
+function NavBarButtons() {
   return (
     <Container>
       <Button label="Events">
@@ -32,11 +31,11 @@ const Container = styled.div`
     margin: 20px;
     height: 46px;
     left: 380px;
+    top: 63px;
     text-transform: capitalize;
-    background-color: #353535;
+    background: #353535;
     font-family: "Rubik", sans-serif;
     text-transform: capitalize;
-    color: #ffffff;
     font-style: normal;
     border: 2px solid #ffffff;
     border-radius: 8px;
@@ -56,4 +55,4 @@ const Container = styled.div`
     color: #ffffff;
   }
 `;
-export default ButtonGroup;
+export default NavBarButtons;

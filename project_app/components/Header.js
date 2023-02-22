@@ -1,8 +1,7 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import ButtonGroup from "./ButtonGroup";
+import NavBarButtons from "./NavBarButtons";
 import ToolBar from "./ToolBar";
-import { Container, AppBar, Typography, StyledText } from "./styled";
+import { Container, AppBar, Typography, StyledButtons } from "./styled";
 import Image from "next/image";
 
 function Header() {
@@ -10,38 +9,32 @@ function Header() {
     <>
       <AppBar>
         <Container maxWidth="xl">
-          <div style={{ position: "absolute", marginLeft: "700px" }}>
-            <Button>Login</Button>
-            <Button style={{ backgroundColor: "rgb(250, 250, 235)" }}>
-              Join Us!
-            </Button>
+          <div>
+            <Image
+              src="/logo.svg"
+              width={227.77}
+              height={150}
+              left={50}
+              right={50}
+              alt="Ain't Board Logo"
+            />
           </div>
-          <Image
-            src="/logo.svg"
-            width={227.77}
-            height={150}
-            left={50}
-            right={50}
-            alt="Ain't Board Logo"
-          />
+          <div style={{ marginLeft: "20px" }}>
+            <StyledButtons>Login</StyledButtons>
+            <StyledButtons style={{ backgroundColor: "rgb(250, 250, 235)" }}>
+              Join Us!
+            </StyledButtons>
+          </div>
+
           <div>
             <ToolBar />
           </div>
           <div>
-            <ButtonGroup />
+            <NavBarButtons />
           </div>
         </Container>
         <>
           <Typography>Interactive BoardGame Community</Typography>
-          {/* <div>
-            <StyledText>
-              Be a part of the best boardgame community.
-              <br />
-              Make reviews and strategies. Join challenges and earn powerups to
-              get new avatars.
-            </StyledText>
-          </div> */}
-
           <div
             style={{
               position: "absolute",
@@ -54,7 +47,6 @@ function Header() {
           >
             <Image src="/trees_left.png" fill="none" alt="image" />
           </div>
-
           <div
             style={{
               position: "absolute",

@@ -9,34 +9,13 @@ top: 0px;
 background: #353535;
 `
 export const Container = styled.div`
- Button{
-  width: 144px;
-    margin: 20px;
-    height: 44px;
-    left: 380px;
-    top: 50px;
-    background: #ffffff;
-    font-family: 'Rubik', sans-serif;
-    font-weight:400;
-    text-transform:capitalize;
-    border-radius: 10px;
-    color: black;
- }
-input{
+
   box-sizing: border-box;
-    position:absolute;
-    width: 614px;
-    height: 67px;
-    left: 413px;
-    top: 137px;
-    backgroundcolor: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-}
-
+  z-index: 1;
+  height: 40px;
+  left: 70px;
+  top: 1px;
 p{
-
 font-family: Rubik,
 font-style: normal;
 font-weight: 500;
@@ -66,12 +45,18 @@ text-transform:uppercase;
 color: white;
 z-index:1;
 `
-
-
-export const StyledText= styled.h1`
-font-size: 1rem;
-   position:absolute;
-    font-family: Quicksand-Regular;
-    text-align:center;
-    margin-top:4rem;
+export const StyledButtons= styled.button`
+     box-sizing: border-box;
+width: 144px;
+ 
+    margin:20px;
+    height: 44px;
+    margin-left: 90%;
+     border:2px;
+    background: #ffffff;
+    font-family: 'Rubik', sans-serif;
+    font-weight:400;
+    text-transform:capitalize;
+    border-radius: 10px;
+    color: black;
 `

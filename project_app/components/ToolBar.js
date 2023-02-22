@@ -6,13 +6,13 @@ function ToolBar() {
     <Container>
       <div className="search">
         <div>
-          <input type="text" />
-          <h1>Search board game </h1>
+          <input type="text" placeholder="Search board game" />
           <div
             style={{
               position: "absolute",
-              width: "26.99px",
-              height: "28.73px",
+              width: "18.99px",
+              height: "18.73px",
+              top: "180px",
               left: "980px",
             }}
           >
@@ -31,33 +31,13 @@ const Container = styled.div`
     width: 614px;
     height: 67px;
     left: 413px;
-    top: 137px;
+    top: 160px;
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-  }
-
-  h1 {
-    position:absolute;
-    width: 273px;
-height: 27px;
-left: 460px;
-top: 140px;
-font-family: 'Rubik';
-font-style: normal;
-font-weight: 300;
-font-size: 24px;
-line-height: 28px;
-display: flex;
-align-items: center;
-letter-spacing: 0.065em;
-color: #AFA5A5;
-  }
-  Image{
-   
-            width: 26.99px,
-            height: 28.73px,
+    font-size: 1.2rem;
+    font-family: "Quicksand", sans-serif;
   }
 `;
 

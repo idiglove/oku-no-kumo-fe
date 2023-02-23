@@ -1,7 +1,8 @@
 import React from "react";
 import NavBarButtons from "./NavBarButtons";
 import ToolBar from "./ToolBar";
-import { Container, AppBar, Typography, StyledButtons } from "./styled";
+import Button from "@mui/material/Button";
+import { Container, AppBar, Typography } from "./styled";
 import Image from "next/image";
 
 function Header() {
@@ -19,13 +20,14 @@ function Header() {
               alt="Ain't Board Logo"
             />
           </div>
-          <div style={{ marginLeft: "20px" }}>
-            <StyledButtons>Login</StyledButtons>
-            <StyledButtons style={{ backgroundColor: "rgb(250, 250, 235)" }}>
-              Join Us!
-            </StyledButtons>
+          <div style={{ marginLeft: "1000px" }}>
+            <div style={{ position: "absolute", top: "0", marginTop: "46px" }}>
+              <Button>Login</Button>
+              <Button style={{ backgroundColor: "rgb(250, 250, 235)" }}>
+                Join Us!
+              </Button>
+            </div>
           </div>
-
           <div>
             <ToolBar />
           </div>

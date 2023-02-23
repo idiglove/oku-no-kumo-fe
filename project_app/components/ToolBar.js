@@ -12,7 +12,7 @@ function ToolBar() {
               position: "absolute",
               width: "18.99px",
               height: "18.73px",
-              top: "180px",
+              top: "170px",
               left: "980px",
             }}
           >
@@ -30,8 +30,8 @@ const Container = styled.div`
     position: absolute;
     width: 614px;
     height: 67px;
-    left: 413px;
-    top: 160px;
+    left: 400px;
+    top: 150px;
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

@@ -38,6 +38,7 @@ const Container = styled.div`
     border-radius: 10px;
     font-size: 1.2rem;
     font-family: "Quicksand", sans-serif;
+    padding-left: 100px;
   }
 `;
 

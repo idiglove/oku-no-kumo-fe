@@ -43,12 +43,6 @@ background: #76AAA4;
 
 `;
 
-// export const Container = styled.div`
-// width: 146px;
-// height: 153px;
-// left: 117px;
-// top: 2777px;
-// `;
 
 export const AppBar = styled.div`
 position: absolute;

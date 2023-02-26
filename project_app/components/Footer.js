@@ -2,77 +2,28 @@ import { Box, Wrapper, Container } from "./styled";
 import Image from "next/image";
 
 export default function Footer() {
+  const titles = ["About Us", "FAQ", "Contact Us", "Give Feedback"];
+
+  const styles = {
+    marginTop: "30px",
+    width: "140px",
+    marginLeft: "40px",
+    top: "2777px",
+    listStyle: "none",
+    fontFamily: "Quicksand-Regular",
+    color: "white",
+    display: "block",
+    fontWeight: "500px",
+    boxSizing: "border-box",
+  };
   return (
     <Box>
       <Container>
-        <ul
-          style={{
-            marginTop: "40px",
-            width: "146px",
-            left: "117px",
-            top: "2777px",
-            listStyle: "none",
-            fontFamily: "Quicksand-Regular",
-            color: "white",
-            display: "block",
-            fontWeight: "500px",
-            boxSizing: "border-box",
-          }}
-        >
-          <li
-            style={{
-              width: "146px",
-              height: "24px",
-              fontWeight: "500",
-              fontSize: "16px",
-              top: "2906px",
-              letterSpacing: "0.025em",
-              lineHeight: "24px",
-            }}
-          >
-            About Us
-          </li>
-          <li
-            style={{
-              marginTop: "10px",
-              width: "146px",
-              height: "24px",
-              fontSize: "16px",
-              top: "2906px",
-              letterSpacing: "0.025em",
-              lineHeight: "24px",
-            }}
-          >
-            FAQ
-          </li>
-          <li
-            style={{
-              marginTop: "10px",
-              width: "146px",
-              height: "24px",
-              fontSize: "16px",
-              top: "2906px",
-              letterSpacing: "0.025em",
-              lineHeight: "24px",
-            }}
-          >
-            Contact Us
-          </li>
-          <li
-            style={{
-              marginTop: "10px",
-              width: "146px",
-              height: "24px",
-              fontWeight: "500",
-              fontSize: "16px",
-              top: "2906px",
-              letterSpacing: "0.025em",
-              lineHeight: "24px",
-            }}
-          >
-            Give Feedback
-          </li>
-        </ul>
+        {titles.map((title) => (
+          <div key={title} style={styles}>
+            {title}
+          </div>
+        ))}
       </Container>
 
       <div

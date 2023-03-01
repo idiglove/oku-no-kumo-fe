@@ -35,3 +35,21 @@ line-height: 14px;
 color: #000000;
   
 `;
+
+export const Container = styled.div`
+  p {
+    width: 152px;
+    height: 86px;
+    left: 60px;
+    margin-left:30px;
+    margin-top:46px;
+    top: 300px;
+    text-align: center;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+  }
+`;

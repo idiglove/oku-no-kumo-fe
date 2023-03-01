@@ -18,3 +18,20 @@ export const Box = styled.div`
 display:flex;
 padding:107px;
 `;
+
+
+
+export const StyledText = styled.p`
+position: absolute;
+width: 152px;
+height: 86px;
+left: 34px;
+top: 169px;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+color: #000000;
+  
+`;

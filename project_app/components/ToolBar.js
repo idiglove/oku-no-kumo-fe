@@ -32,13 +32,14 @@ const Container = styled.div`
     height: 67px;
     left: 400px;
     top: 150px;
+    color: black;
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     font-size: 1.2rem;
     font-family: "Quicksand", sans-serif;
-    padding-left: 100px;
+    padding-left: 40px;
   }
 `;
 

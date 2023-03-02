@@ -11,6 +11,7 @@ export default function ReviewCard() {
             <Image src="/background.png" width={216} height={105} alt="image" />
           </div>
           <CardContent />
+          <Image src="/Dice.png" width={35} height={35} alt="image" />
         </Paper>
         <Paper>
           <div>

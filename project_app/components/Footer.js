@@ -7,6 +7,7 @@ import {
   ProductContainer,
 } from "./styled";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const titles = ["About Us", "FAQ", "Contact Us", "Give Feedback"];
@@ -14,8 +15,10 @@ export default function Footer() {
   return (
     <Box>
       <ProductContainer>
-        {titles.map((title) => (
-          <ul key={title}>{title}</ul>
+        {titles.map((title, key) => (
+          <Link href="/About" key={key}>
+            <ul>{title}</ul>
+          </Link>
         ))}
       </ProductContainer>
       <ImageContainer>

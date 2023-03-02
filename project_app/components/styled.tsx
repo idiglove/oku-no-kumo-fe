@@ -105,8 +105,10 @@ text-transform:uppercase;
 color: white;
 z-index:1;
 `
-export const ProductContainer=styled.ul`
-color:white,
+export const ProductContainer=styled.a`
+
+Link{
+  color:white,
 font-family:Quicksand-Regular,
 margin-top:60px,
 width: 140px,
@@ -116,4 +118,6 @@ list-style: none,
 display: block,
 font-weight: 500px,
 box-sizing: border-box,
+}
+
 `

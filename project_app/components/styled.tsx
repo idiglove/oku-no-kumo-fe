@@ -44,9 +44,9 @@ export const ImageContainer= styled.div`
 width: 229.86px,
 height: 67.5px,
 left: 1090px,
+top: 80px
 
-top: 70px
-margin-top:60px,
+margin-top: 2rem;
 box-sizing: border-box,
 z-index:1;
 
@@ -61,8 +61,13 @@ bottom:0;
 `
 
 export const RightContainer=styled.div`
-position:absolute,
-top: 250px,
+
+
+top: 248px;
+    position: absolute;
+    left: 0px;
+    bottom: 3.6rem;
+    z-index: 1;
 
 `
 
@@ -106,6 +111,10 @@ color: white;
 z-index:1;
 `
 export const ProductContainer=styled.a`
+color: white;
+    width: 10rem;
+    margin-top: 1rem;
+    font-family: Quicksand-Regular;
 
 Link{
   color:white,

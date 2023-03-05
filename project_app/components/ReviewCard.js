@@ -12,6 +12,9 @@ export default function ReviewCard() {
           </div>
           <CardContent />
           <Image src="/Dice.png" width={35} height={35} alt="image" />
+          <p>Strategy</p>
+          <Image src="/chat.png" width={12} height={12} alt="image" />
+          <Image src="/love.png" width={12} height={12} alt="image" />
         </Paper>
         <Paper>
           <div>

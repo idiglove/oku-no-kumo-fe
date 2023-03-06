@@ -10,16 +10,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
-  const titles = ["About Us", "FAQ", "Contact Us", "Give Feedback"];
-
   return (
     <Box>
       <ProductContainer>
-        {titles.map((title, key) => (
-          <Link href="/About" key={key}>
-            <ul>{title}</ul>
-          </Link>
-        ))}
+        <ul>
+          <Link href="/About">About</Link>
+        </ul>
+        <ul>
+          <Link href="/Faq">FAQ</Link>
+        </ul>
+        <ul>
+          <Link href="/Contact">Contact Us</Link>
+        </ul>
+        <ul>
+          <Link href="/Feedback">Give Feedback</Link>
+        </ul>
       </ProductContainer>
       <ImageContainer>
         <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />

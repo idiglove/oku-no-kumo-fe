@@ -111,13 +111,13 @@ color: white;
 z-index:1;
 `
 export const ProductContainer=styled.a`
-color: white;
+    color: white;
     width: 10rem;
     margin-top: 1rem;
     font-family: Quicksand-Regular;
 
-Link{
-  color:white,
+ul{
+color:white,
 font-family:Quicksand-Regular,
 margin-top:60px,
 width: 140px,

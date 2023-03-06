@@ -10,10 +10,11 @@ function ToolBar() {
           <div
             style={{
               position: "absolute",
-              width: "18.99px",
-              height: "18.73px",
-              top: "170px",
-              left: "980px",
+              width: "28.99px",
+              height: "28.73px",
+              top: "166px",
+              right: "350px",
+              left: "979px",
             }}
           >
             <Image src="/search.png" fill="absolute" alt="image" />

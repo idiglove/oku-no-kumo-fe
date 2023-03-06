@@ -27,6 +27,9 @@ module.exports = {
 
     plugins: ["@typescript-eslint"],
     extends: [
+        "plugin:react/recommended",
+        "google",
+        "prettier",
         "next/core-web-vitals",
         "plugin:@typescript-eslint/recommended",
         "airbnb",

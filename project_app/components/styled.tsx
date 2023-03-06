@@ -111,22 +111,19 @@ color: white;
 z-index:1;
 `
 export const ProductContainer=styled.a`
-    color: white;
+   color: white;
     width: 10rem;
     margin-top: 1rem;
+    ul{
+   color:white,
     font-family: Quicksand-Regular;
+    }
 
-ul{
-color:white,
-font-family:Quicksand-Regular,
-margin-top:60px,
-width: 140px,
-margin-left: 40px,
-top: 2777px,
-list-style: none,
-display: block,
-font-weight: 500px,
-box-sizing: border-box,
+li{
+  margin-top: 0.5rem;
+  list-style: none;
+   font-family: Quicksand-Regular;
+   font-size:16px;
 }
 
 `

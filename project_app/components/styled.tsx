@@ -52,4 +52,31 @@ export const Container = styled.div`
     line-height: 14px;
     color: #000000;
   }
+  
 `;
+
+export const Wrapper= styled.div`
+p{
+
+width: 47px;
+height: 13px;
+left: 145px;
+top: 270px;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 13px;
+display: flex;
+align-items: center;
+color: #251300;
+}
+ Image{
+
+left: 0%;
+right: 0%;
+top: 6.25%;
+bottom: 0.43%;
+background: #000000;
+ }
+`

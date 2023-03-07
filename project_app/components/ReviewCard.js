@@ -1,4 +1,4 @@
-import { Paper, Box } from "./styled";
+import { Paper, Box, Wrapper } from "./styled";
 import Image from "next/image";
 import CardContent from "./CardContent";
 
@@ -11,10 +11,12 @@ export default function ReviewCard() {
             <Image src="/background.png" width={216} height={105} alt="image" />
           </div>
           <CardContent />
-          <Image src="/Dice.png" width={35} height={35} alt="image" />
-          <p>Strategy</p>
-          <Image src="/chat.png" width={12} height={12} alt="image" />
-          <Image src="/love.png" width={12} height={12} alt="image" />
+
+          <Wrapper>
+            <p>Strategy</p>
+            <Image src="/chat.png" width={12} height={12} alt="image" />
+            <Image src="/love.png" width={12} height={12} alt="image" />
+          </Wrapper>
         </Paper>
         <Paper>
           <div>

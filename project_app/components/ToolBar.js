@@ -12,9 +12,8 @@ function ToolBar() {
               position: "absolute",
               width: "28.99px",
               height: "28.73px",
-              top: "166px",
-              right: "350px",
-              left: "979px",
+              top: "168px",
+              left: "960px",
             }}
           >
             <Image src="/search.png" fill="absolute" alt="image" />

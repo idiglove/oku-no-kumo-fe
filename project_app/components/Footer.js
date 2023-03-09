@@ -13,19 +13,19 @@ export default function Footer() {
   const titles = [
     {
       name: "About",
-      link: "/about",
+      link: "/About",
     },
     {
       name: "FAQ",
-      link: "/faq",
+      link: "/Faq",
     },
     {
       name: "Contact Us",
-      link: "/contact",
+      link: "/Contact",
     },
     {
       name: "Give Feedback",
-      link: "/feedback",
+      link: "/Feedback",
     },
   ];
   return (

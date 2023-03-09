@@ -1,4 +1,4 @@
-import ReviewCard from "../components/ReviewCard";
+import CardBox from "../components/Card";
 import { Container} from "./styled";
 
 
@@ -6,7 +6,7 @@ import { Container} from "./styled";
 export default function Main() {
   return (
         <Container>
-          <ReviewCard/>
+          <CardBox/>
         </Container>
   );
 }

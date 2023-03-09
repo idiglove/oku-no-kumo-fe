@@ -119,7 +119,7 @@ export const ProductContainer=styled.a`
     font-family: Quicksand-Regular;
     }
 
-li{
+ul{
   margin-top: 0.5rem;
   list-style: none;
    font-family: Quicksand-Regular;

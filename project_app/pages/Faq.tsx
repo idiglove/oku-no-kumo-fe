@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Faq() {
+function faq() {
   return (
     <div>FAQ</div>
   )
 }
 
-export default Faq
+export default faq

@@ -13,32 +13,33 @@ export default function Footer() {
   const titles = [
     {
       name: "About",
-      link: "/About",
+      link: "/about",
     },
     {
       name: "FAQ",
-      link: "/Faq",
+      link: "/faq",
     },
     {
       name: "Contact Us",
-      link: "/Contact",
+      link: "/contact",
     },
     {
       name: "Give Feedback",
-      link: "/Feedback",
+      link: "/feedback",
     },
   ];
   return (
     <Box>
-      <ul>
-        <ProductContainer>
+      <ProductContainer>
+        <div>
           {titles.map((title) => (
-            <li>
+            <ul key={title}>
               <Link href={title.link}>{title.name}</Link>
-            </li>
+            </ul>
           ))}
-        </ProductContainer>
-      </ul>
+        </div>
+      </ProductContainer>
+
       <ImageContainer>
         <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
         <h6>Copyright @2023</h6>

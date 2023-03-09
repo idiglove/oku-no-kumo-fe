@@ -1,6 +1,6 @@
 
-function Feedback() {
+function feedback() {
   return <div>Feedback</div>;
 }
 
-export default Feedback;
+export default feedback;

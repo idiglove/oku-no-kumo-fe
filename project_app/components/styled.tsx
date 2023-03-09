@@ -138,6 +138,15 @@ export const StyledContainer = styled.div`
 
 `;
 
+export const StyledWrapper = styled.section`
+  position: absolute;
+  top: 176px;
+  width: 18.99px;
+  height: 18.73px;
+  left: 970px;
+`;
+
+
 
 
 

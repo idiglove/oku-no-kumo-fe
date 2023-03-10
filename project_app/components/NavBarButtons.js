@@ -26,7 +26,6 @@ const Container = styled.div`
   top:48px;
  
   
-  
  Button{
   width: 140px;
   margin: 20px;

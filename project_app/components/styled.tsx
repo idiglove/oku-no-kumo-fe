@@ -37,19 +37,17 @@ right: 0%;
 top: 94.65%;
 bottom: 2.11%;
 background: #76AAA4;
-
 `;
 
 export const ImageContainer= styled.div`
 width: 229.86px,
 height: 67.5px,
-left: 1090px,
-
-top: 70px
-margin-top:60px,
+left: 100px,
+top:50px;
+margin-left:600px,
+position:absolute,
 box-sizing: border-box,
 z-index:1;
-
 `
 
 export const LeftContainer=styled.div`
@@ -57,12 +55,11 @@ top:240px;
 position:absolute;
 left:1127px;
 bottom:0;
-
 `
 
 export const RightContainer=styled.div`
-position:absolute,
-top: 250px,
+position:absolute;
+top:250px;
 
 `
 
@@ -105,8 +102,12 @@ text-transform:uppercase;
 color: white;
 z-index:1;
 `
-export const ProductContainer=styled.ul`
-color:white,
+export const ProductContainer=styled.div`
+
+color:white;
+font-family: Quicksand-Regular;
+ul{
+color:white;
 font-family:Quicksand-Regular,
 margin-top:60px,
 width: 140px,
@@ -116,6 +117,9 @@ list-style: none,
 display: block,
 font-weight: 500px,
 box-sizing: border-box,
+}
+
+
 `
 
 export const StyledContainer = styled.div`
@@ -135,7 +139,6 @@ export const StyledContainer = styled.div`
     font-family: "Quicksand", sans-serif;
     padding-left: 40px;
   }
-
 `;
 
 export const StyledWrapper = styled.section`
@@ -145,8 +148,5 @@ export const StyledWrapper = styled.section`
   height: 18.73px;
   left: 970px;
 `;
-
-
-
 
 

@@ -41,8 +41,10 @@ export default function Footer() {
       </ProductContainer>
 
       <ImageContainer>
-        <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
-        <h6>Copyright @2023</h6>
+        <div>
+          <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
+          <h6>Copyright @2023</h6>
+        </div>
       </ImageContainer>
       <RightContainer>
         <Image src="/together.png" width={296} height={120} alt="image" />

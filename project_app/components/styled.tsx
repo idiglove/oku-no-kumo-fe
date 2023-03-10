@@ -149,4 +149,24 @@ export const StyledWrapper = styled.section`
   left: 970px;
 `;
 
+export const Card= styled.div`
 
+width: 219.85px;
+height: 330px;
+left: 180px;
+top: 1833px;
+background: #FFFFFF;
+border-radius: 10px;`
+
+export const StyledText= styled.div`
+width: 152px;
+height: 86px;
+left: 34px;
+top: 169px;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+color: #000000;
+`

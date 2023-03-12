@@ -42,7 +42,7 @@ function Header() {
               position: "absolute",
               width: "629.05px",
               height: "471.51px",
-              top: "204px",
+
               left: "0",
               bottom: "0",
             }}
@@ -55,7 +55,7 @@ function Header() {
               width: "296px",
               height: "250px",
               left: "412.31px",
-              top: "422px",
+              bottom: "0",
             }}
           >
             <Image src="/Tent.png" fill="absolute" alt="image" />
@@ -66,8 +66,7 @@ function Header() {
               width: "244px",
               height: "109px",
               left: "477px",
-              top: "560px",
-              bottom: "78.57%",
+              bottom: "0",
               zIndex: "0",
             }}
           >
@@ -79,7 +78,7 @@ function Header() {
               width: "90.37px",
               height: "105.71px",
               left: "708.46px",
-              top: "557.57px",
+              bottom: "0",
             }}
           >
             <Image src="/fire.png" fill="absolute" alt="image" />
@@ -89,9 +88,7 @@ function Header() {
               position: "absolute",
               width: "651.27px",
               height: "464.65px",
-              left: "789.04px",
               bottom: "0",
-              top: "217.54px",
               right: "0",
               zIndex: "0",
             }}

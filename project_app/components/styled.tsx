@@ -1,24 +1,17 @@
 import styled from "styled-components";
 
 export const Box = styled.div`
-position:absolute;
-width: 1440px;
 height: 379px;
-left: -4px;
-top: 2712px;
 background: #353535;
 box-sizing:border-box;
-display:flex;
+position:relative;
 justify-content:space-between;
-  }
+  
   h6{
 display:block;
 text-align: right;
 margin-top: 0.1rem;
-width: 140px;
 height: 23px;
-left: "1090.14px",
-top: 2864px;
 font-family: 'Quicksand', sans-serif;
 font-style: normal;
 font-weight: 400;
@@ -31,47 +24,42 @@ color: #CECECE;
 
 
 export const Wrapper = styled.div`
-position: absolute;
-left: 0%;
-right: 0%;
-top: 94.65%;
-bottom: 2.11%;
 background: #76AAA4;
-
+bottom:0;
+position:absolute;
+height:50px;
+width:100%;
 `;
 
 export const ImageContainer= styled.div`
-width: 229.86px,
-height: 67.5px,
-left: 1090px,
 
-top: 70px
-margin-top:60px,
-box-sizing: border-box,
+height: 67.5px;
+left: 1090px;
+
+margin-top:60px;
+box-sizing: border-box;
 z-index:1;
 
 `
 
 export const LeftContainer=styled.div`
-top:240px;
 position:absolute;
-left:1127px;
+right:0;
 bottom:0;
-
+z-index:100;
 `
 
 export const RightContainer=styled.div`
-position:absolute,
-top: 250px,
-
+bottom:0;
+position:absolute;
+z-index:100;
 `
 
 export const AppBar = styled.div`
-position: absolute;
-width: 1440px;
+
 height: 700px;
-left: 0px;
-top: 0px;
+position:relative;
+
 background: #353535;
 `
 export const Container= styled.div`
@@ -90,11 +78,11 @@ export const Container= styled.div`
 `;
 
 export const Typography = styled.p`
-position:absolute;
-width: 521px;
+
+
 height: 86px;
 left: 486px;
-top: 368px;
+
 font-family: 'Rubik';
 font-style: normal;
 font-weight: 700;
@@ -106,26 +94,25 @@ color: white;
 z-index:1;
 `
 export const ProductContainer=styled.ul`
-color:white,
-font-family:Quicksand-Regular,
-margin-top:60px,
-width: 140px,
-margin-left: 40px,
-top: 2777px,
-list-style: none,
-display: block,
-font-weight: 500px,
-box-sizing: border-box,
+color:white;
+font-family:Quicksand-Regular;
+margin-top:60px;
+width: 140px;
+margin-left: 40px;
+
+list-style: none;
+display: block;
+font-weight: 500px;
+box-sizing: border-box;
 `
 
 export const StyledContainer = styled.div`
   input {
     box-sizing: border-box;
-    position: absolute;
-    width: 614px;
+   
     height: 67px;
     left: 400px;
-    top: 150px;
+  
     color: black;
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -139,9 +126,6 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledWrapper = styled.section`
-  position: absolute;
-  top: 176px;
-  width: 18.99px;
   height: 18.73px;
   left: 970px;
 `;

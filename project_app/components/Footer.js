@@ -29,7 +29,7 @@ export default function Footer() {
         <Image src="/right.png" alt="love" width={312} height={160} />
       </LeftContainer>
       <Wrapper>
-        <Image src="/end.png" alt="love" width={1440} height={72.7} />
+        <Image src="/end.png" alt="love" fill />
       </Wrapper>
     </Box>
   );

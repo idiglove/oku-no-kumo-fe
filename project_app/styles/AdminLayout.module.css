@@ -1,0 +1,19 @@
+.adminLayout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #353535;
+}
+
+.adminContent {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centers content horizontally */
+  align-items: center; /* centers content vertically */
+}
+
+.floatImage {
+  position: absolute;
+}

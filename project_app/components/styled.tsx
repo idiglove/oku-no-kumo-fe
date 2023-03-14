@@ -32,13 +32,12 @@ width:100%;
 `;
 
 export const ImageContainer= styled.div`
-
-height: 67.5px;
-left: 1090px;
+display: flex;
+    position: absolute;
+    right: 0%;
 
 margin-top:60px;
-box-sizing: border-box;
-z-index:1;
+
 
 `
 
@@ -97,9 +96,8 @@ export const ProductContainer=styled.ul`
 color:white;
 font-family:Quicksand-Regular;
 margin-top:60px;
-width: 140px;
-margin-left: 40px;
 
+margin-left: 40px;
 list-style: none;
 display: block;
 font-weight: 500px;
@@ -109,10 +107,8 @@ box-sizing: border-box;
 export const StyledContainer = styled.div`
   input {
     box-sizing: border-box;
-   
+    left:100%;
     height: 67px;
-    left: 400px;
-  
     color: black;
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -126,8 +122,10 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledWrapper = styled.section`
-  height: 18.73px;
-  left: 970px;
+position:absolute;
+  height: 18.67px;
+  width:18.67px;
+
 `;
 
 

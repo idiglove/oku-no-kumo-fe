@@ -19,13 +19,11 @@ function NavBarButtons() {
 
 const Container = styled.div`
   box-sizing: border-box;
-  z-index: 1;
 
   Button {
     margin: 20px;
     height: 46px;
-
-    right: 40px;
+    left: 30%;
     text-transform: capitalize;
     font-family: "Rubik", sans-serif;
     text-transform: capitalize;
@@ -37,7 +35,6 @@ const Container = styled.div`
 
   p {
     height: 24px;
-
     font-family: "Rubik", sans-serif;
     font-style: normal;
     font-weight: 500;

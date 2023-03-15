@@ -144,13 +144,14 @@ export const StyledWrapper = styled.section`
 `;
 
 export const Card= styled.div`
-background:white;
+
+
 width: 220px;
 height: 330px;
 margin-top:40px;
 bottom:10px;
 border: 2px solid #000000;
-background:white;
+background:#f5f5df;
 border-radius: 10px;`
 
 export const StyledText= styled.div`

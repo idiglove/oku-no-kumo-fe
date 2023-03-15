@@ -4,6 +4,7 @@ import CardActions from "@mui/material/CardActions";
 import { Card, StyledText } from "./styled";
 
 function CardComponent() {
+  // @todo - alt for the images will be coming from the BE
   return (
     <Card>
       <div>

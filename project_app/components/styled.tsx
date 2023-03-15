@@ -1,23 +1,22 @@
 import styled from "styled-components";
 
 export const Box = styled.div`
-position:absolute;
 width: 1440px;
-height: 379px;
-left: -4px;
-top: 2712px;
 background: #353535;
+left: -4px;
+position:absolute;
+height: 379px;
+top: 2712px;
 box-sizing:border-box;
 display:flex;
 justify-content:space-between;
-  }
   h6{
 display:block;
 text-align: right;
-margin-top: 0.1rem;
+margin-top: 0.2rem;
 width: 140px;
 height: 23px;
-left: "1090.14px",
+left: "1090.14px";
 top: 2864px;
 font-family: 'Quicksand', sans-serif;
 font-style: normal;
@@ -40,14 +39,13 @@ background: #76AAA4;
 `;
 
 export const ImageContainer= styled.div`
-width: 229.86px,
-height: 67.5px,
-left: 100px,
+width: 229.86px;
+height: 67.5px;
+left: 100px;
 top:50px;
-margin-left:600px,
-position:absolute,
-box-sizing: border-box,
-z-index:1;
+margin-left:600px;
+box-sizing: border-box;
+margin-top:30px;
 `
 
 export const LeftContainer=styled.div`
@@ -104,20 +102,16 @@ z-index:1;
 `
 export const ProductContainer=styled.div`
 
-color:white;
-font-family: Quicksand-Regular;
-ul{
-color:white;
-font-family:Quicksand-Regular,
-margin-top:60px,
-width: 140px,
-margin-left: 40px,
-top: 2777px,
-list-style: none,
-display: block,
-font-weight: 500px,
-box-sizing: border-box,
-}
+  color:white;
+font-family:Quicksand-Regular;
+margin-top:60px;
+width: 140px;
+margin-left: 40px;
+top: 2777px;
+list-style: none;
+display: block;
+font-weight: 500px;
+box-sizing: border-box; 
 
 
 `
@@ -150,20 +144,24 @@ export const StyledWrapper = styled.section`
 `;
 
 export const Card= styled.div`
-
-width: 219.85px;
+background:white;
+width: 220px;
 height: 330px;
-left: 180px;
-top: 1833px;
-background: #FFFFFF;
+margin-top:40px;
+bottom:10px;
+border: 2px solid #000000;
+background:white;
 border-radius: 10px;`
 
 export const StyledText= styled.div`
 width: 152px;
 height: 86px;
-left: 34px;
+left: 44px;
 top: 169px;
 font-family: 'Rubik';
+text-align:center;
+margin-top:20px;
+padding-left:30px;
 font-style: normal;
 font-weight: 400;
 font-size: 12px;

@@ -1,21 +1,35 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/AdminLayout.module.css";
+import styled from "styled-components";
 
 export default function AdminLayout(props) {
   return (
-    <div className={styles.adminLayout}>
-      <Image
-        src="/logo.svg"
-        width={227.77}
-        height={150}
-        left={50}
-        right={50}
-        alt="Ain't Board Logo"
-        className={styles.floatImage}
-      />
-
-      <div className={styles.adminContent}>{props.children}</div>
-    </div>
+    <>
+      <ImageContainer>
+        <Image
+          src="/logo.svg"
+          width={227.77}
+          height={150}
+          alt="Ain't Board Logo"
+        />
+        <Content>{props.children}</Content>
+      </ImageContainer>
+    </>
   );
 }
+
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #353535;
+`;
+
+const Content = styled.div`
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

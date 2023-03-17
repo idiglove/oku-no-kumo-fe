@@ -34,7 +34,7 @@ const Container = styled.div`
     text-transform: capitalize;
     font-family: "Rubik", sans-serif;
     text-transform: capitalize;
-    background: #353535;
+    background-color: #353535;
     font-style: normal;
     border: 2px solid #ffffff;
     border-radius: 8px;

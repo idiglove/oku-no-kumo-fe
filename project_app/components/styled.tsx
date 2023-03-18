@@ -144,8 +144,6 @@ export const StyledWrapper = styled.section`
 `;
 
 export const Card= styled.div`
-
-
 width: 220px;
 height: 330px;
 margin-top:40px;

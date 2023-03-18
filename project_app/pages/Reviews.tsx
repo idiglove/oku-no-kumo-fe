@@ -5,9 +5,7 @@ export default function Main() {
     <div> <Container>
           <CardBox/>
         </Container>  </div>
-
-   
-    
+ 
       
   );
 }

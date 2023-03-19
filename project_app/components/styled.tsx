@@ -25,7 +25,6 @@ color: #CECECE;
 
 export const Wrapper = styled.div`
 background: #76AAA4;
-<<<<<<< HEAD
 bottom:0;
 position:absolute;
 height:50px;
@@ -40,26 +39,12 @@ display: flex;
 margin-top:60px;
 
 
-=======
-`;
-
-export const ImageContainer= styled.div`
-width: 229.86px,
-height: 67.5px,
-left: 100px,
-top:50px;
-margin-left:600px,
-position:absolute,
-box-sizing: border-box,
-z-index:1;
->>>>>>> main
 `
 
 export const LeftContainer=styled.div`
 position:absolute;
 right:0;
 bottom:0;
-<<<<<<< HEAD
 z-index:100;
 `
 
@@ -67,14 +52,6 @@ export const RightContainer=styled.div`
 bottom:0;
 position:absolute;
 z-index:100;
-=======
-`
-
-export const RightContainer=styled.div`
-position:absolute;
-top:250px;
-
->>>>>>> main
 `
 
 export const AppBar = styled.div`
@@ -128,10 +105,12 @@ box-sizing: border-box;
 `
 
 export const StyledContainer = styled.div`
+position:relative;
+left:340px;
   input {
     box-sizing: border-box;
-    left:100%;
-    height: 67px;
+    width: 614px;
+     height: 67px; 
     color: black;
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -139,7 +118,7 @@ export const StyledContainer = styled.div`
     border-radius: 10px;
     font-size: 1.2rem;
     font-family: "Quicksand", sans-serif;
-    padding-left: 40px;
+   
   }
 `;
 

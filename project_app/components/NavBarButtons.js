@@ -23,7 +23,7 @@ const Container = styled.div`
   Button {
     margin: 20px;
     height: 46px;
-    left: 30%;
+    left: 26%;
     text-transform: capitalize;
     font-family: "Rubik", sans-serif;
     text-transform: capitalize;

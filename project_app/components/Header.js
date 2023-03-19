@@ -29,10 +29,10 @@ function Header() {
             </div>
           </div>
           <div>
-            <ToolBar />
+            <NavBarButtons />
           </div>
           <div>
-            <NavBarButtons />
+            <ToolBar />
           </div>
         </Container>
         <>

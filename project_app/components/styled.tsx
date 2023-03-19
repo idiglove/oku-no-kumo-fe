@@ -25,6 +25,7 @@ color: #CECECE;
 
 export const Wrapper = styled.div`
 background: #76AAA4;
+<<<<<<< HEAD
 bottom:0;
 position:absolute;
 height:50px;
@@ -39,12 +40,26 @@ display: flex;
 margin-top:60px;
 
 
+=======
+`;
+
+export const ImageContainer= styled.div`
+width: 229.86px,
+height: 67.5px,
+left: 100px,
+top:50px;
+margin-left:600px,
+position:absolute,
+box-sizing: border-box,
+z-index:1;
+>>>>>>> main
 `
 
 export const LeftContainer=styled.div`
 position:absolute;
 right:0;
 bottom:0;
+<<<<<<< HEAD
 z-index:100;
 `
 
@@ -52,6 +67,14 @@ export const RightContainer=styled.div`
 bottom:0;
 position:absolute;
 z-index:100;
+=======
+`
+
+export const RightContainer=styled.div`
+position:absolute;
+top:250px;
+
+>>>>>>> main
 `
 
 export const AppBar = styled.div`
@@ -118,7 +141,6 @@ export const StyledContainer = styled.div`
     font-family: "Quicksand", sans-serif;
     padding-left: 40px;
   }
-
 `;
 
 export const StyledWrapper = styled.section`
@@ -127,8 +149,5 @@ position:absolute;
   width:18.67px;
 
 `;
-
-
-
 
 

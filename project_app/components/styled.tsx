@@ -36,7 +36,6 @@ display: flex;
     position: absolute;
     right: 0%;
 
-margin-top:60px;
 
 
 `
@@ -93,10 +92,10 @@ color: white;
 z-index:1;
 `
 export const ProductContainer=styled.ul`
+
 color:white;
 font-family:Quicksand-Regular;
 margin-top:60px;
-
 margin-left: 40px;
 list-style: none;
 display: block;

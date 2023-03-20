@@ -31,13 +31,13 @@ export default function Footer() {
   return (
     <Box>
       <ProductContainer>
-        <div>
-          {titles.map((title) => (
-            <ul key={title}>
-              <Link href={title.link}>{title.name}</Link>
-            </ul>
-          ))}
-        </div>
+        {titles.map((title) => (
+          <ul key={title}>
+            <Link href={title.link} style={{ color: "white" }}>
+              {title.name}
+            </Link>
+          </ul>
+        ))}
       </ProductContainer>
 
       <ImageContainer>

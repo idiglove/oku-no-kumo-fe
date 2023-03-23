@@ -2,11 +2,11 @@ import CardBox from "../components/CardBox";
 import styled from "styled-components";
 export default function Main() {
   return (
-    <div> <Container>
+    <div> 
+      <Container>
           <CardBox/>
-        </Container>  </div>
- 
-      
+        </Container> 
+         </div>
   );
 }
 const Container=styled.div`

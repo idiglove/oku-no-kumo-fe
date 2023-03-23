@@ -1,9 +1,44 @@
 import styled from "styled-components";
 
-export const Box = styled.div`
-height: 379px;
-background: #353535;
+
+export const AppBar = styled.div`
+
+/* width: 100%;
+height: 700px;
+left: 0px;
+top: 0px;
+background: #353535; */
+
+ position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  background: #353535;
+
+`
+export const Container= styled.div`
+  Button{
+   width: 144px;
+   margin:20px;
+   height: 44px;
+   border:2px;
+   background: #ffffff;
+   font-family: 'Rubik', sans-serif;
+   font-weight:400;
+   text-transform:capitalize;
+   border-radius: 10px;
+   color: black; 
+  }
+`;
+
+
+
+
+export const FooterBox = styled.div`
 position:relative;
+background: #353535;
+
 `;
 
 
@@ -45,25 +80,7 @@ position:absolute;
 z-index:100;
 `
 
-export const AppBar = styled.div`
-height: 700px;
-position:relative;
-background: #353535;
-`
-export const Container= styled.div`
-  Button{
-   width: 144px;
-   margin:20px;
-   height: 44px;
-   border:2px;
-   background: #ffffff;
-   font-family: 'Rubik', sans-serif;
-   font-weight:400;
-   text-transform:capitalize;
-   border-radius: 10px;
-   color: black; 
-  }
-`;
+
 
 export const Typography = styled.p`
 

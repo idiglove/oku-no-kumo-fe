@@ -9,7 +9,7 @@ function Header() {
   return (
     <>
       <AppBar>
-        <Container maxWidth="xl">
+        <Container>
           <div>
             <Image
               src="/logo.svg"

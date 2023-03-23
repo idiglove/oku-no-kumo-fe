@@ -1,5 +1,5 @@
 import {
-  Box,
+  FooterBox,
   Wrapper,
   ImageContainer,
   LeftContainer,
@@ -29,7 +29,7 @@ export default function Footer() {
     },
   ];
   return (
-    <Box>
+    <FooterBox>
       <ProductContainer>
         {titles.map((title) => (
           <ul key={title}>
@@ -42,7 +42,6 @@ export default function Footer() {
           </ul>
         ))}
       </ProductContainer>
-
       <ImageContainer>
         <div>
           <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
@@ -59,6 +58,6 @@ export default function Footer() {
       <Wrapper>
         <Image src="/end.png" alt="love" fill />
       </Wrapper>
-    </Box>
+    </FooterBox>
   );
 }

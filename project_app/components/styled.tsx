@@ -3,23 +3,7 @@ import styled from "styled-components";
 export const Box = styled.div`
 height: 379px;
 background: #353535;
-box-sizing:border-box;
 position:relative;
-justify-content:space-between;
-  
-  h6{
-display:block;
-text-align: right;
-margin-top: 0.1rem;
-height: 23px;
-font-family: 'Quicksand', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 0.67em;
-line-height: 22px;
-letter-spacing: 0.025em;
-color: #CECECE;
-  }
 `;
 
 
@@ -32,11 +16,19 @@ width:100%;
 `;
 
 export const ImageContainer= styled.div`
-display: flex;
-    position: absolute;
-    right: 0%;
+display:flex;
+position:absolute;
+right:0;
+top:2;
 
-
+  h6{
+height: 10px;
+font-family: 'Quicksand', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 0.67em;
+color: #CECECE;
+  }
 
 `
 
@@ -54,10 +46,8 @@ z-index:100;
 `
 
 export const AppBar = styled.div`
-
 height: 700px;
 position:relative;
-
 background: #353535;
 `
 export const Container= styled.div`
@@ -92,7 +82,10 @@ color: white;
 z-index:1;
 `
 export const ProductContainer=styled.ul`
-
+ul{
+  color:white;
+  font-family:Quicksand-Regular;
+}
 color:white;
 font-family:Quicksand-Regular;
 margin-top:60px;

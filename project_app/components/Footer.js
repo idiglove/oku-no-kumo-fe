@@ -33,7 +33,10 @@ export default function Footer() {
       <ProductContainer>
         {titles.map((title) => (
           <ul key={title}>
-            <Link href={title.link} style={{ color: "white" }}>
+            <Link
+              href={title.link}
+              style={{ color: "white", textDecoration: "none" }}
+            >
               {title.name}
             </Link>
           </ul>
@@ -43,6 +46,7 @@ export default function Footer() {
       <ImageContainer>
         <div>
           <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
+
           <h6>Copyright @2023</h6>
         </div>
       </ImageContainer>

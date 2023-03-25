@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+import { GlobalStateContext } from '../pages/_app';
 import styled from "styled-components";
 //import styles from "../styles/AdminLogin.module.css";
 import { CFormInput, CFormFloating, CFormLabel } from "@coreui/react";
@@ -7,100 +8,116 @@ import "@coreui/coreui/dist/css/coreui.min.css";
 
 import Swal from "sweetalert2";
 
+import { useRouter } from 'next/router';
+
 export default function AdminLogin() {
-  const [emailOrUsername, setEmailOrUsername] = useState("");
-  const [password, setPassword] = useState("");
+    const router = useRouter();
+    const { token, setToken } = useContext(GlobalStateContext);
+    const [emailOrUsername, setEmailOrUsername] = useState("");
+    const [password, setPassword] = useState("");
 
-  async function handleLoginClick() {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/admin/auth`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          emailOrUsername: emailOrUsername,
-          password: password,
-        }),
-      }
-    );
+    useEffect(() => {
+        console.log(token);
+        if (token != null) {
+            // Verify that token is not tampered with using api
+            router.push('adminpage');
+        }
+    }, [])
 
-    const resBody = await response.json();
+    async function handleLoginClick() {
+        const response = await fetch(
+            `${process.env.NEXT_PUBLIC_API_URL}/api/admin/auth`,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    emailOrUsername: emailOrUsername,
+                    password: password,
+                }),
+            }
+        );
 
-    console.log(resBody);
 
-    if (!response.ok) {
-      Swal.fire({
-        title: resBody.heading,
-        text: resBody.message,
-        icon: "error",
-      });
-      return;
+        const resBody = await response.json();
+
+
+        if (!response.ok) {
+            Swal.fire({
+                title: resBody.heading,
+                text: resBody.message,
+                icon: "error",
+            });
+            return;
+        } else {
+            // Successfully logged in
+            //TO DO: Persist token between browser sessiosn. Send token through http only cookie to secure against xss, then use samesite strict to protect against csrf. this is instead of storing in local storage.
+            const tokenReceived = resBody.access;
+            setToken(tokenReceived);
+            router.push('/adminpage');
+
+        }
+
     }
 
-    // Successfully logged in
-    //TODO: store the jwt in resBody.access in local storage and the state and redirect to admin dashboard/page
-    console.log(resBody);
-  }
+    return (
+        <LoginLayout>
+            <AdminLoginTitle>Admin Login</AdminLoginTitle>
 
-  return (
-    <LoginLayout>
-      <AdminLoginTitle>Admin Login</AdminLoginTitle>
+            <AdminLoginDialog>
+                <DialogTitle>Login</DialogTitle>
 
-      <AdminLoginDialog>
-        <DialogTitle>Login</DialogTitle>
+                <FormContainer>
+                    <DialogText>Welcome!</DialogText>
 
-        <FormContainer>
-          <DialogText>Welcome!</DialogText>
+                    <CFormFloating style={{ marginBottom: '1rem' }}>
+                        <CFormInput
+                            type="email"
+                            id="emailOrUsername"
+                            placeholder="name@example.com"
+                            value={emailOrUsername}
+                            onChange={(e) => {
+                                setEmailOrUsername(e.target.value);
+                            }}
+                            style={{ backgroundColor: "#2B2B2B", color: "#FFFFFF" }}
+                        />
+                        <CFormLabel htmlFor="floatingInput" style={{ color: "gray" }}>
+                            Username / Email
+                        </CFormLabel>
+                    </CFormFloating>
+                    <CFormFloating>
+                        <CFormInput
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => {
+                                setPassword(e.target.value);
+                            }}
+                            style={{ backgroundColor: "#2B2B2B", color: "#FFFFFF" }}
+                        />
+                        <CFormLabel
+                            htmlFor="exampleFormControlTextarea1"
+                            style={{ color: "gray" }}
+                        >
+                            Password
+                        </CFormLabel>
+                    </CFormFloating>
 
-          <CFormFloating style={{marginBottom: '1rem'}}>
-            <CFormInput
-              type="email"
-              id="emailOrUsername"
-              placeholder="name@example.com"
-              value={emailOrUsername}
-              onChange={(e) => {
-                setEmailOrUsername(e.target.value);
-              }}
-              style={{ backgroundColor: "#2B2B2B", color: "#FFFFFF" }}
-            />
-            <CFormLabel htmlFor="floatingInput" style={{ color: "gray" }}>
-              Username / Email
-            </CFormLabel>
-          </CFormFloating>
-          <CFormFloating>
-            <CFormInput
-              type="password"
-              id="adminPassword"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-              style={{ backgroundColor: "#2B2B2B", color: "#FFFFFF" }}
-            />
-            <CFormLabel
-              htmlFor="exampleFormControlTextarea1"
-              style={{ color: "gray" }}
-            >
-              Password
-            </CFormLabel>
-          </CFormFloating>
-
-          <LoginButtonContainer>
-            <LoginButton onClick={handleLoginClick}>
-              Login
-            </LoginButton>
-          </LoginButtonContainer>
-        </FormContainer>
-      </AdminLoginDialog>
-    </LoginLayout>
-  );
+                    <LoginButtonContainer>
+                        <LoginButton onClick={handleLoginClick}>
+                            Login
+                        </LoginButton>
+                    </LoginButtonContainer>
+                </FormContainer>
+            </AdminLoginDialog>
+        </LoginLayout>
+    );
 }
 
 const LoginLayout = styled.div`
-width: 100%;
+  width: 100%;
 text-align: center;
 border-radius: 0.625rem;
 }

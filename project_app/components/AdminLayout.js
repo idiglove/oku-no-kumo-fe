@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export default function AdminLayout(props) {
   return (
-    <>
+    <AdminLayoutStyle>
       <ImageContainer>
         <Image
           src="/logo.svg"
@@ -14,7 +14,7 @@ export default function AdminLayout(props) {
         />
         <Content>{props.children}</Content>
       </ImageContainer>
-    </>
+    </AdminLayoutStyle>
   );
 }
 
@@ -32,4 +32,12 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const AdminLayoutStyle = styled.div`
+  display: flex;
+  flex-direciton: column;
+  height: 100%;
+width: 100%;
+background-color: #353535;
 `;

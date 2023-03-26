@@ -10,12 +10,15 @@ export default function CardBox() {
       <ReviewsBox>
         <Image
           src="/path.png"
-          layout="fill"
+          fill="absolute"
           objectFit="cover"
-          objectPosition="center"
           alt="picture of the background"
         />
-        <Image src="/left_review.png" width={12} height={12} alt="image" />
+        <div
+          style={{ position: "absolute", left: "0%", background: "#73D1E9" }}
+        ></div>
+
+        <Image src="/left_review.png" width={20} height={20} alt="image" />
         <Grid container spacing={2} style={{ display: "flex" }}>
           {cards.map((card) => (
             <Grid item key={card} md={3}>
@@ -23,7 +26,7 @@ export default function CardBox() {
             </Grid>
           ))}
         </Grid>
-        <Image src="/right_review.png" width={12} height={12} alt="image" />
+        <Image src="/right_review.png" width={20} height={20} alt="image" />
       </ReviewsBox>
     </>
   );

@@ -166,8 +166,8 @@ color: #000000;
 `
 export const ReviewsBox= styled.div`
 position:absolute;
-display:flex;
-background-image: url('./path.png');
+display: flex;
+justify-content: center;
 width: 1440px;
 height: 700px;
 left: 0px;

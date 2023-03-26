@@ -101,8 +101,7 @@ color: white;
 z-index:1;
 `
 export const ProductContainer=styled.div`
-
-  color:white;
+color:white;
 font-family:Quicksand-Regular;
 margin-top:60px;
 width: 140px;
@@ -112,7 +111,6 @@ list-style: none;
 display: block;
 font-weight: 500px;
 box-sizing: border-box; 
-
 
 `
 
@@ -146,7 +144,6 @@ export const StyledWrapper = styled.section`
 export const Card= styled.div`
 width: 220px;
 height: 330px;
-margin-top:40px;
 bottom:10px;
 border: 2px solid #000000;
 background:#f5f5df;
@@ -167,3 +164,14 @@ font-size: 12px;
 line-height: 14px;
 color: #000000;
 `
+export const ReviewsBox= styled.div`
+position:absolute;
+display:flex;
+background-image: url('./path.png');
+width: 1440px;
+height: 700px;
+left: 0px;
+top: 682px;
+background: #353535;`
+  
+

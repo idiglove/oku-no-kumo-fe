@@ -101,7 +101,10 @@ color: white;
 z-index:1;
 `
 export const ProductContainer=styled.div`
-color:white;
+ul{
+  color: white;
+}
+ color:white;
 font-family:Quicksand-Regular;
 margin-top:60px;
 width: 140px;
@@ -110,7 +113,8 @@ top: 2777px;
 list-style: none;
 display: block;
 font-weight: 500px;
-box-sizing: border-box; 
+box-sizing: border-box;  
+
 
 `
 
@@ -147,7 +151,10 @@ height: 330px;
 bottom:10px;
 border: 2px solid #000000;
 background:#f5f5df;
-border-radius: 10px;`
+border-radius: 10px;
+`
+
+
 
 export const StyledText= styled.div`
 width: 152px;
@@ -166,12 +173,43 @@ color: #000000;
 `
 export const ReviewsBox= styled.div`
 position:absolute;
-display: flex;
-justify-content: center;
-width: 1440px;
-height: 700px;
+display:flex;
+width:100%;
 left: 0px;
-top: 682px;
-background: #353535;`
+top: 24%;
+min-height: 67rem;
+background-color: rgb(53, 53, 53);
+z-index: 10;
+ 
+` 
   
 
+export const LeftWaterContainer=styled.div`
+position: absolute;
+left: 0%;
+right: 92.8%;
+top: 48.41%;
+bottom: 40.47%;
+background: #73D1E9;
+transform: matrix(1, 0, 0, -1, 0, 0);
+`
+
+
+export const RightWaterContainer=styled.div`
+position: absolute;
+left: 90.83%;
+right: 0%;
+top: 46.23%;
+bottom: 42.35%;
+background: #73D1E9;
+transform: matrix(1, 0, 0, -1, 0, 0);
+`
+
+
+export const MazeContainer=styled.div`
+position:absolute;
+width: 1014.05px;
+height: 1005.01px;
+left: 212.85px;
+top: 50px;
+`

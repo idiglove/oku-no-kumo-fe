@@ -1,7 +1,6 @@
 import Footer from "./Footer";
 import Header from "./Header";
 import Reviews from "./Reviews";
-import Challenges from "./Challenges";
 import styled from "styled-components";
 
 function Layout() {
@@ -13,9 +12,7 @@ function Layout() {
       <div>
         <Reviews />
       </div>
-      <div>
-        <Challenges />
-      </div>
+
       <div>
         <Footer />
       </div>

@@ -21,12 +21,6 @@ export default function CardBox() {
             alt="picture of the background"
           />
         </MazeContainer>
-
-        {/* <div
-          style={{ position: "absolute", left: "0%", background: "#73D1E9" }}
-        >
-          <Image src="/left_review.png" width={20} height={20} alt="image" />
-        </div> */}
         <LeftWaterContainer>
           <Image
             src="/left_review.png"

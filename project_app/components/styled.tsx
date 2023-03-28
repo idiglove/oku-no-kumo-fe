@@ -188,7 +188,6 @@ export const LeftWaterContainer=styled.div`
 position: absolute;
 left: 0%;
 right: 92.8%;
-top: 48.41%;
 bottom: 40.47%;
 background: #73D1E9;
 transform: matrix(1, 0, 0, -1, 0, 0);
@@ -199,7 +198,6 @@ export const RightWaterContainer=styled.div`
 position: absolute;
 left: 90.83%;
 right: 0%;
-top: 46.23%;
 bottom: 42.35%;
 background: #73D1E9;
 transform: matrix(1, 0, 0, -1, 0, 0);

@@ -1,9 +1,8 @@
 import Button from "@mui/material/Button";
-import Wrapper from "@mui/material/Button";
 import NavBarButtons from "../components/NavBarButtons";
 import Image from "next/image";
 import styled from "styled-components";
-import Footer from "../components/Footer";
+
 
 function About() {
   
@@ -23,14 +22,14 @@ function About() {
             />
             <NavBarButtons/>
            <div style={{display:"flex",flex: "1 1 0%",justifyContent:"flex-end",margin:"30px"}}>
-         <Button style={{padding:"10px"}}>Log In </Button>
+         <Button style={{padding:"10px",width:"147px"}}>Log In </Button>
          <Button>Join Us </Button>
            </div>
       </HeaderContainer>
       <div
             style={{
               position: "absolute",
-              width: "629.05px",
+              width: "435.05px",
               height: "400.51px",
               top: "162px",
               left: "0",
@@ -42,8 +41,8 @@ function About() {
           <div
             style={{
               position: "absolute",
-              width: "296px",
-              height: "200px",
+              width: "267px",
+              height: "198px",
               left: "412.31px",
               top: "360px",
             }}
@@ -52,26 +51,30 @@ function About() {
           </div>
              <div>
             <StyledText>About Us</StyledText>
-            <p style={{color:"white",zIndex:"10",textAlign:"center"}}>Be a part of the best boardgame community.
-Make reviews and strategies. Join challenges and earn powerups to get new avatars.</p>
+            <p style={{color:"white",zIndex:"100",textAlign:"center",position:"absolute",padding:"10px"}}>Be a part of the best boardgame community.
+<br/>Make reviews and strategies. Join challenges and earn powerups to get new avatars.</p>
       </div>
            <div
             style={{
-              position: "absolute",
-             
+            position:"absolute",
+              width: "451px",
               height: "400.65px",
-              left: "789.04px",
+              left: "1014px",
               bottom: "0",
               top: "162.54px",
-              right: "0",
-              zIndex: "100",
+              
+             
             }}
           >
             <Image src="/trees_right.png" layout="fill" alt="image" />
           </div>
       </NavBarWrapper>
-       
       </div>
+      <Wrapper>
+        <p>Were an interactive community of avid boardgamers - be it in sharing Reviews,<br/> participating and competing in Online Battles, achieving Challenges, and more. We want you to play more of your favorite board games with friends, family and even potential friends! We are in a very early stage of.....</p>
+      </Wrapper>
+     
+   
     </Container>
    
   )
@@ -108,4 +111,17 @@ text-transform: uppercase;
 position: relative;
 text-align: center;
 margin-top: 5rem;
+`
+
+const Wrapper= styled.div`
+      background-color: rgb(53, 53, 53);
+    font-family: Quicksand-Regular;
+   
+    color: white;
+    height:212px;
+    position:absolute;
+    padding: 0px 2rem 2rem;
+    text-align: center;
+    display:block;
+    box-sizing:border-box;
 `

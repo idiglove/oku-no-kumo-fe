@@ -13,7 +13,7 @@ export default function Footer() {
   const titles = [
     {
       name: "About",
-      link: "/about",
+      link: "/About",
     },
     {
       name: "FAQ",

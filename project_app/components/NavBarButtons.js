@@ -18,12 +18,9 @@ function NavBarButtons() {
 }
 
 const Container = styled.div`
-  position: absolute;
   box-sizing: border-box;
-  z-index: 1;
   height: 30px;
   left: 120px;
-  top: 48px;
 
   Button {
     width: 140px;

@@ -39,7 +39,6 @@ export default function Footer() {
           ))}
         </div>
       </ProductContainer>
-
       <ImageContainer>
         <div>
           <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />

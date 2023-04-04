@@ -23,7 +23,7 @@ function Layout() {
 export default Layout;
 
 const LayoutContainer = styled.div`
-  width: 1466px;
+  width: 100%;
   height: 2862px;
   box-sizing: border-box;
   position: absolute;

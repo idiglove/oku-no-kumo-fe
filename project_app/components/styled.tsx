@@ -1,31 +1,13 @@
 import styled from "styled-components";
 
 export const Box = styled.div`
-width: 1440px;
+width: 100%;
 background: #353535;
-left: -4px;
 position:absolute;
-height: 379px;
 top: 2712px;
 box-sizing:border-box;
 display:flex;
 justify-content:space-between;
-  h6{
-display:block;
-text-align: right;
-margin-top: 0.2rem;
-width: 140px;
-height: 23px;
-left: "1090.14px";
-top: 2864px;
-font-family: 'Quicksand', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 0.67em;
-line-height: 22px;
-letter-spacing: 0.025em;
-color: #CECECE;
-  }
 `;
 
 
@@ -42,21 +24,34 @@ export const ImageContainer= styled.div`
 width: 229.86px;
 height: 67.5px;
 left: 100px;
-top:50px;
 margin-left:600px;
 box-sizing: border-box;
 margin-top:30px;
+h6{
+  display:block;
+text-align: right;
+margin-top: 0.2rem;
+width: 140px;
+height: 23px;
+left: "1090.14px";
+top: 2864px;
+font-family: 'Quicksand', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 0.67em;
+line-height: 22px;
+letter-spacing: 0.025em;
+color: #CECECE;
+}
 `
 
 export const LeftContainer=styled.div`
 top:240px;
-position:absolute;
 left:1127px;
 bottom:0;
 `
 
 export const RightContainer=styled.div`
-position:absolute;
 top:250px;
 
 `
@@ -100,11 +95,11 @@ text-transform:uppercase;
 color: white;
 z-index:1;
 `
-export const ProductContainer=styled.div`
+export const ProductContainer=styled.ul`
 ul{
   color: white;
 }
- color:white;
+
 font-family:Quicksand-Regular;
 margin-top:60px;
 width: 140px;

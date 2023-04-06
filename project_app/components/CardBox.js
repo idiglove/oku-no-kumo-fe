@@ -16,8 +16,8 @@ export default function CardBox() {
         <MazeContainer>
           <Image
             src="/Maze.png"
-            fill="absolute"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             alt="picture of the background"
           />
         </MazeContainer>

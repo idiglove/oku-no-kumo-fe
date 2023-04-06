@@ -2,10 +2,12 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Reviews from "./Reviews";
 import styled from "styled-components";
+import Global, { GlobalStyle } from "../styles/global";
 
 function Layout() {
   return (
     <LayoutContainer>
+      <GlobalStyle />
       <div>
         <Header />
       </div>

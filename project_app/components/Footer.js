@@ -1,5 +1,5 @@
 import {
-  Box,
+  FooterBox,
   Wrapper,
   ImageContainer,
   LeftContainer,
@@ -29,15 +29,13 @@ export default function Footer() {
     },
   ];
   return (
-    <Box>
+    <FooterBox>
       <ProductContainer>
-        <div>
-          {titles.map((title) => (
-            <ul key={title}>
-              <Link href={title.link}>{title.name}</Link>
-            </ul>
-          ))}
-        </div>
+        {titles.map((title) => (
+          <ul key={title}>
+            <Link href={title.link}>{title.name}</Link>
+          </ul>
+        ))}
       </ProductContainer>
       <ImageContainer>
         <div>
@@ -52,8 +50,8 @@ export default function Footer() {
         <Image src="/right.png" alt="love" width={312} height={160} />
       </LeftContainer>
       <Wrapper>
-        <Image src="/end.png" alt="love" width={1440} height={72.7} />
+        <Image src="/end.png" alt="love" width={1440} height={60} />
       </Wrapper>
-    </Box>
+    </FooterBox>
   );
 }

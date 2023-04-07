@@ -1,23 +1,26 @@
 import styled from "styled-components";
 
-export const Box = styled.div`
-width: 100%;
-background: #353535;
-position:absolute;
+export const FooterBox = styled.div`
+position: relative;
+left:0;
+right:0;
+display: flex;
+justify-content: space-between;
+overflow-x: hidden;
+width:1440px;
 top: 2712px;
-box-sizing:border-box;
-display:flex;
-justify-content:space-between;
+height: 25rem;
+box-sizing: border-box;
+background-color: rgb(53, 53, 53);
 `;
 
 
 export const Wrapper = styled.div`
 position: absolute;
-left: 0%;
-right: 0%;
-top: 94.65%;
-bottom: 2.11%;
-background: #76AAA4;
+width: 100%;
+left: 0px;
+bottom: 0px;
+z-index: 0;
 `;
 
 export const ImageContainer= styled.div`
@@ -46,23 +49,32 @@ color: #CECECE;
 `
 
 export const LeftContainer=styled.div`
-top:240px;
-left:1127px;
-bottom:0;
+position: absolute;
+right: 0px;
+bottom: 3.6rem;
+z-index: 1;
 `
 
 export const RightContainer=styled.div`
-top:250px;
+position: absolute;
+left: 0px;
+bottom: 3.4rem;
+z-index: 1;
 
 `
 
 export const AppBar = styled.div`
-position: absolute;
+
+width: 100%;
+background-color: rgb(53, 53, 53);
+min-height: 35rem;
+position: relative;
+/* position: absolute;
 width: 1440px;
 height: 700px;
 left: 0px;
 top: 0px;
-background: #353535;
+background: #353535; */
 `
 export const Container= styled.div`
   Button{
@@ -95,20 +107,17 @@ text-transform:uppercase;
 color: white;
 z-index:1;
 `
-export const ProductContainer=styled.ul`
-ul{
-  color: white;
+export const ProductContainer=styled.div`
+ul {
+  list-style: none;
+  font-family: Quicksand-Regular;
+  display: block;
 }
 
-font-family:Quicksand-Regular;
-margin-top:60px;
-width: 140px;
-margin-left: 40px;
-top: 2777px;
-list-style: none;
-display: block;
-font-weight: 500px;
-box-sizing: border-box;  
+ul link{
+  margin-top: 0.5rem;
+  color: white;
+}
 
 
 `
@@ -167,14 +176,18 @@ line-height: 14px;
 color: #000000;
 `
 export const ReviewsBox= styled.div`
-position:absolute;
-display:flex;
-width:100%;
-left: 0px;
-top: 24%;
+
+
+width: 100%;
 min-height: 67rem;
 background-color: rgb(53, 53, 53);
+display:block;
+box-sizing: border-box;
 z-index: 10;
+left: 0px;
+right:0px;
+
+overflow: hidden;
  
 ` 
   

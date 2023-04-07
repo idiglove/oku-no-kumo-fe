@@ -67,7 +67,7 @@ export default function admin() {
                 <FormContainer>
 
                     <CFormFloating style={{ marginBottom: '1rem' }}>
-                        <CFormInput
+                        <StyledCFormInput
                             type="email"
                             id="emailOrUsername"
                             placeholder="Game Title"
@@ -75,34 +75,25 @@ export default function admin() {
                             onChange={(e) => {
                                 setGameTitle(e.target.value);
                             }}
-                            style={{ backgroundColor: "#2B2B2B", color: "#FFFFFF" }}
                         />
-                        <CFormLabel htmlFor="floatingInput" style={{ color: "gray" }}>
+                        <StyledCFormLabel htmlFor="floatingInput">
                             Game Title
-                        </CFormLabel>
+                        </StyledCFormLabel>
                     </CFormFloating>
                     <CFormFloating>
-                        <CFormTextarea
-                            type="textarea"
+                        <StyledCFormTextarea
                             id="gameDescription"
                             placeholder="Game Description"
                             value={gameDesc}
                             onChange={(e) => {
                                 setGameDesc(e.target.value);
                             }}
-                            style={{ 
-                                backgroundColor: "#2B2B2B", 
-                                color: "#FFFFFF",
-                                height: '20rem',
-                                verticalAlign: "top"
-                            }}
                         />
-                        <CFormLabel
+                        <StyledCFormLabel
                             htmlFor="exampleFormControlTextarea1"
-                            style={{ color: "gray" }}
                         >
                             Game Description
-                        </CFormLabel>
+                        </StyledCFormLabel>
                     </CFormFloating>
 
                     <LoginButtonContainer>
@@ -118,6 +109,31 @@ export default function admin() {
     </AdminLayout>
   )
 }
+
+const StyledCFormTextarea = styled(CFormTextarea)`
+  background-color: #2B2B2B;
+  color: #FFFFFF;
+  height: 20rem !important;
+
+  &:focus {
+    background-color: #2B2B2B;
+    color: #FFFFFF;
+  }
+`
+
+const StyledCFormInput = styled(CFormInput)`
+  background-color: #2B2B2B;
+  color: #FFFFFF;
+
+  &:focus {
+    background-color: #2B2B2B;
+    color: #FFFFFF;
+  }
+`
+
+const StyledCFormLabel = styled(CFormLabel)`
+  color: gray
+`
 
 const LoginLayout = styled.div`
   width: 100%;

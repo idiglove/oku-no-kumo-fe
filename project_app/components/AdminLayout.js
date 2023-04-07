@@ -5,15 +5,16 @@ import styled from "styled-components";
 export default function AdminLayout(props) {
   return (
     <AdminLayoutStyle>
-      <ImageContainer>
+        <LogoContainer>
         <Image
           src="/logo.svg"
           width={227.77}
           height={150}
           alt="Ain't Board Logo"
         />
+        </LogoContainer>
         <Content>{props.children}</Content>
-      </ImageContainer>
+
     </AdminLayoutStyle>
   );
 }
@@ -25,6 +26,11 @@ const ImageContainer = styled.div`
   width: 100%;
   background-color: #353535;
 `;
+
+const LogoContainer =styled.div`
+  position: absolute;
+  top: 0;
+`
 
 const Content = styled.div`
   flex-grow: 1;

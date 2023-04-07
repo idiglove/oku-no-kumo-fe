@@ -118,15 +118,15 @@ export default function AdminLogin() {
 
 const LoginLayout = styled.div`
   width: 100%;
-text-align: center;
-border-radius: 0.625rem;
+  text-align: center;
+  border-radius: 0.625rem;
 }
 `;
 
 const AdminLoginTitle = styled.span`
 color: #ffffff;
 line-height: 63.99px;
-font-family: "Rubik", sans-serif;
+font-family: 'Rubik', sans-serif;
 font-weight: 700;
 text-transform: uppercase;
 font-size: 2rem;
@@ -137,6 +137,10 @@ const AdminLoginDialog = styled.div`
   background-color: #234c4c;
   width: 30%;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const DialogTitle = styled.h3`
@@ -169,7 +173,7 @@ const LoginButton = styled.button`
   margin-top: 1rem;
   background-color: rgb(250, 250, 235);
   color: rgb(0, 0, 0);
-font-family: Rubik;
+  font-family: Rubik, sans-serif;
 border-radius: 0.625rem;
 font-size: 1.25rem;
   min-width: 10rem;

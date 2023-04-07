@@ -1,7 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import { GlobalStateContext } from '../pages/_app';
 import styled from "styled-components";
-//import styles from "../styles/AdminLogin.module.css";
 import { CFormInput, CFormFloating, CFormLabel } from "@coreui/react";
 
 import "@coreui/coreui/dist/css/coreui.min.css";
@@ -17,7 +16,6 @@ export default function AdminLogin() {
     const [password, setPassword] = useState("");
 
     useEffect(() => {
-        console.log(token);
         if (token != null) {
             // Verify that token is not tampered with using api
             router.push('adminpage');
@@ -72,7 +70,7 @@ export default function AdminLogin() {
                     <DialogText>Welcome!</DialogText>
 
                     <CFormFloating style={{ marginBottom: '1rem' }}>
-                        <CFormInput
+                        <StyledCFormInput
                             type="email"
                             id="emailOrUsername"
                             placeholder="name@example.com"
@@ -80,14 +78,14 @@ export default function AdminLogin() {
                             onChange={(e) => {
                                 setEmailOrUsername(e.target.value);
                             }}
-                            style={{ backgroundColor: "#2B2B2B", color: "#FFFFFF" }}
                         />
-                        <CFormLabel htmlFor="floatingInput" style={{ color: "gray" }}>
+                        <StyledCFormLabel htmlFor="floatingInput" 
+                        >
                             Username / Email
-                        </CFormLabel>
+                        </StyledCFormLabel>
                     </CFormFloating>
                     <CFormFloating>
-                        <CFormInput
+                        <StyledCFormInput
                             type="password"
                             id="adminPassword"
                             placeholder="Password"
@@ -95,14 +93,12 @@ export default function AdminLogin() {
                             onChange={(e) => {
                                 setPassword(e.target.value);
                             }}
-                            style={{ backgroundColor: "#2B2B2B", color: "#FFFFFF" }}
                         />
-                        <CFormLabel
+                        <StyledCFormLabel
                             htmlFor="exampleFormControlTextarea1"
-                            style={{ color: "gray" }}
                         >
                             Password
-                        </CFormLabel>
+                        </StyledCFormLabel>
                     </CFormFloating>
 
                     <LoginButtonContainer>
@@ -115,6 +111,21 @@ export default function AdminLogin() {
         </LoginLayout>
     );
 }
+
+const StyledCFormInput = styled(CFormInput)`
+  background-color: #2B2B2B;
+  color: #FFFFFF; 
+
+  &:focus {
+    background-color: #2B2B2B !important;
+    color: #FFFFFF; 
+  }
+`;
+
+const StyledCFormLabel = styled(CFormLabel)`
+  color: gray
+`;
+
 
 const LoginLayout = styled.div`
   width: 100%;

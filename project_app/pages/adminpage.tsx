@@ -11,8 +11,6 @@ export default function admin() {
     useEffect(() => {
         if (token == null) {
             router.push('/admin');
-        } else {
-
         }
     }, []);
 

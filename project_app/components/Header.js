@@ -2,48 +2,58 @@ import React from "react";
 import NavBarButtons from "./NavBarButtons";
 import ToolBar from "./ToolBar";
 import Button from "@mui/material/Button";
-import { Container, AppBar, Typography } from "./styled";
+import {
+  Container,
+  AppBar,
+  Typography,
+  NavBarWrapper,
+  HeaderButtons,
+  HomePageContainer,
+} from "./styled";
 import Image from "next/image";
 
 function Header() {
   return (
     <AppBar>
-      <Container maxWidth="xl">
-        <div>
-          <Image
-            src="/logo.svg"
-            width={227.77}
-            height={150}
-            left={50}
-            right={50}
-            alt="Ain't Board Logo"
-          />
-        </div>
-        <div style={{ marginLeft: "1000px" }}>
-          <div style={{ position: "absolute", top: "0", marginTop: "46px" }}>
+      <NavBarWrapper>
+        <Container>
+          <div>
+            <Image
+              src="/logo.svg"
+              width={227.77}
+              height={150}
+              left={50}
+              right={50}
+              alt="Ain't Board Logo"
+            />
+          </div>
+          <HeaderButtons>
             <Button>Login</Button>
             <Button style={{ backgroundColor: "rgb(250, 250, 235)" }}>
               Join Us!
             </Button>
+          </HeaderButtons>
+          <div>
+            <ToolBar />
           </div>
-        </div>
-        <div>
-          <ToolBar />
-        </div>
-        <div>
-          <NavBarButtons />
-        </div>
-      </Container>
-      <>
+          <div>
+            <NavBarButtons />
+          </div>
+        </Container>
+      </NavBarWrapper>
+      <HomePageContainer>
+        {/* <InnerContainer></InnerContainer> */}
         <Typography>Interactive BoardGame Community</Typography>
         <div
           style={{
             position: "absolute",
-            width: "629.05px",
-            height: "471.51px",
-            top: "204px",
-            left: "0",
+            width: "25rem",
+            zIndex: "0",
+            left: "0px",
             bottom: "0",
+            boxSizing: "borderBox",
+            width: "630px",
+            height: "472px",
           }}
         >
           <Image src="/trees_left.png" fill="none" alt="image" />
@@ -54,7 +64,7 @@ function Header() {
             width: "296px",
             height: "250px",
             left: "412.31px",
-            top: "422px",
+            top: "440px",
           }}
         >
           <Image src="/Tent.png" fill="absolute" alt="image" />
@@ -65,7 +75,7 @@ function Header() {
             width: "244px",
             height: "109px",
             left: "477px",
-            top: "560px",
+            top: "572px",
             bottom: "78.57%",
             zIndex: "0",
           }}
@@ -78,7 +88,7 @@ function Header() {
             width: "90.37px",
             height: "105.71px",
             left: "708.46px",
-            top: "557.57px",
+            top: "580px",
           }}
         >
           <Image src="/fire.png" fill="absolute" alt="image" />
@@ -86,18 +96,16 @@ function Header() {
         <div
           style={{
             position: "absolute",
-            width: "651.27px",
-            height: "464.65px",
-            left: "789.04px",
+            width: "651px",
+            height: "466px",
             bottom: "0",
-            top: "217.54px",
             right: "0",
             zIndex: "0",
           }}
         >
           <Image src="/trees_right.png" fill="none" alt="image" />
         </div>
-      </>
+      </HomePageContainer>
     </AppBar>
   );
 }

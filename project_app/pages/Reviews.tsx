@@ -24,8 +24,15 @@ export default function PricingContent() {
 <a href="../">Challenges</a>
 <a href="../">Game Night</a>
           </StyledLinks>
+            <h1>Reviews</h1> 
       </Wrapper>
+                
+     
       <StyledText>Interactive BoardGame <br/>Community</StyledText>
+       <Image src="/Tent.png" width={300} height={200} alt="image" />
+         <Image src="/fire.png" width={90} height={90} alt="image" />
+    
+       
      </HeaderWrapper>
     <Container >
       
@@ -68,7 +75,7 @@ const Wrapper= styled.div`
 
 `
 const StyledLinks= styled.div`
-position: absolute;
+/* position: absolute; */
 max-width: 40rem;
 margin: 0px auto;
 left: 0px;

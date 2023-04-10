@@ -11,7 +11,7 @@ function NavBarButtons() {
         <p>Challenges</p>
       </Button>
       <Button label="About Us">
-        <p>Game Night</p>
+        <p>Game </p>
       </Button>
     </Container>
   );
@@ -19,25 +19,19 @@ function NavBarButtons() {
 
 const Container = styled.div`
   position: absolute;
-  box-sizing: border-box;
-  z-index: 1;
-  height: 30px;
-  left: 120px;
-  top: 48px;
+  max-width: 40rem;
+  margin: 0px auto;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
 
   Button {
-    width: 140px;
-    margin: 20px;
-    height: 46px;
-    left: 320px;
-    right: 40px;
-    text-transform: capitalize;
-    font-family: "Rubik", sans-serif;
-    text-transform: capitalize;
-    background: #353535;
-    font-style: normal;
-    border: 2px solid #ffffff;
-    border-radius: 8px;
+    padding: 0.7rem 1.7rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(53, 53, 53);
+    border: 2px solid white;
+    border-radius: 0.625rem;
   }
 
   p {

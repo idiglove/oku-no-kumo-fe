@@ -32,18 +32,19 @@ export default function PricingContent() {
        <Image src="/Tent.png" width={300} height={200} alt="image" />
          <Image src="/fire.png" width={90} height={90} alt="image" />
     
-       
+    
      </HeaderWrapper>
     <Container >
-      
-          {cards.map((card) => (
-            <Container key={card} >
-              <CardComponent />
-            </Container>
-          ))}
+      <div></div>
+
+        <CardComponent />
+          <CardComponent />
+            <CardComponent />
+  
+         
         </Container>
-    </>
-     
+   
+     </>
   );
 }
 
@@ -52,7 +53,6 @@ position: absolute;
 width: 1440px;
 height: 2562px;
 left: 0px;
-
 background: #234C4C;
 padding:40px 40px 120px 40px;
 margin-right:120px;
@@ -61,7 +61,7 @@ flex-direction:row;
 `
 
 const HeaderWrapper= styled.div`
-width: 100%;
+width: 1440px;
 background-color: rgb(53, 53, 53);
 position: relative;
 display: flex;
@@ -72,6 +72,7 @@ height: 24.7rem;
 `
 
 const Wrapper= styled.div`
+width:100%;
 
 `
 const StyledLinks= styled.div`

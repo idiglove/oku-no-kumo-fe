@@ -1,8 +1,9 @@
 import CardComponent from "../components/CardComponent";
 import styled from "styled-components";
+import Button from "@mui/material/Button";
 import Image from "next/image";
 
-const cards = [1, 2,3,4,5,6];
+
 
 export default function PricingContent() {
   return (
@@ -14,36 +15,42 @@ export default function PricingContent() {
               src="/logo.svg"
               width={227.77}
               height={150}
-             
-           
               alt="Ain't Board Logo"
             />
           </div>
+             <NavbarText>Reviews</NavbarText> 
+           <NavBarButtons>
+          <Button>LogIn</Button>
+          <Button>Join Us</Button>
+         </NavBarButtons>
           <StyledLinks>
-<a href="../">Reviews</a>
-<a href="../">Challenges</a>
-<a href="../">Game Night</a>
+            <a href="../">Reviews</a>
+            <a href="../">Challenges</a>
+            <a href="../">Game Night</a>
           </StyledLinks>
-            <h1>Reviews</h1> 
+           <div style={{ display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: "5rem",
+    paddingBottom: "1rem",
+    zIndex: "10"}}>
+         <h1 style={{fontSize:"1.25rem",
+    color: "rgb(255, 255, 255",
+    marginRight: "0.5rem",
+    zIndex: "1"}}>Filter By</h1>
+        <input type="text" placeholder="Search board game" />
+      </div>
+       
       </Wrapper>
-                
-     
       <StyledText>Interactive BoardGame <br/>Community</StyledText>
-       <Image src="/Tent.png" width={300} height={200} alt="image" />
-         <Image src="/fire.png" width={90} height={90} alt="image" />
-    
-    
+ <Image src="/Tent.png" width={290} height={200} alt="image" />
+      <Image src="/fire.png" width={90} height={100} alt="image" /> 
      </HeaderWrapper>
     <Container >
-      <div></div>
-
         <CardComponent />
           <CardComponent />
             <CardComponent />
-  
-         
         </Container>
-   
      </>
   );
 }
@@ -67,8 +74,8 @@ position: relative;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-min-height: 18rem;
-height: 24.7rem;
+min-height: 24rem;
+height: 30.7rem;
 `
 
 const Wrapper= styled.div`
@@ -76,13 +83,16 @@ width:100%;
 
 `
 const StyledLinks= styled.div`
-/* position: absolute; */
+position: absolute;
+box-sizing: border-box;
 max-width: 40rem;
 margin: 0px auto;
+top: 30px;
 left: 0px;
 right: 0px;
 display: flex;
 justify-content: space-between;
+margin: 0px auto;
     a{
 padding: 0.625rem 1.5rem;
 color: rgb(255, 255, 255);
@@ -103,3 +113,37 @@ font-family: Rubik-Bold;
 z-index: 5;
 text-align: center;
   `  
+const NavBarButtons= styled.div`
+    display: flex;
+    position:absolute;
+    right:0;
+    top:30px;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+    Button{
+    margin: 0px 0.5rem;
+    width: 5rem;
+    min-width: 5rem;
+    font-size: 1rem;
+    background-color:white;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    font-family: Rubik-Regular;
+    border-radius: 0.625rem;
+    }
+  `  
+
+  const NavbarText= styled.h1`
+    text-align:center;
+    font-family: Rubik-Bold;
+    font-weight: 700;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 0rem;
+    
+  `

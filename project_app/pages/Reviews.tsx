@@ -1,12 +1,32 @@
 import CardComponent from "../components/CardComponent";
 import styled from "styled-components";
 import Button from "@mui/material/Button";
-import{Container,HeaderWrapper,ReviewBox,StyledLinks,NavBarButtons,StyledText} from "./style";
+import MenuItem from '@mui/material/MenuItem';
+import{Container,HeaderWrapper,ReviewBox,StyledLinks,NavBarButtons} from "./style";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 import Image from "next/image";
 
 
-
-export default function PricingContent() {
+const reviews = [
+  {
+    value: 'Reviews',
+    label: 'BoardGame Name',
+  },
+  {
+    value: 'Reviews',
+    label: 'Review Type',
+  },
+  {
+    value: 'Reviews',
+    label: 'Language',
+  },
+  {
+    value: 'Reviews',
+    label: 'Overall Rating',
+  },
+];
+export default function Reviews() {
   return (
   <>
    <HeaderWrapper>
@@ -16,15 +36,30 @@ export default function PricingContent() {
               width={227.77}
               height={150}
               alt="Ain't Board Logo"
-            />
-             <NavbarText>Reviews</NavbarText> 
-                {/* <CSSStyledText>
-            <h1>Filter By</h1>
-            <input type="text" placeholder="Search board game" />
-          </CSSStyledText> */}
-            
-        <Image src="/Tent.png" width={260} height={150} alt="image" />
+            />   
+        <NavbarText>Reviews</NavbarText> 
+        <Image src="/Tent.png" width={260} height={155} alt="image" />
       <Image src="/fire.png" width={90} height={100} alt="image" /> 
+      <InputBar>
+        <h1>Filter By</h1>
+         <Box
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
+      }}
+    >
+        <TextField
+          select
+          style={{backgroundColor:"white",width:"200px"}}
+        >
+          {reviews.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+    </Box>
+      </InputBar>
            <NavBarButtons>
           <Button>LogIn</Button>
           <Button>Join Us</Button>
@@ -50,31 +85,30 @@ export default function PricingContent() {
 
 const Wrapper= styled.div`
 width:100%;
-
 `
-
 const NavbarText= styled.h1`
-    text-align:center;
-    font-family: Rubik-Bold;
-    font-weight: 700;
-    font-size: 3rem;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    margin-top: 0rem;
-    
+text-align:center;
+font-family: Rubik-Bold;
+font-weight: 700;
+font-size: 3rem;
+color: rgb(255, 255, 255);
+text-align: center;
+margin-top: 0rem; 
   `
 
-const CSSStyledText= styled.div`
-display: flex;
-align-items: center;
+const InputBar= styled.div`
+position:absolute;
+display:flex;
+top:300px;
+align-items:center;
 justify-content:center;
-margin-top: 5rem;
-padding-bottom:1rem;
-z-index: 10;
+left:40%;
+
 h1{
-  font-size:1.25rem;
+  font-size: 1.25rem;
     color: rgb(255, 255, 255);
     margin-right: 0.5rem;
     z-index: 1;
 }
-`
+
+  `

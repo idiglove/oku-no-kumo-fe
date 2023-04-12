@@ -20,24 +20,23 @@ min-height: 14rem;
 height: 24.7rem;
 `
 export  const ReviewBox= styled.div`
-   display: flex;
+    display: flex;
     flex-direction: column;
     box-sizing: border-box;
 
     button{
-      background-color: rgb(250, 250, 235);
-      top:20px;
+    background-color: rgb(250, 250, 235);
     color: rgb(0, 0, 0);
     font-family: Rubik-Regular;
     border-radius: 0.625rem;
     font-size: 1.25rem;
     min-width: 10rem;
-    padding: 0.5rem;
+    padding: 0.5rem; 
     outline: none;
     border: none;
     cursor: pointer;
     text-transform: capitalize;
-    margin: 10rem auto;
+    margin: 10rem auto; 
     width: 10rem;
     }
     

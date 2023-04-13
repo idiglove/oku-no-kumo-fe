@@ -1,17 +1,58 @@
 import styled from "styled-components";
 
-export const Box = styled.div`
+export const LayoutContainer = styled.div`
 width: 1440px;
-background: #353535;
-left: -4px;
-position:absolute;
-height: 379px;
+height:2862px;
+box-sizing: border-box;
+display: block;
+font-family: Rubik-Regular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+font-size: 16px;
+`;
+
+export const FooterBox = styled.div`
+width: 100%;
+position:relative;
+left:0;
+right:0;
+display: flex;
+justify-content: space-between;
+overflow-x: hidden;
 top: 2712px;
-box-sizing:border-box;
-display:flex;
-justify-content:space-between;
-  h6{
-display:block;
+height: 25rem;
+box-sizing: border-box;
+background-color: rgb(53, 53, 53);
+`;
+
+export const HomePageContainer = styled.div`
+box-sizing: border-box;
+width:100%;
+min-height:35rem;
+display: block;
+`;
+
+export const NavBarWrapper= styled.div`
+width: 100%;
+height:8rem;
+box-sizing: border-box;
+display: block;
+`
+export const Wrapper = styled.div`
+position: absolute;
+width: 160%;
+left: 0px;
+bottom: 0px;
+z-index: 0;
+`;
+
+export const ImageContainer= styled.div`
+width: 229.86px;
+height: 67.5px;
+left: 100px;
+margin-left:600px;
+box-sizing: border-box;
+margin-top:30px;
+h6{
+  display:block;
 text-align: right;
 margin-top: 0.2rem;
 width: 140px;
@@ -25,51 +66,44 @@ font-size: 0.67em;
 line-height: 22px;
 letter-spacing: 0.025em;
 color: #CECECE;
-  }
-`;
-
-
-export const Wrapper = styled.div`
-position: absolute;
-left: 0%;
-right: 0%;
-top: 94.65%;
-bottom: 2.11%;
-background: #76AAA4;
-`;
-
-export const ImageContainer= styled.div`
-width: 229.86px;
-height: 67.5px;
-left: 100px;
-top:50px;
-margin-left:600px;
-box-sizing: border-box;
-margin-top:30px;
+}
 `
 
 export const LeftContainer=styled.div`
-top:240px;
-position:absolute;
-left:1127px;
-bottom:0;
+position: absolute;
+right: 0px;
+bottom: 3.6rem;
+z-index: 1;
 `
 
 export const RightContainer=styled.div`
-position:absolute;
-top:250px;
+position: absolute;
+left: 0px;
+bottom: 3.4rem;
+z-index: 1;
 
 `
 
 export const AppBar = styled.div`
-position: absolute;
-width: 1440px;
-height: 700px;
-left: 0px;
-top: 0px;
-background: #353535;
+width: 100%;
+background-color: rgb(53, 53, 53);
+min-height: 35rem;
+position: relative;
+box-sizing: border-box;
+display: block;
+
 `
 export const Container= styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgb(53, 53, 53);
+height: 8rem;
+padding: 0px 3.5rem;
+position: static;
+z-index: 9999;
+top: -9rem;
+  
   Button{
    width: 144px;
    margin:20px;
@@ -85,35 +119,28 @@ export const Container= styled.div`
 `;
 
 export const Typography = styled.p`
-position:absolute;
-width: 521px;
-height: 86px;
-left: 486px;
-top: 368px;
-font-family: 'Rubik';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 43px;
+color: rgb(255, 255, 255);
+font-family: Rubik-Bold;
+font-size: 1.65rem;
+text-transform: uppercase;
+position: relative;
+z-index: 5;
 text-align: center;
-text-transform:uppercase;
-color: white;
-z-index:1;
+margin-block: 0px;
+top: 150px;
 `
+
 export const ProductContainer=styled.div`
-ul{
+ul {
+  list-style: none;
+  font-family: Quicksand-Regular;
+  display: block;
+}
+
+ul link{
+  margin-top: 0.5rem;
   color: white;
 }
- color:white;
-font-family:Quicksand-Regular;
-margin-top:60px;
-width: 140px;
-margin-left: 40px;
-top: 2777px;
-list-style: none;
-display: block;
-font-weight: 500px;
-box-sizing: border-box;  
 
 
 `
@@ -121,6 +148,8 @@ box-sizing: border-box;
 export const StyledContainer = styled.div`
   input {
     box-sizing: border-box;
+   
+ 
     position: absolute;
     width: 614px;
     height: 67px;
@@ -138,7 +167,7 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledWrapper = styled.section`
-  position: absolute;
+position:absolute;
   top: 176px;
   width: 18.99px;
   height: 18.73px;
@@ -172,15 +201,17 @@ line-height: 14px;
 color: #000000;
 `
 export const ReviewsBox= styled.div`
-position:absolute;
-display:flex;
-width:100%;
-left: 0px;
-top: 24%;
+width: 100%;
 min-height: 67rem;
 background-color: rgb(53, 53, 53);
+display:block;
+box-sizing: border-box;
 z-index: 10;
- 
+top:140px;
+position: relative;
+overflow: hidden;
+
+
 ` 
   
 
@@ -210,4 +241,18 @@ width: 1014.05px;
 height: 1005.01px;
 left: 212.85px;
 top: 50px;
+`
+
+
+export const HeaderButtons=styled.div`
+display: flex;
+flex: 1 1 0%;
+justify-content: flex-end;
+`
+export const HomePageNav=styled.div`
+height: 10rem;
+    background-color: rgb(53, 53, 53);
+    width: 100%;
+    position: absolute;
+    top: 43rem;
 `

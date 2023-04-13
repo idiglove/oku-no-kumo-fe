@@ -1,10 +1,11 @@
 import CardBox from "./CardBox";
-import Container from "@mui/material/Container";
+import { HomePageNav } from "./styled";
 
 export default function Main() {
   return (
-    <Container>
-      <CardBox />
-    </Container>
+    <>
+      <HomePageNav />
+      <CardBox />;
+    </>
   );
 }

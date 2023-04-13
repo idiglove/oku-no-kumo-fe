@@ -3,8 +3,6 @@ import NavBarButtons from "../components/NavBarButtons";
 import Image from "next/image";
 import styled from "styled-components";
 
-
-
 function About() {
   
   return (
@@ -65,14 +63,13 @@ function About() {
           </div>
       </NavBarWrapper>
       </div>
-    
-      <Wrapper>
+      <div>
+         <Wrapper>
         <p>We're an interactive community of avid boardgamers - be it in sharing Reviews, participating and competing in Online Battles, achieving Challenges, and more.<br></br> We want you to play more of your favorite board games with friends, family and even potential friends!<br></br>We are in a very early stage of development, thus bugs and hiccups are expected. Because of this, any feedback is welcome to make this place the best! So please contact us to give any feedback here.</p>
-      </Wrapper>
-     
-  <FooterContainer>
-<h1>hello </h1>
-  </FooterContainer>
+      </Wrapper> 
+      </div>
+    
+  <FooterContainer/>
     </Container>
    
   )
@@ -83,7 +80,7 @@ const Container= styled.div`
 width: 100%;
 display:block;
 box-sizing:border-box;
-height: 1172px; 
+position:absolute;
 `
 const HeaderContainer=styled.div`
 display: flex;
@@ -133,7 +130,10 @@ width:100%;
 box-sizing:border-box;
 `
 const FooterContainer=styled.div`
-display: block;
-width:100%;
-background-color:green;
+
+display: flex;
+justify-content: space-between;
+width: 100%;
+height: 25rem;
+background-color: rgb(53, 53, 53);
 `

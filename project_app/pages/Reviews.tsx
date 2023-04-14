@@ -1,8 +1,10 @@
 import CardComponent from "../components/CardComponent";
+import NavBarButtons from "../components/NavBarButtons";
+import { HeaderButtons } from "../components/styled";
 import styled from "styled-components";
 import Button from "@mui/material/Button";
 import MenuItem from '@mui/material/MenuItem';
-import{Container,HeaderWrapper,ReviewBox,StyledLinks,NavBarButtons} from "./style";
+import{Container,HeaderWrapper,ReviewBox,Wrapper,NavbarText,InputBar} from "./style";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Image from "next/image";
@@ -30,6 +32,13 @@ export default function Reviews() {
   return (
   <>
    <HeaderWrapper>
+     <NavBarButtons/>
+     <HeaderButtons>
+       <Button>Login</Button>
+        <Button style={{ backgroundColor: "rgb(250, 250, 235)" }}>
+              Join Us!
+            </Button>
+     </HeaderButtons>
       <Wrapper>
             <Image
               src="/logo.svg"
@@ -60,15 +69,6 @@ export default function Reviews() {
         </TextField>
     </Box>
       </InputBar>
-           <NavBarButtons>
-          <Button>LogIn</Button>
-          <Button>Join Us</Button>
-         </NavBarButtons>
-          <StyledLinks>
-            <a href="../">Reviews</a>
-            <a href="../">Challenges</a>
-            <a href="../">Game Night</a>
-          </StyledLinks>
       </Wrapper>
      </HeaderWrapper>
     <Container >
@@ -82,33 +82,3 @@ export default function Reviews() {
 }
 
 
-
-const Wrapper= styled.div`
-width:100%;
-`
-const NavbarText= styled.h1`
-text-align:center;
-font-family: Rubik-Bold;
-font-weight: 700;
-font-size: 3rem;
-color: rgb(255, 255, 255);
-text-align: center;
-margin-top: 0rem; 
-  `
-
-const InputBar= styled.div`
-position:absolute;
-display:flex;
-top:300px;
-align-items:center;
-justify-content:center;
-left:40%;
-
-h1{
-  font-size: 1.25rem;
-    color: rgb(255, 255, 255);
-    margin-right: 0.5rem;
-    z-index: 1;
-}
-
-  `

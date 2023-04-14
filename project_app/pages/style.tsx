@@ -98,4 +98,32 @@ z-index: 5;
 text-align: center;
   `  
 
+export const Wrapper= styled.div`
+width:100%;
+`
+export const NavbarText= styled.h1`
+text-align:center;
+font-family: Rubik-Bold;
+font-weight: 700;
+font-size: 3rem;
+color: rgb(255, 255, 255);
+text-align: center;
+margin-top: 0rem; 
+  `
 
+export const InputBar= styled.div`
+position:absolute;
+display:flex;
+top:300px;
+align-items:center;
+justify-content:center;
+left:40%;
+
+h1{
+  font-size: 1.25rem;
+    color: rgb(255, 255, 255);
+    margin-right: 0.5rem;
+    z-index: 1;
+}
+
+  `

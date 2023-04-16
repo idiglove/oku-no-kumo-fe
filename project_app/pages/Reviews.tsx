@@ -1,10 +1,9 @@
 import CardComponent from "../components/CardComponent";
 import NavBarButtons from "../components/NavBarButtons";
-import { HeaderButtons } from "../components/styled";
-import styled from "styled-components";
+import { HeaderButtons,AppBar, NavBarWrapper,Container} from "../components/styled";
 import Button from "@mui/material/Button";
 import MenuItem from '@mui/material/MenuItem';
-import{Container,HeaderWrapper,ReviewBox,Wrapper,NavbarText,InputBar} from "./style";
+import{ReviewBox,NavbarText,InputBar} from "./style";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Image from "next/image";
@@ -30,26 +29,32 @@ const reviews = [
 ];
 export default function Reviews() {
   return (
-  <>
-   <HeaderWrapper>
-     <NavBarButtons/>
-     <HeaderButtons>
-       <Button>Login</Button>
-        <Button style={{ backgroundColor: "rgb(250, 250, 235)" }}>
-              Join Us!
-            </Button>
-     </HeaderButtons>
-      <Wrapper>
+    <>
+     <AppBar>
+    <NavBarWrapper>
+      <Container>
+         <div>
             <Image
               src="/logo.svg"
               width={227.77}
               height={150}
               alt="Ain't Board Logo"
-            />   
-        <NavbarText>Reviews</NavbarText> 
-        <Image src="/Tent.png" width={260} height={155} alt="image" />
+            />
+          </div>
+         <HeaderButtons>
+       <Button>Login</Button>
+        <Button style={{ backgroundColor: "rgb(250, 250, 235)" }}>
+        Join Us!
+        </Button>
+     </HeaderButtons>
+      <div>
+      <NavBarButtons />
+      </div>
+      </Container>
+      <NavbarText>Reviews</NavbarText> 
+      <Image src="/Tent.png" width={260} height={155} alt="image" />
       <Image src="/fire.png" width={90} height={100} alt="image" /> 
-      <InputBar>
+       <InputBar>
         <h1>Filter By</h1>
          <Box
       component="form"
@@ -67,17 +72,15 @@ export default function Reviews() {
             </MenuItem>
           ))}
         </TextField>
-    </Box>
-      </InputBar>
-      </Wrapper>
-     </HeaderWrapper>
-    <Container >
+         </Box>
+          </InputBar>
+    </NavBarWrapper> 
+  </AppBar>
       <ReviewBox>
          <button>Create a Review</button> 
           <CardComponent />
-      </ReviewBox>
-        </Container>
-  </>
+      </ReviewBox>   
+    </>
   );
 }
 

@@ -42,7 +42,6 @@ function Header() {
         </Container>
       </NavBarWrapper>
       <HomePageContainer>
-        {/* <InnerContainer></InnerContainer> */}
         <Typography>Interactive BoardGame Community</Typography>
         <div
           style={{

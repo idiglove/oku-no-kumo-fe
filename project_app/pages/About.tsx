@@ -3,6 +3,7 @@ import NavBarButtons from "../components/NavBarButtons";
 import { AppBar ,NavBarWrapper,HeaderButtons,Container} from "../components/styled";
 import { StyledText,Wrapper } from "./style";
 import Image from "next/image";
+import styled from "styled-components";
 
 
 function About() {
@@ -31,13 +32,13 @@ function About() {
       </Container>
          <div
             style={{
-              position: "absolute",
-              top: "162px",
-              left: "0",
-              bottom: "0",
+             position: "absolute",
+            zIndex: "0",
+            left: "0px",
+            bottom: "0",
             }}
           >
-            <Image src="/trees_left.png" width={435}  height={400}alt="image" />
+            <Image src="/trees_left.png" width={400} height={420}alt="image" />
           </div>
           <div
             style={{
@@ -55,20 +56,31 @@ function About() {
            </div>
          <div
          style={{
-        position:"absolute",
-        left: "1014px",
-        bottom: "0",
-        top: "162.54px",
+          position: "absolute",
+            bottom: "0",
+            right: "0",
+            zIndex: "0",
               
          }}
        >
-       <Image src="/trees_right.png" width={440} height={400}alt="image" /> 
+       <Image src="/trees_right.png" width={400} height={390}alt="image" /> 
        </div>
+     
     </NavBarWrapper>  
+  
   </AppBar>
+
    <Wrapper>
-     <p>We're an interactive community of avid boardgamers - be it in sharing Reviews, participating and competing in Online Battles, achieving Challenges, and more.<br></br> We want you to play more of your favorite board games with friends, family and even potential friends!<br></br>We are in a very early stage of development, thus bugs and hiccups are expected. Because of this, any feedback is welcome to make this place the best! So please contact us to give any feedback here.</p>
+     <p>We're an interactive community of avid boardgamers - be it in sharing Reviews, participating and competing in Online Battles, achieving Challenges, and more.<br>
+     </br> We want you to play more of your favorite board games with friends, family and even potential friends!<br>
+     </br>We are in a very early stage of development, thus bugs and hiccups are expected. Because of this, any feedback is welcome to make this place the best! So please contact us to give any feedback here.
+     <br></br>
+     </p>
+     
      </Wrapper> 
+     <FooterContainer>
+  
+     </FooterContainer>
 </>  
   )
 }
@@ -76,5 +88,8 @@ function About() {
 export default About
 
 
-
-
+const FooterContainer=styled.div`
+    height: 25rem;
+    background-color: rgb(53, 53, 53);
+    top: 1rem;
+`

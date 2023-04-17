@@ -43,7 +43,8 @@ font-weight: 700;
 font-size: 3rem;
 color: rgb(255, 255, 255);
 text-align: center;
-margin-top: 12rem; 
+margin-top: 0rem; 
+position: absolute;
   `
 
 export const InputBar= styled.div`

@@ -6,7 +6,9 @@ import { LayoutContainer } from "./styled";
 function Layout() {
   return (
     <LayoutContainer>
-      <Header />
+      <Header
+        header={<Typography>Interactive BoardGame Community</Typography>}
+      />
       <Reviews />
       <Footer />
     </LayoutContainer>

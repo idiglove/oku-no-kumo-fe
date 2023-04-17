@@ -12,7 +12,7 @@ import {
 } from "./styled";
 import Image from "next/image";
 
-function Header() {
+function Header(props) {
   return (
     <AppBar>
       <NavBarWrapper>
@@ -42,8 +42,9 @@ function Header() {
         </Container>
       </NavBarWrapper>
       <HomePageContainer>
-        {/* <InnerContainer></InnerContainer> */}
-        <Typography>Interactive BoardGame Community</Typography>
+        {/* <Typography>Interactive BoardGame Community{props.header}</Typography> */}
+        <Typography>{props.header}</Typography>
+
         <div
           style={{
             position: "absolute",

@@ -34,7 +34,7 @@ function Header(props) {
             </Button>
           </HeaderButtons>
           <div>
-            <ToolBar />
+            <ToolBar ToolBar={ToolBar} />
           </div>
           <div>
             <NavBarButtons />
@@ -42,7 +42,6 @@ function Header(props) {
         </Container>
       </NavBarWrapper>
       <HomePageContainer>
-        {/* <Typography>Interactive BoardGame Community{props.header}</Typography> */}
         <Typography>{props.header}</Typography>
 
         <div

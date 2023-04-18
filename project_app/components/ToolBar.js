@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { StyledContainer, StyledWrapper } from "./styled";
 
-function ToolBar() {
+function ToolBar(props) {
   return (
     <div>
       <StyledContainer>

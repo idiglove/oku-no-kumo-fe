@@ -38,7 +38,7 @@ export default function Reviews() {
     >
         <TextField
           select
-          style={{backgroundColor:"white",width:"200px"}}
+          style={{backgroundColor:"white",width:"400px"}}
         >
           {reviews.map((option) => (
             <MenuItem key={option.value} value={option.value}>

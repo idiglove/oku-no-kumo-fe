@@ -87,8 +87,7 @@ z-index: 1;
 export const AppBar = styled.div`
 width: 100%;
 background-color: rgb(53, 53, 53);
-min-height: 35rem;
-position: relative;
+min-height: 43rem;
 box-sizing: border-box;
 display: block;
 

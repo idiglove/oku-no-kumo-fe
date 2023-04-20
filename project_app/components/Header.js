@@ -1,6 +1,5 @@
 import React from "react";
 import NavBarButtons from "./NavBarButtons";
-import ToolBar from "./ToolBar";
 import Button from "@mui/material/Button";
 import {
   Container,
@@ -8,11 +7,10 @@ import {
   Typography,
   NavBarWrapper,
   HeaderButtons,
-  HomePageContainer,
 } from "./styled";
 import Image from "next/image";
 
-function Header() {
+function Header(props) {
   return (
     <AppBar>
       <NavBarWrapper>
@@ -34,78 +32,11 @@ function Header() {
             </Button>
           </HeaderButtons>
           <div>
-            <ToolBar />
-          </div>
-          <div>
             <NavBarButtons />
           </div>
         </Container>
       </NavBarWrapper>
-      <HomePageContainer>
-        {/* <InnerContainer></InnerContainer> */}
-        <Typography>Interactive BoardGame Community</Typography>
-        <div
-          style={{
-            position: "absolute",
-            width: "25rem",
-            zIndex: "0",
-            left: "0px",
-            bottom: "0",
-            boxSizing: "borderBox",
-            width: "630px",
-            height: "472px",
-          }}
-        >
-          <Image src="/trees_left.png" fill="none" alt="image" />
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            width: "296px",
-            height: "250px",
-            left: "412.31px",
-            top: "440px",
-          }}
-        >
-          <Image src="/Tent.png" fill="absolute" alt="image" />
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            width: "244px",
-            height: "109px",
-            left: "477px",
-            top: "572px",
-            bottom: "78.57%",
-            zIndex: "0",
-          }}
-        >
-          <Image src="/people.png" fill="absolute" alt="image" />
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            width: "90.37px",
-            height: "105.71px",
-            left: "708.46px",
-            top: "580px",
-          }}
-        >
-          <Image src="/fire.png" fill="absolute" alt="image" />
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            width: "651px",
-            height: "466px",
-            bottom: "0",
-            right: "0",
-            zIndex: "0",
-          }}
-        >
-          <Image src="/trees_right.png" fill="none" alt="image" />
-        </div>
-      </HomePageContainer>
+      <Typography>{props.header}</Typography>
     </AppBar>
   );
 }

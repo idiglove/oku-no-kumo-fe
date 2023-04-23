@@ -1,4 +1,4 @@
-// import '../styles/globals.css'
+import "../styles/globals.css";
 import { createContext, useState } from "react";
 
 export const GlobalStateContext = createContext();

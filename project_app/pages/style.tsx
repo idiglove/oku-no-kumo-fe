@@ -36,7 +36,7 @@ z-index: 5;
 text-align: center;
   `  
 
-export const NavbarText= styled.h1`
+export const NavbarText= styled.p`
 text-align:center;
 font-family: Rubik-Bold;
 font-weight: 700;

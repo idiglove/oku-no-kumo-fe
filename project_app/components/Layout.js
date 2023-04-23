@@ -3,7 +3,7 @@ import Header from "./Header";
 import ToolBar from "./ToolBar";
 import Reviews from "./Reviews";
 import Image from "next/image";
-import { Typography, LayoutContainer, HomePageContainer } from "./styled";
+import { Typography, LayoutContainer } from "./styled";
 
 function Layout(props) {
   return (

@@ -1,9 +1,13 @@
- import React from 'react';
- import Layout from "../components/Layout";
+import React from 'react';
+import Header from "../components/Header";
+import{NavbarText} from "./style";
+
  
  function About() {
    return (
-    <Layout/>
+    <div>
+    <Header header={<NavbarText>About Us</NavbarText>}/> 
+    </div>
    )
  }
  

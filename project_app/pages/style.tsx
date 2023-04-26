@@ -24,17 +24,17 @@ export  const ReviewBox= styled.div`
     width: 10rem;
     }   
   `
-export const StyledText= styled.h1`
-position: absolute;
-font-size: 1rem;
-top: 8rem;
-margin: 0px;
-left: 3.4rem;
-color: rgb(255, 255, 255);
-font-family: Rubik-Bold;
-z-index: 5;
-text-align: center;
-  `  
+// export const StyledText= styled.h1`
+// position: absolute;
+// font-size: 1rem;
+// top: 8rem;
+// margin: 0px;
+// left: 3.4rem;
+// color: rgb(255, 255, 255);
+// font-family: Rubik-Bold;
+// z-index: 5;
+// text-align: center;
+//   `  
 
 export const NavbarText= styled.p`
 text-align:center;

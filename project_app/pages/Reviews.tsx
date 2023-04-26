@@ -27,8 +27,7 @@ const reviews = [
 ];
 export default function Reviews() {
   return (
-  <>
- 
+    <div>
      <Header header={<NavbarText>Reviews</NavbarText>}/> 
        <InputBar>
         <div
@@ -74,8 +73,8 @@ export default function Reviews() {
       <ReviewBox>
          <button>Create a Review</button> 
           <CardComponent />
-      </ReviewBox>   
-    </>
+      </ReviewBox>  
+    </div>
   );
 }
 

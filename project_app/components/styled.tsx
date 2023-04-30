@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const LayoutContainer = styled.div`
 width: 1440px;
 height:2862px;
+position:absolute;
 box-sizing: border-box;
 display: block;
 font-family: Rubik-Regular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;

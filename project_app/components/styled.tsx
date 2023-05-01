@@ -118,10 +118,10 @@ top: -9rem;
   }
 `;
 
-export const Typography = styled.p`
+export const Typography = styled.h1`
 color: rgb(255, 255, 255);
 font-family: Rubik-Bold;
-font-size: 1.65rem;
+font-size: 1.75rem;
 text-transform: uppercase;
 position: relative;
 z-index: 5;

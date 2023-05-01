@@ -16,16 +16,14 @@ function Header(props) {
       <AppBar>
         <NavBarWrapper>
           <Container>
-            <div>
-              <Image
-                src="/logo.svg"
-                width={227.77}
-                height={150}
-                left={50}
-                right={50}
-                alt="Ain't Board Logo"
-              />
-            </div>
+            <Image
+              src="/logo.svg"
+              width={227.77}
+              height={150}
+              left={50}
+              right={50}
+              alt="Ain't Board Logo"
+            />
             <HeaderButtons>
               <Button>Login</Button>
               <Button style={{ backgroundColor: "rgb(250, 250, 235)" }}>

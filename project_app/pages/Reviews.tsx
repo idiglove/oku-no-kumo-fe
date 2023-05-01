@@ -28,9 +28,7 @@ const reviews = [
 export default function Reviews() {
   return (
   <>
- 
      <Header header={<NavbarText>Reviews</NavbarText>}/> 
-     
        <InputBar>
         <div
           style={{
@@ -51,7 +49,7 @@ export default function Reviews() {
         >
           <Image src="/fire.png" width={100}  height={200}alt="image" />
         </div>
-      
+       
         <h1>Filter By</h1>
          <Box
       component="form"

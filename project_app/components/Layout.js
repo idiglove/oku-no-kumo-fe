@@ -3,7 +3,7 @@ import Header from "./Header";
 import ToolBar from "./ToolBar";
 import Reviews from "./Reviews";
 import Image from "next/image";
-import { Typography, LayoutContainer } from "./styled";
+import { Typography, LayoutContainer, StyledContainer } from "./styled";
 
 function Layout(props) {
   return (
@@ -11,7 +11,7 @@ function Layout(props) {
       <Header
         header={<Typography>Interactive BoardGame Community</Typography>}
       ></Header>
-      <ToolBar ToolBar={ToolBar} />
+      <ToolBar toolbar={<StyledContainer />} />
       <div
         style={{
           position: "absolute",

@@ -35,7 +35,8 @@ function Header(props) {
             </div>
           </Container>
         </NavBarWrapper>
-        <Typography>{props.header}</Typography>
+        {/* <Typography>{props.header}</Typography> */}
+        {props.header}
       </AppBar>
     </>
   );

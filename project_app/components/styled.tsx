@@ -141,15 +141,11 @@ ul link{
   margin-top: 0.5rem;
   color: white;
 }
-
-
 `
 
 export const StyledContainer = styled.div`
   input {
     box-sizing: border-box;
-   
- 
     position: absolute;
     width: 614px;
     height: 67px;

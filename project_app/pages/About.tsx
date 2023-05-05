@@ -2,7 +2,7 @@ import React from 'react';
 import Header from "../components/Header";
 import{NavbarText} from "./style";
 import styled from "styled-components";
-import ToolBar from '../components/ToolBar';
+import Image from "next/image";
 
 
  
@@ -12,9 +12,29 @@ import ToolBar from '../components/ToolBar';
      <AboutContainer>
    <HeaderWrapper>
       <Header header={<NavbarText>About Us</NavbarText>}/> 
-      <ToolBar/> 
    </HeaderWrapper>
    <AboutWrapper>
+      <div
+        style={{
+          position: "absolute",
+          width: "25rem",
+          zIndex: "0",
+          left: "0px",
+          bottom: "0",
+        }}
+      >
+        <Image src="/trees_left.png" width={630} height={472} alt="image"/>
+      </div>
+        <div
+        style={{
+          position: "absolute",
+          bottom: "0",
+          right: "0",
+          zIndex: "0",
+        }}
+      >
+        <Image src="/trees_right.png" width={651} height={466} alt="imageNext" />
+      </div>
        <p>
         Were an interactive community of avid boardgamers - be it in sharing Reviews, participating and competing in Online Battles, achieving Challenges, and more.
         <br>

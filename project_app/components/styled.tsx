@@ -120,7 +120,8 @@ top: -9rem;
 
 export const Typography = styled.h1`
 color: rgb(255, 255, 255);
-font-family: Rubik-Bold;
+font-family: 'Rubik', sans-serif;
+font-weight: bold;
 font-size: 1.75rem;
 text-transform: uppercase;
 position: relative;
@@ -133,10 +134,14 @@ top: 150px;
 export const ProductContainer=styled.div`
 ul {
   list-style: none;
-  font-family: Quicksand-Regular;
+  font-family: Rubik-Regular, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   display: block;
+ 
 }
-
+a{
+  color:white;
+  text-decoration:none;
+}
 ul link{
   margin-top: 0.5rem;
   color: white;

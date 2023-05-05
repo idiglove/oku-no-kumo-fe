@@ -43,7 +43,8 @@ font-weight: 700;
 font-size: 3rem;
 color: rgb(255, 255, 255);
 text-align: center;
-margin-top: 0rem; 
+margin-top: 6rem; 
+margin-bottom:1rem;
 
   `
 

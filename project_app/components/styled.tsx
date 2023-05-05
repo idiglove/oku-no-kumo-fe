@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LayoutContainer = styled.div`
-width: 1440px;
+width: 100%;
 height:2862px;
 position:absolute;
 box-sizing: border-box;
@@ -13,8 +13,6 @@ font-size: 16px;
 export const FooterBox = styled.div`
 width: 100%;
 position:relative;
-left:0;
-right:0;
 display: flex;
 justify-content: space-between;
 overflow-x: hidden;
@@ -38,8 +36,14 @@ box-sizing: border-box;
 display: block;
 `
 export const Wrapper = styled.div`
-position: absolute;
+/* position: absolute;
 width: 160%;
+left: 0px;
+bottom: 0px;
+z-index: 0; */
+color: transparent;
+position: absolute;
+width: 100%;
 left: 0px;
 bottom: 0px;
 z-index: 0;
@@ -240,8 +244,11 @@ export const MazeContainer=styled.div`
 position:absolute;
 width: 1014.05px;
 height: 1005.01px;
-left: 212.85px;
+left: 80.85px;
 top: 50px;
+right: 0px;
+text-align: center;
+margin: 0 auto;
 `
 
 

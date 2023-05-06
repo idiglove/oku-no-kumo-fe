@@ -36,17 +36,13 @@ box-sizing: border-box;
 display: block;
 `
 export const Wrapper = styled.div`
-/* position: absolute;
-width: 160%;
-left: 0px;
-bottom: 0px;
-z-index: 0; */
-color: transparent;
 position: absolute;
-width: 100%;
-left: 0px;
+width:100%;
 bottom: 0px;
-z-index: 0;
+left: 0px;
+right:0px;
+z-index: 0; 
+
 `;
 
 export const ImageContainer= styled.div`

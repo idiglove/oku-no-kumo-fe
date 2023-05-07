@@ -44,8 +44,8 @@ function Layout(props) {
           width: "244px",
           height: "109px",
           left: "477px",
-          top: "572px",
-          bottom: "78.57%",
+          top: "580px",
+          bottom: "90.57%",
           zIndex: "0",
         }}
       >

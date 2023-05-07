@@ -149,30 +149,37 @@ ul link{
 `
 
 export const StyledContainer = styled.div`
-  input {
-    box-sizing: border-box;
-    position: absolute;
+ 
+input {
+  position:absolute;
+ margin: 0px auto;
+ padding-left:50px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
     width: 614px;
-    height: 67px;
-    left: 400px;
-    top: 150px;
-    color: black;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    font-size: 1.2rem;
-    font-family: "Quicksand", sans-serif;
-    padding-left: 40px;
-  }
-`;
+ height: 67px;
+ top: 137px;
+color: black;
+background: #ffffff;
+ border: 1px solid rgba(71, 50, 50, 0.05);
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 10px;
+font-size: 1.2rem;
+ font-family: "Quicksand", sans-serif;
+  } 
+`; 
+
+
 
 export const StyledWrapper = styled.section`
-position:absolute;
-  top: 176px;
+  position:absolute;
+ left: 62%;
+  top: 165px;
   width: 18.99px;
   height: 18.73px;
-  left: 970px;
+  
 `;
 
 export const Card= styled.div`
@@ -219,7 +226,6 @@ overflow: hidden;
 export const LeftWaterContainer=styled.div`
 position: absolute;
 left: 0%;
-right: 92.8%;
 bottom: 40.47%;
 background: #73D1E9;
 transform: matrix(1, 0, 0, -1, 0, 0);

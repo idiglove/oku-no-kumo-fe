@@ -70,7 +70,7 @@ function Layout(props) {
           bottom: "0",
           right: "0",
           zIndex: "0",
-          top: "230px",
+          top: "14.4rem",
         }}
       >
         <Image src="/trees_right.png" fill="none" alt="image" />

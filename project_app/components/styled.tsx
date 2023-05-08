@@ -73,14 +73,14 @@ color: #CECECE;
 export const LeftContainer=styled.div`
 position: absolute;
 right: 0px;
-bottom: 3.6rem;
+bottom: 3.0rem;
 z-index: 1;
 `
 
 export const RightContainer=styled.div`
 position: absolute;
 left: 0px;
-bottom: 3.4rem;
+bottom: 3.2rem;
 z-index: 1;
 
 `

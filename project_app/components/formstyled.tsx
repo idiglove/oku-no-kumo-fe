@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CFormInput, CFormLabel, CFormTextarea } from "@coreui/react";
+import { CFormInput, CFormLabel, CFormTextarea, CFormSelect } from "@coreui/react";
 
 const StyledCFormTextarea = styled(CFormTextarea)`
   background-color: #2B2B2B;
@@ -20,6 +20,28 @@ const StyledCFormInput = styled(CFormInput)`
     background-color: #2B2B2B;
     color: #FFFFFF;
   }
+`
+
+const StyledCFormSelect = styled(CFormSelect)`
+background-color: #2B2B2B;
+color: #FFFFFF;
+margin-bottom: 1rem;
+padding: 1rem 12px;
+
+&:focus {
+  background-color: #2B2B2B;
+  color: #FFFFFF;
+}
+`
+
+const StyledFormLabel = styled.label `
+color: #FFFFFF;
+font-family: "Rubik", sans-serif;
+font-weight: 400;
+text-align: left;
+display: block;
+padding-bottom: 0.5rem;
+padding-left: 3px;
 `
 
 const StyledCFormLabel = styled(CFormLabel)`
@@ -95,4 +117,4 @@ cursor: pointer;
 text-transform: capitalize;
 `;
 
-export {StyledCFormTextarea, StyledCFormInput, StyledCFormLabel, FormLayout, FormTitle, FormDialog, DialogTitle, FormContainer, DialogText, ActionButtonContainer, ActionButton}
+export {StyledCFormTextarea, StyledCFormInput, StyledCFormLabel, FormLayout, FormTitle, FormDialog, DialogTitle, FormContainer, DialogText, ActionButtonContainer, ActionButton, StyledCFormSelect, StyledFormLabel}

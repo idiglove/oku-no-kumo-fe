@@ -2,40 +2,18 @@ import React from 'react';
 import Header from "../components/Header";
 import{NavbarText} from "./style";
 import styled from "styled-components";
-import {FooterBox} from "../components/styled";
+import Footer from "../components/Footer";
 import Image from "next/image";
 
 
  
  function About() {
    return (
-  
-     <AboutContainer>
-   <HeaderWrapper>
+  <AboutContainer>
+    <HeaderWrapper>
       <Header header={<NavbarText>About Us</NavbarText>}/> 
-   </HeaderWrapper>
-   <AboutWrapper>
-      {/* <div
-        style={{
-          position: "absolute",
-          width: "25rem",
-          zIndex: "0",
-          left: "0px",
-          bottom: "0",
-        }}
-      >
-        <Image src="/trees_left.png" width={630} height={472} alt="image"/>
-      </div>
-        <div
-        style={{
-          position: "absolute",
-          bottom: "0",
-          right: "0",
-          zIndex: "0",
-        }}
-      >
-        <Image src="/trees_right.png" width={651} height={466} alt="imageNext" />
-      </div> */}
+     </HeaderWrapper>
+   {/* <AboutWrapper>
        <p>
         Were an interactive community of avid boardgamers - be it in sharing Reviews, participating and competing in Online Battles, achieving Challenges, and more.
         <br>
@@ -49,32 +27,34 @@ import Image from "next/image";
       </br>
     </p>
    </AboutWrapper>
-  
-<FooterBox/>
-  
+<FooterContainer>
+
+</FooterContainer> */}
   </AboutContainer>
     
    )
  }
 
 const AboutContainer=styled.div`
-width: 100%;
-    padding: 0px;
-    margin: 0px;
-    font-family: Rubik-Regular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-size: 16px;
-
-height: 1112px;
+position: relative;
 box-sizing: border-box;
-display:box;
+height: 1112px;
+width: 100%;
+padding: 0px;
+margin: 0px;
 font-size: 16px;
  `
 const HeaderWrapper=styled.div`
 width: 100%;
 background-color: rgb(53, 53, 53);
+min-height: 35rem;
+position: relative;
+display: block;
 font-family: Rubik-Bold;
-font-size: 1.75rem;
-height:557px;
+position: relative;
+z-index: 5;
+text-align: center;
+
 
  `
 const AboutWrapper=styled.div`
@@ -94,8 +74,6 @@ height: 1017px;
 left: 91px;
 top: 714px;
 font-family: 'Quicksand';
-/* font-style: normal;
-font-weight: 700; */
 font-size: 16px;
 line-height: 30px;
 color: #FFFFFF;
@@ -104,9 +82,11 @@ color: #FFFFFF;
  `
 
 const FooterContainer=styled.div`
-background-color:pink;
-height:400px;
-width:100%;
+position: absolute;
+width: 1440px;
+height: 379px;
+left: 0px;
+top: 1088px;
  `
 
  export default About;

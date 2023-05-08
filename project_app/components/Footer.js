@@ -50,7 +50,13 @@ export default function Footer() {
         <Image src="/right.png" alt="love" width={312} height={160} />
       </LeftContainer>
       <Wrapper>
-        <Image src="/end.png" alt="love" width={1440} height={60} />
+        <Image
+          src="/end.png"
+          alt="love"
+          style={{ width: "100%" }}
+          width={1440}
+          height={60}
+        />
       </Wrapper>
     </FooterBox>
   );

@@ -35,7 +35,11 @@ export default function CardBox() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          zIndex: "100",
+          zIndex: "10",
+          width: "57%",
+          margin: "9rem auto 13rem",
+          flexWrap: "wrap",
+          gap: "3rem",
         }}
       >
         {cards.map((card) => (

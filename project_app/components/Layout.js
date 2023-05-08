@@ -22,6 +22,7 @@ function Layout(props) {
           boxSizing: "borderBox",
           width: "630px",
           height: "472px",
+          top: "220px",
         }}
       >
         <Image src="/trees_left.png" fill="none" alt="image" />
@@ -43,8 +44,8 @@ function Layout(props) {
           width: "244px",
           height: "109px",
           left: "477px",
-          top: "572px",
-          bottom: "78.57%",
+          top: "580px",
+          bottom: "90.57%",
           zIndex: "0",
         }}
       >
@@ -69,6 +70,7 @@ function Layout(props) {
           bottom: "0",
           right: "0",
           zIndex: "0",
+          top: "14.4rem",
         }}
       >
         <Image src="/trees_right.png" fill="none" alt="image" />

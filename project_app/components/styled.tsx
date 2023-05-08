@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const LayoutContainer = styled.div`
-width: 1440px;
+width: 100%;
 height:2862px;
+position:absolute;
 box-sizing: border-box;
 display: block;
 font-family: Rubik-Regular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -12,8 +13,6 @@ font-size: 16px;
 export const FooterBox = styled.div`
 width: 100%;
 position:relative;
-left:0;
-right:0;
 display: flex;
 justify-content: space-between;
 overflow-x: hidden;
@@ -38,10 +37,12 @@ display: block;
 `
 export const Wrapper = styled.div`
 position: absolute;
-width: 160%;
-left: 0px;
+width:100%;
 bottom: 0px;
-z-index: 0;
+left: 0px;
+right:0px;
+z-index: 0; 
+
 `;
 
 export const ImageContainer= styled.div`
@@ -72,14 +73,14 @@ color: #CECECE;
 export const LeftContainer=styled.div`
 position: absolute;
 right: 0px;
-bottom: 3.6rem;
+bottom: 3.0rem;
 z-index: 1;
 `
 
 export const RightContainer=styled.div`
 position: absolute;
 left: 0px;
-bottom: 3.4rem;
+bottom: 3.2rem;
 z-index: 1;
 
 `
@@ -117,10 +118,11 @@ top: -9rem;
   }
 `;
 
-export const Typography = styled.p`
+export const Typography = styled.h1`
 color: rgb(255, 255, 255);
-font-family: Rubik-Bold;
-font-size: 1.65rem;
+font-family: 'Rubik', sans-serif;
+font-weight: bold;
+font-size: 1.75rem;
 text-transform: uppercase;
 position: relative;
 z-index: 5;
@@ -132,45 +134,52 @@ top: 150px;
 export const ProductContainer=styled.div`
 ul {
   list-style: none;
-  font-family: Quicksand-Regular;
+  font-family: Rubik-Regular, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   display: block;
+ 
 }
-
+a{
+  color:white;
+  text-decoration:none;
+}
 ul link{
   margin-top: 0.5rem;
   color: white;
 }
-
-
 `
 
 export const StyledContainer = styled.div`
-  input {
-    box-sizing: border-box;
-   
  
-    position: absolute;
+input {
+  position:absolute;
+ margin: 0px auto;
+ padding-left:50px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
     width: 614px;
-    height: 67px;
-    left: 400px;
-    top: 150px;
-    color: black;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    font-size: 1.2rem;
-    font-family: "Quicksand", sans-serif;
-    padding-left: 40px;
-  }
-`;
+ height: 67px;
+ top: 137px;
+color: black;
+background: #ffffff;
+ border: 1px solid rgba(71, 50, 50, 0.05);
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 10px;
+font-size: 1.2rem;
+ font-family: "Quicksand", sans-serif;
+  } 
+`; 
+
+
 
 export const StyledWrapper = styled.section`
-position:absolute;
-  top: 176px;
+  position:absolute;
+ left: 62%;
+  top: 165px;
   width: 18.99px;
   height: 18.73px;
-  left: 970px;
+  
 `;
 
 export const Card= styled.div`
@@ -217,7 +226,6 @@ overflow: hidden;
 export const LeftWaterContainer=styled.div`
 position: absolute;
 left: 0%;
-right: 92.8%;
 bottom: 40.47%;
 background: #73D1E9;
 transform: matrix(1, 0, 0, -1, 0, 0);
@@ -238,8 +246,11 @@ export const MazeContainer=styled.div`
 position:absolute;
 width: 1014.05px;
 height: 1005.01px;
-left: 212.85px;
+left: 80.85px;
 top: 50px;
+right: 0px;
+text-align: center;
+margin: 0 auto;
 `
 
 

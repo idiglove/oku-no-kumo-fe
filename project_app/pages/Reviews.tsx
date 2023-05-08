@@ -27,29 +27,29 @@ const reviews = [
 ];
 export default function Reviews() {
   return (
-    <div>
+  <>
      <Header header={<NavbarText>Reviews</NavbarText>}/> 
        <InputBar>
         <div
           style={{
          position:"absolute",
          marginRight:"1400px",
-            marginBottom:"-40px",
+            marginBottom:"-90px",
         
           }}
         >
-          <Image src="/Tent.png" width={390} height={360} alt="image"/>
+          <Image src="/Tent.png" width={300} height={300} alt="image"/>
         </div>
           <div
           style={{
             position: "absolute",
-            marginRight:"900px",
-            marginBottom:"-180px",
+            marginRight:"1000px",
+            marginBottom:"-240px",
           }}
         >
-          <Image src="/fire.png" width={100}  height={200}alt="image" />
+          <Image src="/fire.png" width={100}  height={150}alt="image" />
         </div>
-      
+       
         <h1>Filter By</h1>
          <Box
       component="form"
@@ -74,7 +74,7 @@ export default function Reviews() {
          <button>Create a Review</button> 
           <CardComponent />
       </ReviewBox>  
-    </div>
+    </>
   );
 }
 

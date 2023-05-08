@@ -3,17 +3,14 @@ import { StyledContainer, StyledWrapper } from "./styled";
 
 function ToolBar(props) {
   return (
-    <div>
-      {props.toolbar}
-      <StyledContainer>
+    <StyledContainer>
+      <div>
         <input type="text" placeholder="Search board game" />
         <StyledWrapper>
-          <section>
-            <Image src="/search.png" fill="absolute" alt="image" />
-          </section>
+          <Image src="/search.png" fill="absolute" alt="image" />
         </StyledWrapper>
-      </StyledContainer>
-    </div>
+      </div>
+    </StyledContainer>
   );
 }
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { ProductContainer,ImageContainer } from '../components/styled';
 import{NavbarText} from "./style";
 import styled from "styled-components";
 import Image from "next/image";
@@ -57,16 +59,16 @@ import Image from "next/image";
      </HeaderWrapper>
     <AboutWrapper>
        <p>
-        Were an interactive community of avid boardgamers - 
-        be it in sharing Reviews, participating and competing
-         in Online Battles, achieving Challenges, and more.
-        <br>
-        </br>
-    We want you to play more of your favorite board games with friends, family and even potential friends!
-    We are in a very early stage of development, thus bugs and hiccups are expected.
-     <br>
+        Were an interactive community of avid boardgamers - be it in sharing Reviews, 
+        participating <br></br>
+        and competing in Online Battles, achieving Challenges, and more.
+        <br></br>
+    We want you to play more of your favorite board games with friends, family
+     and even potential friends!
+      <br>
      </br>
-    Because of this, any feedback is welcome to make this place the best! So please contact us to give any feedback here.
+    We are in a very early stage of development, thus bugs and hiccups are expected.
+    Because of this,<br></br> any feedback is welcome to make this place the best! So please contact us to give any feedback here.
       <br>
       </br>
     </p>
@@ -106,29 +108,28 @@ text-align: center;
     color: white;
     padding: 0px 2rem 2rem;
     text-align: center;
-    height:156px;
-    top:0;
+    height:250px;
+    
  p{
 position: absolute;
+text-align: center;
 margin: 0px auto;
-width: 100%;
+width: 50%;
 display: block;
-left: 91px;
-top: 714px;
+left:380px;
+top: 800px;
 font-family: Quicksand-Regular;
 font-size: 16px;
 line-height: 30px;
  color: #FFFFFF;
  }
 `
-
-
 const FooterContainer=styled.div`
 position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 25rem;
+    height: 20rem;
     background-color:grey;
  `
 

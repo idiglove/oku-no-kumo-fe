@@ -1,9 +1,9 @@
 import Header from "../components/Header";
 import HomePage from '../components/HomePage';
+import Footer from "../components/Footer";
 import AboutWrapper from "../components/AboutWrapper";
 import{NavbarText} from "./style";
 import styled from "styled-components";
-
 
 
  
@@ -16,7 +16,9 @@ import styled from "styled-components";
      </HeaderWrapper>
      <AboutWrapper/>
     <FooterContainer>
-    </FooterContainer> 
+       
+   </FooterContainer> 
+  
   </AboutContainer>
     
    )
@@ -45,12 +47,19 @@ text-align: center;
 
  `
 const FooterContainer=styled.div`
-position: relative;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 20rem;
+    background-color:grey;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 20rem;
     background-color:grey;
  `
+
+
 
  export default About;

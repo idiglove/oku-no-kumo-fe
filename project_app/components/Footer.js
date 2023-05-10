@@ -9,7 +9,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer(props) {
   const titles = [
     {
       name: "About",
@@ -30,6 +30,7 @@ export default function Footer() {
   ];
   return (
     <FooterBox>
+      {props.Footer}
       <ProductContainer>
         {titles.map((title) => (
           <ul key={title}>

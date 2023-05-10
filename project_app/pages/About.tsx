@@ -15,10 +15,11 @@ import styled from "styled-components";
       <HomePage/>
      </HeaderWrapper>
      <AboutWrapper/>
-    <FooterContainer>
-       
-   </FooterContainer> 
-  
+
+      <FooterContainer>
+
+      </FooterContainer>
+
   </AboutContainer>
     
    )

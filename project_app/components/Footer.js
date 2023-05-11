@@ -30,7 +30,6 @@ export default function Footer(props) {
   ];
   return (
     <FooterBox>
-      {props.footer}
       <ProductContainer>
         {titles.map((title) => (
           <ul key={title}>

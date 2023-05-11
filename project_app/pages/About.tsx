@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import HomePage from '../components/HomePage';
-import Footer from "../components/Footer";
+import { ProductContainer,ImageContainer } from "../components/styled";
 import AboutWrapper from "../components/AboutWrapper";
 import{NavbarText} from "./style";
 import styled from "styled-components";
@@ -13,14 +13,12 @@ import styled from "styled-components";
     <HeaderWrapper>
       <Header header={<NavbarText>About Us</NavbarText>}/> 
       <HomePage/>
-     </HeaderWrapper>
-     <AboutWrapper/>
-
-      <FooterContainer>
-
-      </FooterContainer>
-
-  </AboutContainer>
+    </HeaderWrapper>
+    <AboutWrapper/>
+    <FooterContainer>
+    <ProductContainer/>
+    </FooterContainer>
+    </AboutContainer>
     
    )
  }
@@ -47,20 +45,11 @@ z-index: 5;
 text-align: center;
 
  `
-const FooterContainer=styled.div`
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 20rem;
-    background-color:grey;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 20rem;
-    background-color:grey;
- `
-
-
+const FooterContainer=styled(ProductContainer)`
+position: relative;
+background-color: rgb(53, 53, 53);
+height: 20rem;
+    `
 
  export default About;
+

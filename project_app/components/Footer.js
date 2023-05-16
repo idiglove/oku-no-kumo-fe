@@ -6,10 +6,11 @@ import {
   RightContainer,
   ProductContainer,
 } from "./styled";
+import { FooterContainer } from "../pages/style";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Footer(props) {
+export default function Footer() {
   const titles = [
     {
       name: "About",

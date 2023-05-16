@@ -20,7 +20,27 @@ top: 2712px;
 height: 25rem;
 box-sizing: border-box;
 background-color: rgb(53, 53, 53);
+
 `;
+
+// export const FooterBox = styled.footer.attrs(props => ({
+ 
+//   position: props.footer
+// }))`
+// background-color: rgb(53, 53, 53);
+// width: 100%;
+// position:relative;
+// display: flex;
+// justify-content: space-between;
+// overflow-x: hidden;
+// top: 2712px;
+// height: 25rem;
+// box-sizing: border-box;
+
+// position: ${props => props.footer};
+
+// `;
+
 
 export const HomePageContainer = styled.div`
 box-sizing: border-box;

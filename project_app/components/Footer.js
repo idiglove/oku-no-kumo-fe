@@ -6,11 +6,10 @@ import {
   RightContainer,
   ProductContainer,
 } from "./styled";
-import { FooterContainer } from "../pages/style";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer(props) {
   const titles = [
     {
       name: "About",
@@ -59,6 +58,7 @@ export default function Footer() {
           height={60}
         />
       </Wrapper>
+      {props.footer}
     </FooterBox>
   );
 }

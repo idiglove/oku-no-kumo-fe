@@ -1,10 +1,11 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HomePage from '../components/HomePage';
-import { FooterBox} from "../components/styled";
+import {ProductContainer,ImageContainer} from "../components/styled";
 import AboutWrapper from "../components/AboutWrapper";
 import{NavbarText} from "./style";
 import styled from "styled-components";
+import Image from "next/image";
 
 
  function About() {
@@ -15,7 +16,16 @@ import styled from "styled-components";
       <HomePage/>
     </HeaderWrapper>
     <AboutWrapper/>
-    <FooterContainer/>
+   <FooterContainer>
+    <ProductContainer/>
+      <ImageContainer>
+        <div>
+          <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
+          <h6>Copyright @2023</h6>
+        </div> 
+      </ImageContainer>
+   <ProductContainer/>
+   </FooterContainer>
     </AboutContainer>
     
    )
@@ -48,6 +58,8 @@ const FooterContainer = styled.div`
 position:relative; 
 background-color: rgb(53, 53, 53);
 height: 20rem;
+
+
 `;
 
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const LayoutContainer = styled.div`
 width: 100%;
-height:2862px;
+/* height:2862px; */
 position:absolute;
 box-sizing: border-box;
 display: block;
@@ -20,26 +20,8 @@ top: 2712px;
 height: 25rem;
 box-sizing: border-box;
 background-color: rgb(53, 53, 53);
-
 `;
 
-// export const FooterBox = styled.footer.attrs(props => ({
- 
-//   position: props.footer
-// }))`
-// background-color: rgb(53, 53, 53);
-// width: 100%;
-// position:relative;
-// display: flex;
-// justify-content: space-between;
-// overflow-x: hidden;
-// top: 2712px;
-// height: 25rem;
-// box-sizing: border-box;
-
-// position: ${props => props.footer};
-
-// `;
 
 
 export const HomePageContainer = styled.div`
@@ -62,7 +44,6 @@ bottom: 0px;
 left: 0px;
 right:0px;
 z-index: 0; 
-
 `;
 
 export const ImageContainer= styled.div`
@@ -238,8 +219,6 @@ z-index: 10;
 top:140px;
 position: relative;
 overflow: hidden;
-
-
 ` 
   
 

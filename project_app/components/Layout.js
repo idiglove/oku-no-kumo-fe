@@ -7,7 +7,6 @@ import {
   Typography,
   LayoutContainer,
   StyledContainer,
-  ProductContainer,
   FooterBox,
 } from "./styled";
 
@@ -20,7 +19,7 @@ function Layout(props) {
       <ToolBar toolbar={<StyledContainer />} />
       <HomePage />
       <Reviews />
-      <Footer footer={<FooterBox />} />
+      <Footer />
     </LayoutContainer>
   );
 }

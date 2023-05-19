@@ -3,12 +3,7 @@ import Header from "./Header";
 import ToolBar from "./ToolBar";
 import Reviews from "./Reviews";
 import HomePage from "./HomePage";
-import {
-  Typography,
-  LayoutContainer,
-  StyledContainer,
-  FooterBox,
-} from "./styled";
+import { Typography, LayoutContainer, StyledContainer } from "./styled";
 
 function Layout(props) {
   return (

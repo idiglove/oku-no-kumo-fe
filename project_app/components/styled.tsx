@@ -12,7 +12,7 @@ font-size: 16px;
 
 export const FooterBox = styled.div`
 width: 100%;
-position:relative;
+position:absolute;
 display: flex;
 justify-content: space-between;
 overflow-x: hidden;

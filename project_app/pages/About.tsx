@@ -5,7 +5,7 @@ import {ProductContainer,ImageContainer} from "../components/styled";
 import AboutWrapper from "../components/AboutWrapper";
 import{NavbarText} from "./style";
 import styled from "styled-components";
-import Image from "next/image";
+
 
 
  function About() {
@@ -18,13 +18,8 @@ import Image from "next/image";
     <AboutWrapper/>
    <FooterContainer>
     <ProductContainer/>
-      <ImageContainer>
-        <div>
-          <Image src="/logo.svg" alt="love" width={238.2} height={106.1} />
-          <h6>Copyright @2023</h6>
-        </div> 
-      </ImageContainer>
-   <ProductContainer/>
+    <Footer/>
+    {/* <Footer style={{paddingTop:"1000px",position:"relative"}}/>  */}
    </FooterContainer>
     </AboutContainer>
     
@@ -57,10 +52,9 @@ text-align: center;
 const FooterContainer = styled.div`
 position:relative; 
 background-color: rgb(53, 53, 53);
-height: 20rem;
-
-
-`;
+height: 100vh;
+width:100%;
+`
 
 
 

@@ -4,7 +4,7 @@ function AboutWrapper() {
   return (
     <Container>
       <p>
-        Were an interactive community of avid boardgamers - be it in sharing
+        We're an interactive community of avid boardgamers - be it in sharing
         Reviews, participating <br></br>
         and competing in Online Battles, achieving Challenges, and more.
         <br></br>

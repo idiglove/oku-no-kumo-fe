@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const LayoutContainer = styled.div`
 width: 100%;
-/* height:2862px; */
 position:absolute;
 box-sizing: border-box;
 display: block;
@@ -15,9 +14,7 @@ width: 100%;
 position:absolute;
 display: flex;
 justify-content: space-between;
-overflow-x: hidden;
-top: 2712px;
-height: 25rem;
+height: 20rem;
 box-sizing: border-box;
 background-color: rgb(53, 53, 53);
 `;
@@ -180,7 +177,6 @@ export const StyledWrapper = styled.section`
   top: 165px;
   width: 18.99px;
   height: 18.73px;
-  
 `;
 
 export const Card= styled.div`
@@ -216,7 +212,6 @@ background-color: rgb(53, 53, 53);
 display:block;
 box-sizing: border-box;
 z-index: 10;
-top:140px;
 position: relative;
 overflow: hidden;
 ` 
@@ -263,5 +258,4 @@ height: 10rem;
     background-color: rgb(53, 53, 53);
     width: 100%;
     position: absolute;
-    top: 43rem;
 `

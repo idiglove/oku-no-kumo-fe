@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HomePage from '../components/HomePage';
-import {ProductContainer,ImageContainer} from "../components/styled";
+import {ProductContainer} from "../components/styled";
 import AboutWrapper from "../components/AboutWrapper";
 import{NavbarText} from "./style";
 import styled from "styled-components";
@@ -17,9 +17,8 @@ import styled from "styled-components";
     </HeaderWrapper>
     <AboutWrapper/>
    <FooterContainer>
-    <ProductContainer/>
-    <Footer/>
-    {/* <Footer style={{paddingTop:"1000px",position:"relative"}}/>  */}
+     <ProductContainer/>
+    <Footer/> 
    </FooterContainer>
     </AboutContainer>
     
@@ -52,7 +51,6 @@ text-align: center;
 const FooterContainer = styled.div`
 position:relative; 
 background-color: rgb(53, 53, 53);
-height: 100vh;
 width:100%;
 `
 

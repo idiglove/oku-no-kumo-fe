@@ -248,6 +248,7 @@ width: 1014.05px;
 height: 1005.01px;
 left: 80.85px;
 top: 50px;
+z-index:99;
 right: 0px;
 text-align: center;
 margin: 0 auto;

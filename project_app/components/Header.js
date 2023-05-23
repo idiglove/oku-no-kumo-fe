@@ -1,13 +1,7 @@
 import React from "react";
 import NavBarButtons from "./NavBarButtons";
 import Button from "@mui/material/Button";
-import {
-  Container,
-  AppBar,
-  Typography,
-  NavBarWrapper,
-  HeaderButtons,
-} from "./styled";
+import { Container, AppBar, NavBarWrapper, HeaderButtons } from "./styled";
 import Image from "next/image";
 
 function Header(props) {

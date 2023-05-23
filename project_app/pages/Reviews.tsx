@@ -73,7 +73,7 @@ export default function Reviews() {
       <ReviewBox>
          <button>Create a Review</button> 
           <CardComponent />
-      </ReviewBox>   
+      </ReviewBox>  
     </>
   );
 }

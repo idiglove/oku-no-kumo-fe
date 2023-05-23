@@ -24,19 +24,19 @@ export  const ReviewBox= styled.div`
     width: 10rem;
     }   
   `
-export const StyledText= styled.h1`
-position: absolute;
-font-size: 1rem;
-top: 8rem;
-margin: 0px;
-left: 3.4rem;
-color: rgb(255, 255, 255);
-font-family: Rubik-Bold;
-z-index: 5;
-text-align: center;
-  `  
+// export const StyledText= styled.h1`
+// position: absolute;
+// font-size: 1rem;
+// top: 8rem;
+// margin: 0px;
+// left: 3.4rem;
+// color: rgb(255, 255, 255);
+// font-family: Rubik-Bold;
+// z-index: 5;
+// text-align: center;
+//   `  
 
-export const NavbarText= styled.h1`
+export const NavbarText= styled.p`
 text-align:center;
 font-family: Rubik-Bold;
 font-weight: 700;
@@ -64,3 +64,31 @@ h1{
 }
 
   `
+export const AboutWrapperContainer=styled.div`  
+position: relative;
+box-sizing: border-box;
+height: 1112px;
+width: 100%;
+padding: 0px;
+margin: 0px;
+font-size: 16px;
+ `
+export const AboutHeaderWrapper=styled.div`
+width: 100%;
+font-size: 1.75rem;
+background-color: rgb(53, 53, 53);
+min-height: 35rem;
+position: relative;
+display: block;
+font-family: Rubik-Bold;
+position: relative;
+z-index: 5;
+text-align: center;
+
+ `
+
+export const AboutFooterContainer = styled.div`
+position:relative; 
+background-color: rgb(53, 53, 53);
+width:100%;
+`

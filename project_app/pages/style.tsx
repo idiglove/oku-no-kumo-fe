@@ -64,3 +64,31 @@ h1{
 }
 
   `
+export const AboutWrapperContainer=styled.div`  
+position: relative;
+box-sizing: border-box;
+height: 1112px;
+width: 100%;
+padding: 0px;
+margin: 0px;
+font-size: 16px;
+ `
+export const AboutHeaderWrapper=styled.div`
+width: 100%;
+font-size: 1.75rem;
+background-color: rgb(53, 53, 53);
+min-height: 35rem;
+position: relative;
+display: block;
+font-family: Rubik-Bold;
+position: relative;
+z-index: 5;
+text-align: center;
+
+ `
+
+export const AboutFooterContainer = styled.div`
+position:relative; 
+background-color: rgb(53, 53, 53);
+width:100%;
+`

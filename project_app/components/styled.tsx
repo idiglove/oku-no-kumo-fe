@@ -259,3 +259,25 @@ height: 10rem;
     width: 100%;
     position: absolute;
 `
+
+export const AboutContainer = styled.div`
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 0px 2rem 2rem;
+  text-align: center;
+  height: 250px;
+
+  p {
+    position: absolute;
+    text-align: center;
+    margin: 0px auto;
+    width: 50%;
+    display: block;
+    left: 380px;
+    top: 800px;
+    font-family: Quicksand-Regular;
+    font-size: 16px;
+    line-height: 30px;
+    color: #ffffff;
+  }
+`;

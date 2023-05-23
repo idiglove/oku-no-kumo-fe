@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import { AboutContainer } from "./styled";
 
 function AboutWrapper() {
   return (
-    <Container>
+    <AboutContainer>
       <p>
         We're an interactive community of avid boardgamers - be it in sharing
         Reviews, participating <br></br>
@@ -16,30 +16,8 @@ function AboutWrapper() {
         place the best! So please contact us to give any feedback here.
         <br></br>
       </p>
-    </Container>
+    </AboutContainer>
   );
 }
-
-const Container = styled.div`
-  background-color: rgb(53, 53, 53);
-  color: white;
-  padding: 0px 2rem 2rem;
-  text-align: center;
-  height: 250px;
-
-  p {
-    position: absolute;
-    text-align: center;
-    margin: 0px auto;
-    width: 50%;
-    display: block;
-    left: 380px;
-    top: 800px;
-    font-family: Quicksand-Regular;
-    font-size: 16px;
-    line-height: 30px;
-    color: #ffffff;
-  }
-`;
 
 export default AboutWrapper;

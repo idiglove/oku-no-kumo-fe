@@ -186,6 +186,8 @@ bottom:10px;
 border: 2px solid #000000;
 background:#f5f5df;
 border-radius: 10px;
+position:relative;
+z-index:100;
 `
 
 
@@ -211,7 +213,7 @@ min-height: 67rem;
 background-color: rgb(53, 53, 53);
 display:block;
 box-sizing: border-box;
-z-index: 10;
+z-index: 100;
 position: relative;
 overflow: hidden;
 ` 

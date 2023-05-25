@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const LayoutContainer = styled.div`
 width: 100%;
-height:2862px;
 position:absolute;
 box-sizing: border-box;
 display: block;
@@ -12,15 +11,15 @@ font-size: 16px;
 
 export const FooterBox = styled.div`
 width: 100%;
-position:relative;
+position:absolute;
 display: flex;
 justify-content: space-between;
-overflow-x: hidden;
-top: 2712px;
-height: 25rem;
+height: 20rem;
 box-sizing: border-box;
 background-color: rgb(53, 53, 53);
 `;
+
+
 
 export const HomePageContainer = styled.div`
 box-sizing: border-box;
@@ -42,7 +41,6 @@ bottom: 0px;
 left: 0px;
 right:0px;
 z-index: 0; 
-
 `;
 
 export const ImageContainer= styled.div`
@@ -179,7 +177,6 @@ export const StyledWrapper = styled.section`
   top: 165px;
   width: 18.99px;
   height: 18.73px;
-  
 `;
 
 export const Card= styled.div`
@@ -215,11 +212,8 @@ background-color: rgb(53, 53, 53);
 display:block;
 box-sizing: border-box;
 z-index: 10;
-top:140px;
 position: relative;
 overflow: hidden;
-
-
 ` 
   
 
@@ -265,5 +259,26 @@ height: 10rem;
     background-color: rgb(53, 53, 53);
     width: 100%;
     position: absolute;
-    top: 43rem;
 `
+
+export const AboutContainer = styled.div`
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 0px 2rem 2rem;
+  text-align: center;
+  height: 250px;
+
+  p {
+    position: absolute;
+    text-align: center;
+    margin: 0px auto;
+    width: 50%;
+    display: block;
+    left: 380px;
+    top: 800px;
+    font-family: Quicksand-Regular;
+    font-size: 16px;
+    line-height: 30px;
+    color: #ffffff;
+  }
+`;

@@ -147,16 +147,15 @@ ul link{
 `
 
 export const StyledContainer = styled.div`
- 
+padding-left:28%;
+
 input {
-  position:absolute;
- margin: 0px auto;
- padding-left:50px;
-  left: 0px;
-  right: 0px;
-  display: flex;
+position:absolute;
+box-sizing:border-box;
+padding-left:30px;
+display: flex;
   justify-content: space-between;
-    width: 614px;
+  width: 614px;
  height: 67px;
  top: 137px;
 color: black;
@@ -164,7 +163,9 @@ background: #ffffff;
  border: 1px solid rgba(71, 50, 50, 0.05);
  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 10px;
+letter-spacing: 0.065em;
 font-size: 1.2rem;
+align-items: center;
  font-family: "Quicksand", sans-serif;
   } 
 `; 
@@ -172,8 +173,8 @@ font-size: 1.2rem;
 
 
 export const StyledWrapper = styled.section`
-  position:absolute;
- left: 62%;
+position:absolute; 
+margin-left:560px;
   top: 165px;
   width: 18.99px;
   height: 18.73px;

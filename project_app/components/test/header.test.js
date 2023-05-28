@@ -1,6 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import Header from '../Header';
 
-test('should render a button with login text', () => {
-  render(<Header />);
+describe('Header component', () => {
+  it('should render Header component correctly', () => {
+    render(<Header />);
+    const element = screen.getByRole('LogIn');
+    expect(element).toBeInTheDocument();
+  });
 });

@@ -147,7 +147,12 @@ ul link{
 `
 
 export const StyledContainer = styled.div`
-padding-left:28%;
+/* padding-left:28%; */
+align-items:center;
+justify-content:center;
+margin:auto;
+display:flex;
+box-sizing:border-box;
 
 input {
 position:absolute;
@@ -161,12 +166,12 @@ top: 137px;
 color: black;
 background: #ffffff;
 border: 1px solid rgba(71, 50, 50, 0.05);
- box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 10px;
 letter-spacing: 0.065em;
 font-size: 1.2rem;
 align-items: center;
- font-family: "Quicksand", sans-serif;
+font-family: "Quicksand", sans-serif;
   } 
 `; 
 
@@ -224,8 +229,8 @@ export const LeftWaterContainer=styled.div`
 position: absolute;
 left: 0%;
 bottom: 40.47%;
-background: #73D1E9;
-transform: matrix(1, 0, 0, -1, 0, 0);
+fill: #73D1E9;
+/* transform: matrix(1, 0, 0, -1, 0, 0); */
 `
 
 
@@ -234,8 +239,8 @@ position: absolute;
 left: 90.83%;
 right: 0%;
 bottom: 42.35%;
-background: #73D1E9;
-transform: matrix(1, 0, 0, -1, 0, 0);
+fill: #73D1E9;
+/* transform: matrix(1, 0, 0, -1, 0, 0); */
 `
 
 

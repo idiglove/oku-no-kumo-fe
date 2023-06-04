@@ -147,34 +147,40 @@ ul link{
 `
 
 export const StyledContainer = styled.div`
- 
+/* padding-left:28%; */
+align-items:center;
+justify-content:center;
+margin:auto;
+display:flex;
+box-sizing:border-box;
+
 input {
-  position:absolute;
- margin: 0px auto;
- padding-left:50px;
-  left: 0px;
-  right: 0px;
-  display: flex;
-  justify-content: space-between;
-    width: 614px;
- height: 67px;
- top: 137px;
+position:absolute;
+box-sizing:border-box;
+padding-left:30px;
+display: flex;
+justify-content: space-between;
+width: 614px;
+height: 67px;
+top: 137px;
 color: black;
 background: #ffffff;
- border: 1px solid rgba(71, 50, 50, 0.05);
- box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border: 1px solid rgba(71, 50, 50, 0.05);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 10px;
+letter-spacing: 0.065em;
 font-size: 1.2rem;
- font-family: "Quicksand", sans-serif;
+align-items: center;
+font-family: "Quicksand", sans-serif;
   } 
 `; 
 
 
 
 export const StyledWrapper = styled.section`
-  position:absolute;
- left: 62%;
-  top: 165px;
+position:absolute; 
+margin-left:560px;
+  top: 160px;
   width: 18.99px;
   height: 18.73px;
 `;
@@ -186,6 +192,8 @@ bottom:10px;
 border: 2px solid #000000;
 background:#f5f5df;
 border-radius: 10px;
+position:relative;
+z-index:100;
 `
 
 
@@ -211,7 +219,7 @@ min-height: 67rem;
 background-color: rgb(53, 53, 53);
 display:block;
 box-sizing: border-box;
-z-index: 10;
+z-index: 100;
 position: relative;
 overflow: hidden;
 ` 
@@ -221,8 +229,8 @@ export const LeftWaterContainer=styled.div`
 position: absolute;
 left: 0%;
 bottom: 40.47%;
-background: #73D1E9;
-transform: matrix(1, 0, 0, -1, 0, 0);
+fill: #73D1E9;
+/* transform: matrix(1, 0, 0, -1, 0, 0); */
 `
 
 
@@ -231,8 +239,8 @@ position: absolute;
 left: 90.83%;
 right: 0%;
 bottom: 42.35%;
-background: #73D1E9;
-transform: matrix(1, 0, 0, -1, 0, 0);
+fill: #73D1E9;
+/* transform: matrix(1, 0, 0, -1, 0, 0); */
 `
 
 
@@ -242,6 +250,7 @@ width: 1014.05px;
 height: 1005.01px;
 left: 80.85px;
 top: 50px;
+z-index:99;
 right: 0px;
 text-align: center;
 margin: 0 auto;

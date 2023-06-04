@@ -1,29 +1,45 @@
 import styled from "styled-components";
+import {useEffect, useState} from 'react';
 
 const DiceContainer = styled.div`
   height: 52px;
   width: 64px;am 
-  margin: 2rem 0.5rem;
+  margin: 2rem 2rem;
   display: inline-block;
 `;
 
 export function DiceRating({rating}) {
 
+    const [viewRating, setViewRating] = useState(0);
+
+    useEffect(() => {
+        setViewRating(rating);
+    }, [])
+
     const ratings = [1, 2, 3, 4, 5, 6];
+
+    const handleDiceHover = (diceValue) => {
+        console.log('mouse entered')
+        setViewRating(diceValue);
+      };
+
+    const handleDiceLeave = () => {
+        setViewRating(rating);
+    }
     
     return (
         <>
             {ratings.map(dice => {
-                if (rating >=dice) {
+                if (viewRating >=dice) {
                     return ( 
-                        <DiceContainer key={dice}>
-                            <Dice  value={dice} />
+                        <DiceContainer key={dice} onMouseEnter={() => handleDiceHover(dice)} onMouseLeave={handleDiceLeave}>
+                            <Dice value={dice}  />
                         </DiceContainer>
                     )
                 } else {
                     return ( 
-                        <DiceContainer key={dice}>
-                            <Dice value={0} />
+                        <DiceContainer key={dice} onMouseEnter={() => handleDiceHover(dice)} onMouseLeave={handleDiceLeave}>
+                            <Dice value={0}  />
                         </DiceContainer>
                     )
                 }

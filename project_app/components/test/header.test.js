@@ -1,12 +1,17 @@
 import { render, screen } from '@testing-library/react';
 import Header from '../Header';
+import Button from '../Header';
 import { HeaderButtons } from '../styled';
 
 //test if login is rendered on button
 
 describe('HeaderButtons ', () => {
   it('renders the Login on Header page', () => {
-    const { getByText } = render(<HeaderButtons />);
+    const { getByText } = render(
+      <HeaderButtons>
+        <Button />
+      </HeaderButtons>
+    );
     const element = screen.getByLabelText('Login');
     expect(element).toBeInTheDocument();
     expect(getByText(element)).toBeInTheDocument();

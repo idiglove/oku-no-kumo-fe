@@ -9,3 +9,7 @@ describe('HeaderButtons component', () => {
     expect(element).toBeInTheDocument();
   });
 });
+
+//test if login is rendered on button
+
+//test if signup is rendered on button

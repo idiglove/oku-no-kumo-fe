@@ -67,7 +67,7 @@ export default function Reviews() {
 
     return (
         <>
-            <Header height={'18rem'}/>
+            <Header height={'18rem'} />
 
             <ReviewArea>
                 <InputContainer>

@@ -180,7 +180,7 @@ font-family: "Quicksand", sans-serif;
 export const StyledWrapper = styled.section`
 position:absolute; 
 margin-left:560px;
-  top: 165px;
+  top: 160px;
   width: 18.99px;
   height: 18.73px;
 `;

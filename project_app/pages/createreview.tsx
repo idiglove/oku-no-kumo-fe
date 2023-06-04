@@ -13,12 +13,21 @@ import { CFormInput, CFormFloating, CFormLabel } from "@coreui/react";
 
 import {StyledCFormTextarea, StyledCFormInput, StyledCFormLabel, FormLayout, FormTitle, FormDialog, DialogTitle, FormContainer, DialogText, ActionButtonContainer, ActionButton, StyledCFormSelect, StyledFormLabel} from '../components/formstyled';
 
-import {DiceRating} from '../components/Dices';
+import {DiceRating, Dice} from '../components/Dices';
 
 
 export default function Reviews() {
     const [games, setGames] = useState([]); 
     const [selectedGame, setSelectedGame] = useState(null);
+
+    const [replayability, setRepleyability] = useState(1);
+    const [complexity, setComplexity] = useState(1);
+    const [aesthetics, setAesthetics] = useState(1);
+    const [valueForMoney, setValueForMoney] = useState(1);
+    const [playTime, setPlayTime] = useState(1);
+    const [componentsQuality, setComponentsQuality] = useState(1);
+
+    const [averageRating, setAverageRating] = useState(1)
     
     async function fetchGames() {
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/games`);
@@ -32,6 +41,25 @@ export default function Reviews() {
     useEffect(() => {
         fetchGames();
     }, []);
+
+    function computeAverage(numbers) {
+        if (numbers.length === 0) {
+          return 0; // Return 0 for an empty array or handle it as per your requirements
+        }
+      
+        const sum = numbers.reduce((acc, num) => acc + num, 0);
+        const average = sum / numbers.length;
+        return parseFloat(average.toFixed(1));
+      }
+
+    useEffect(() => {
+
+        setAverageRating(computeAverage([replayability, complexity, aesthetics, valueForMoney, playTime, componentsQuality]))
+
+    }, [replayability, complexity, aesthetics, valueForMoney, playTime, componentsQuality])
+
+
+
 
     function handleSelectGame(e) {
         setSelectedGame(e.target.value)
@@ -98,9 +126,8 @@ export default function Reviews() {
                         Put your Review content here
                     </h5>
 
-                    <div>
+                    <StyledCFormTextarea />
 
-                    </div>
 
                 </ContentSection>
 
@@ -125,7 +152,85 @@ export default function Reviews() {
                     <span>* Playing Time: 1 being too long or too short, 6 being well-balanced</span>
 
                     <DicesArea>
-                        <DiceRating rating={4}/>
+                        <RatingRow>
+                            <DiceContainer>
+                                <Dice value={Math.floor(averageRating)} />
+                            
+                            </DiceContainer>
+
+                            <div>
+                            <h2>{averageRating} / 6</h2>
+                            </div>
+
+
+                        </RatingRow>
+
+                        <RatingRow>
+                            <div>
+                                <h1>Replayability</h1>
+                            </div>
+                                
+                            <DiceRating
+                              rating={replayability}
+                              setRating={setRepleyability}
+                            />
+                        </RatingRow>
+
+                        <RatingRow>
+                            <div>
+                                <h1>Complexity</h1>
+                            </div>
+                                
+                            <DiceRating
+                              rating={complexity}
+                              setRating={setComplexity}
+                            />
+                        </RatingRow>
+
+                        <RatingRow>
+                            <div>
+                                <h1>Aesthetics</h1>
+                            </div>
+                                
+                            <DiceRating
+                              rating={aesthetics}
+                              setRating={setAesthetics}
+                            />
+                        </RatingRow>
+
+                        <RatingRow>
+                            <div>
+                                <h1>Value for Money</h1>
+                            </div>
+                                
+                           <DiceRating
+                              rating={valueForMoney}
+                              setRating={setValueForMoney}
+                            />
+                        </RatingRow>
+
+                        <RatingRow>
+                            <div>
+                                <h1>Play Time</h1>
+                            </div>
+                                
+                            <DiceRating
+                              rating={playTime}
+                              setRating={setPlayTime}
+                            />
+                        </RatingRow>
+
+                        <RatingRow>
+                            <div>
+                                <h1>Components Quality</h1>
+                            </div>
+                                
+                            <DiceRating
+                              rating={componentsQuality}
+                              setRating={setComponentsQuality}
+                            />
+                        </RatingRow>
+
                     </DicesArea>
                     
 
@@ -151,7 +256,7 @@ export default function Reviews() {
                         <StyledCFormLabel
                         htmlFor="ytUrl"
                         >
-                            Youtube Url
+                            Youtube URL (optional)
                         </StyledCFormLabel>
                     </ReviewFormFloating>
 
@@ -209,6 +314,7 @@ const LanguageSection = styled.div`
 const ContentSection = styled.div`
   color: rgb(250, 250, 235);
   margin-top: 2rem;
+  margin-right: 5rem;
 
   > div {
     margin-top: 1rem;
@@ -279,6 +385,7 @@ const RatingSection = styled.div`
 const YtUrlArea = styled.div`
     margin-top: 2rem;
     margin-bottom: 1rem;
+    width: 40rem;
 
     color: white;
 
@@ -292,12 +399,35 @@ const SubmitReviewButton = styled(ActionButton)`
   margin-bottom: 3rem;
 `
 
+const DicesArea = styled.div`
+    margin-top: 2rem;
+
+    & h1 {
+        display: block;
+        margin: auto 0;
+        font-size: 1rem;
+        width: 15rem;
+     }  
+
+
+`
+
+const RatingRow = styled.div`
+  display: flex;
+
+  & h2 {
+    margin: auto 0;
+  }
+
+  > div {
+    display: flex;
+  }
+`
+
 const DiceContainer = styled.div`
   height: 52px;
   width: 64px;
-  margin: 2rem 2rem;
-`
+  margin: 2rem 0.5rem;
+  display: inline-block;
+`;
 
-const DicesArea = styled.div`
-    margin-top: 2rem;
-`

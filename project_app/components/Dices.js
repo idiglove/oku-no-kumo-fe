@@ -1,14 +1,9 @@
 import styled from "styled-components";
 import {useEffect, useState} from 'react';
 
-const DiceContainer = styled.div`
-  height: 52px;
-  width: 64px;am 
-  margin: 2rem 2rem;
-  display: inline-block;
-`;
 
-export function DiceRating({rating}) {
+
+export function DiceRating({rating, setRating}) {
 
     const [viewRating, setViewRating] = useState(0);
 
@@ -32,13 +27,23 @@ export function DiceRating({rating}) {
             {ratings.map(dice => {
                 if (viewRating >=dice) {
                     return ( 
-                        <DiceContainer key={dice} onMouseEnter={() => handleDiceHover(dice)} onMouseLeave={handleDiceLeave}>
+                        <DiceContainer 
+                          key={dice} 
+                          onMouseEnter={() => handleDiceHover(dice)} 
+                          onMouseLeave={handleDiceLeave}
+                          onClick={() => {setRating(dice)}}
+                        >
                             <Dice value={dice}  />
                         </DiceContainer>
                     )
                 } else {
                     return ( 
-                        <DiceContainer key={dice} onMouseEnter={() => handleDiceHover(dice)} onMouseLeave={handleDiceLeave}>
+                        <DiceContainer 
+                          key={dice} 
+                          onMouseEnter={() => handleDiceHover(dice)} 
+                          onMouseLeave={handleDiceLeave}
+                          onClick={() => {setRating(dice)}}
+                        >
                             <Dice value={0}  />
                         </DiceContainer>
                     )
@@ -50,10 +55,19 @@ export function DiceRating({rating}) {
 
 }
 
+const DiceContainer = styled.div`
+  height: 52px;
+  width: 64px;
+  margin: 2rem 0.5rem;
+  display: inline-block;
+`;
+
+
+
 
 
  
-function Dice({value}) {
+export function Dice({value}) {
     switch (value) {
         case 0:
             return (

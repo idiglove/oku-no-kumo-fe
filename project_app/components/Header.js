@@ -8,7 +8,7 @@ import Image from 'next/image';
 function Header(props) {
   return (
     <>
-      <AppBar>
+      <AppBar height={props.height}>
         <NavBarWrapper>
           <Container>
             <Image

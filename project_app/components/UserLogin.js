@@ -2,14 +2,11 @@ import { useState, useContext, useEffect } from 'react';
 import { GlobalStateContext } from '../pages/_app';
 import styled from 'styled-components';
 import { CFormInput, CFormFloating, CFormLabel } from '@coreui/react';
-
 import '@coreui/coreui/dist/css/coreui.min.css';
-
 import Swal from 'sweetalert2';
-
 import { useRouter } from 'next/router';
 
-export default function AdminLogin() {
+export default function UserLogin() {
   const router = useRouter();
   const { token, setToken } = useContext(GlobalStateContext);
   const [emailOrUsername, setEmailOrUsername] = useState('');
@@ -17,7 +14,6 @@ export default function AdminLogin() {
 
   useEffect(() => {
     if (token != null) {
-      // Verify that token is not tampered with using api
       router.push('adminpage');
     }
   }, []);
@@ -47,8 +43,6 @@ export default function AdminLogin() {
       });
       return;
     } else {
-      // Successfully logged in
-      //TO DO: Persist token between browser sessiosn. Send token through http only cookie to secure against xss, then use samesite strict to protect against csrf. this is instead of storing in local storage.
       const tokenReceived = resBody.access;
       setToken(tokenReceived);
       router.push('/adminpage');
@@ -57,14 +51,11 @@ export default function AdminLogin() {
 
   return (
     <LoginLayout>
-      <AdminLoginTitle>Admin Login</AdminLoginTitle>
-
+      <AdminLoginTitle>Login</AdminLoginTitle>
       <AdminLoginDialog>
         <DialogTitle>Login</DialogTitle>
-
         <FormContainer>
           <DialogText>Welcome!</DialogText>
-
           <CFormFloating style={{ marginBottom: '1rem' }}>
             <StyledCFormInput
               type="email"
@@ -93,7 +84,6 @@ export default function AdminLogin() {
               Password
             </StyledCFormLabel>
           </CFormFloating>
-
           <LoginButtonContainer>
             <LoginButton onClick={handleLoginClick}>Login</LoginButton>
           </LoginButtonContainer>

@@ -1,11 +1,11 @@
-import React from 'react';
-import NavBarButtons from './NavBarButtons';
-import HeaderButton from './HeaderButton';
-import Button from '@mui/material/Button';
-import { Container, AppBar, NavBarWrapper, HeaderButtons } from './styled';
-import Image from 'next/image';
+import React from "react";
+import NavBarButtons from "./NavBarButtons";
+import Button from "@mui/material/Button";
+import { Container, AppBar, NavBarWrapper, HeaderButtons } from "./styled";
+import Image from "next/image";
+import styled from "styled-components";
 
-function Header(props) {
+export default function Header(props) {
   return (
     <>
       <AppBar height={props.height}>
@@ -21,9 +21,9 @@ function Header(props) {
             />
             <HeaderButtons>
               <HeaderButton>Login</HeaderButton>
-              <Button style={{ backgroundColor: 'rgb(250, 250, 235)' }}>
+              <HeaderButton>
                 Join Us!
-              </Button>
+              </HeaderButton>
             </HeaderButtons>
             <div>
               <NavBarButtons />
@@ -36,4 +36,13 @@ function Header(props) {
   );
 }
 
-export default Header;
+
+const HeaderButton = styled(Button)`
+    background-color: rgb(250, 250, 235) !important;
+    color: rgb(0, 0, 0) !important;
+
+    &:hover {
+        background-color: rgba(25, 118, 210, 0.04) !important;
+    }
+
+`;

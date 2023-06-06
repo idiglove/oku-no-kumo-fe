@@ -106,13 +106,9 @@ top: -9rem;
    width: 144px;
    margin:20px;
    height: 44px;
-   border:2px;
-   background: #ffffff;
    font-family: 'Rubik', sans-serif;
    font-weight:400;
    text-transform:capitalize;
-   border-radius: 10px;
-   color: black; 
   }
 `;
 

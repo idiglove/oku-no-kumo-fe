@@ -10,7 +10,7 @@ import {StyledCFormTextarea, StyledCFormInput, StyledCFormLabel, FormLayout, For
 
 
 
-export default function admin() {
+export default function addgame() {
     const [gameTitle, setGameTitle] = useState("");
     const [gameDesc, setGameDesc] = useState("");
 

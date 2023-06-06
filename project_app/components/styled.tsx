@@ -230,7 +230,6 @@ position: absolute;
 left: 0%;
 bottom: 40.47%;
 fill: #73D1E9;
-/* transform: matrix(1, 0, 0, -1, 0, 0); */
 `
 
 
@@ -240,7 +239,6 @@ left: 90.83%;
 right: 0%;
 bottom: 42.35%;
 fill: #73D1E9;
-/* transform: matrix(1, 0, 0, -1, 0, 0); */
 `
 
 
@@ -289,4 +287,72 @@ export const AboutContainer = styled.div`
     line-height: 30px;
     color: #ffffff;
   }
+`;
+
+export const LoginTitle = styled.span`
+  color: #ffffff;
+  line-height: 63.99px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+`;
+
+export const LoginDialog = styled.div`
+  background-color: #234c4c;
+  width: 30%;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+`;
+
+export const LoginButton = styled.button`
+  margin-top: 1rem;
+  background-color: rgb(250, 250, 235);
+  color: rgb(0, 0, 0);
+  font-family: Rubik, sans-serif;
+  border-radius: 0.625rem;
+  font-size: 1.25rem;
+  min-width: 10rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+`;
+
+export const DialogText = styled.h6`
+  color: rgb(255, 255, 255);
+  font-family: 'Rubik', sans-serif;
+  text-align: left;
+  margin-bottom: 2rem;
+`;
+
+export const DialogTitle = styled.h3`
+  background-color: #2b4040;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  padding: 1rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  text-align: left;
+`;
+
+
+export const LoginLayout = styled.div`
+  width: 100%;
+  text-align: center;
+  border-radius: 0.625rem;
+`;
+
+export const LoginButtonContainer = styled.div`
+  display: flex;
+  justify-content: right;
+`;
+
+export const FormContainer = styled.div`
+  padding: 2rem;
 `;

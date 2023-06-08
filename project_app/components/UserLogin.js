@@ -11,6 +11,7 @@ import {
 import styled from 'styled-components';
 import { CFormInput, CFormFloating, CFormLabel } from '@coreui/react';
 import '@coreui/coreui/dist/css/coreui.min.css';
+import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function UserLogin() {
@@ -40,7 +41,7 @@ export default function UserLogin() {
               ...(open && { display: 'none' })
             }}
           >
-            <MenuIcon />
+            <CloseIcon />
           </IconButton>
         </DialogTitle>
         <FormContainer>

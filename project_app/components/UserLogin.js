@@ -1,17 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
-  LoginTitle,
   LoginDialog,
   LoginButton,
   DialogText,
   DialogTitle,
-  LoginLayout,
+  UserLoginLayout,
   LoginButtonContainer,
   FormContainer
 } from './styled';
 import styled from 'styled-components';
 import { CFormInput, CFormFloating, CFormLabel } from '@coreui/react';
 import '@coreui/coreui/dist/css/coreui.min.css';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function UserLogin() {
   const [emailOrUsername, setEmailOrUsername] = useState('');
@@ -19,11 +19,30 @@ export default function UserLogin() {
 
   async function handleLoginClick() {}
 
+  function handleDialogClose() {}
+
+  useEffect(() => {
+    console.log('render!');
+  });
+
   return (
-    <LoginLayout>
-      <LoginTitle>Login</LoginTitle>
+    <UserLoginLayout>
       <LoginDialog>
-        <DialogTitle>Login</DialogTitle>
+        <DialogTitle>
+          Login
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDialogClose}
+            edge="start"
+            sx={{
+              marginRight: 5,
+              ...(open && { display: 'none' })
+            }}
+          >
+            <MenuIcon />
+          </IconButton>
+        </DialogTitle>
         <FormContainer>
           <DialogText>Welcome!</DialogText>
           <CFormFloating style={{ marginBottom: '1rem' }}>
@@ -59,7 +78,7 @@ export default function UserLogin() {
           </LoginButtonContainer>
         </FormContainer>
       </LoginDialog>
-    </LoginLayout>
+    </UserLoginLayout>
   );
 }
 
@@ -75,4 +94,9 @@ const StyledCFormInput = styled(CFormInput)`
 
 const StyledCFormLabel = styled(CFormLabel)`
   color: gray;
+`;
+
+const IconButton = styled.button`
+  color: white;
+  margin-left: 260px;
 `;

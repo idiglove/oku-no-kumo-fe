@@ -342,8 +342,9 @@ export const DialogTitle = styled.h3`
 `;
 
 
-export const LoginLayout = styled.div`
+export const UserLoginLayout = styled.div`
   width: 100%;
+  margin-top:10%;
   text-align: center;
   border-radius: 0.625rem;
 `;
@@ -355,4 +356,36 @@ export const LoginButtonContainer = styled.div`
 
 export const FormContainer = styled.div`
   padding: 2rem;
+`;
+
+export const NavbarButtonContainer = styled.div`
+  position: absolute;
+  max-width: 40rem;
+  margin: 0px auto;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+
+  Button {
+    padding: 0.7rem 1.7rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(53, 53, 53);
+    border: 2px solid white;
+    border-radius: 0.625rem;
+  }
+
+  p {
+    height: 24px;
+    left: 418px;
+    top: 227px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: lowercase;
+    letter-spacing: 0.025em;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
 `;

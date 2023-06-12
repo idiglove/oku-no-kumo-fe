@@ -9,39 +9,34 @@ import {
   FormContainer
 } from './styled';
 import styled from 'styled-components';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import { CFormInput, CFormFloating, CFormLabel } from '@coreui/react';
 import '@coreui/coreui/dist/css/coreui.min.css';
-import CloseIcon from '@mui/icons-material/Close';
-import MenuIcon from '@mui/icons-material/Menu';
 
 export default function UserLogin() {
   const [emailOrUsername, setEmailOrUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [open, setOpen] = useState(false);
 
-  async function handleLoginClick() {}
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-  function handleDialogClose() {}
+  const handleSave = (event) => {};
 
-  useEffect(() => {
-    console.log('render!');
-  });
+  useEffect(() => {});
 
   return (
     <UserLoginLayout>
       <LoginDialog>
         <DialogTitle>
           Login
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDialogClose}
-            edge="start"
-            sx={{
-              marginRight: 5,
-              ...(open && { display: 'none' })
-            }}
-          >
-            <CloseIcon />
+          <IconButton>
+            <CloseIcon
+              style={{ color: 'white', marginLeft: '240px' }}
+              onClick={handleClose}
+            />
           </IconButton>
         </DialogTitle>
         <FormContainer>
@@ -75,7 +70,7 @@ export default function UserLogin() {
             </StyledCFormLabel>
           </CFormFloating>
           <LoginButtonContainer>
-            <LoginButton onClick={handleLoginClick}>Login</LoginButton>
+            <LoginButton onClick={handleSave}>Login</LoginButton>
           </LoginButtonContainer>
         </FormContainer>
       </LoginDialog>
@@ -86,7 +81,6 @@ export default function UserLogin() {
 const StyledCFormInput = styled(CFormInput)`
   background-color: #2b2b2b;
   color: #ffffff;
-
   &:focus {
     background-color: #2b2b2b !important;
     color: #ffffff;
@@ -95,9 +89,4 @@ const StyledCFormInput = styled(CFormInput)`
 
 const StyledCFormLabel = styled(CFormLabel)`
   color: gray;
-`;
-
-const IconButton = styled.button`
-  color: white;
-  margin-left: 260px;
 `;

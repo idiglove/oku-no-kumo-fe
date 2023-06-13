@@ -10,7 +10,7 @@ import {
 } from './styled';
 import styled from 'styled-components';
 import Button from '@mui/material/Button';
-import CloseIcon from '@mui/icons-material/Close';
+
 import { CFormInput, CFormFloating, CFormLabel } from '@coreui/react';
 import '@coreui/coreui/dist/css/coreui.min.css';
 
@@ -18,11 +18,7 @@ export default function UserLogin() {
   const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [active, setActive] = useState(false);
-
-  function closeItem() {
-    setActive(true);
-  }
+  const [isOpen, setIsOpen] = useState(false);
 
   const Login = (event) => {
     event.preventDefault();
@@ -40,15 +36,7 @@ export default function UserLogin() {
   return (
     <UserLoginLayout>
       <LoginDialog>
-        <DialogTitle>
-          Login
-          <Button
-            onClick={closeItem}
-            style={{ paddingLeft: '220px', color: 'white' }}
-          >
-            <CloseIcon className={active ? 'close' : 'open'} />
-          </Button>
-        </DialogTitle>
+        <DialogTitle>Login</DialogTitle>
         <FormContainer>
           <DialogText>Welcome!</DialogText>
           {!isLoggedIn ? (

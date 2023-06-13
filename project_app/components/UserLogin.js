@@ -9,69 +9,87 @@ import {
   FormContainer
 } from './styled';
 import styled from 'styled-components';
-import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 import { CFormInput, CFormFloating, CFormLabel } from '@coreui/react';
 import '@coreui/coreui/dist/css/coreui.min.css';
 
 export default function UserLogin() {
-  const [emailOrUsername, setEmailOrUsername] = useState('');
+  const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
-  const [open, setOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [active, setActive] = useState(false);
 
-  const handleClose = () => {
-    setOpen(false);
+  function closeItem() {
+    setActive(true);
+  }
+
+  const Login = (event) => {
+    event.preventDefault();
+    console.log(username, password);
+    const userData = {
+      username,
+      password
+    };
+    localStorage.setItem('token-info', JSON.stringify(userData));
+    setIsLoggedIn(true);
+    setUserName('');
+    setPassword('');
   };
-
-  const handleSave = (event) => {};
-
-  useEffect(() => {});
 
   return (
     <UserLoginLayout>
       <LoginDialog>
         <DialogTitle>
           Login
-          <IconButton>
-            <CloseIcon
-              style={{ color: 'white', marginLeft: '240px' }}
-              onClick={handleClose}
-            />
-          </IconButton>
+          <Button
+            onClick={closeItem}
+            style={{ paddingLeft: '220px', color: 'white' }}
+          >
+            <CloseIcon className={active ? 'close' : 'open'} />
+          </Button>
         </DialogTitle>
         <FormContainer>
           <DialogText>Welcome!</DialogText>
-          <CFormFloating style={{ marginBottom: '1rem' }}>
-            <StyledCFormInput
-              type="email"
-              id="emailOrUsername"
-              placeholder="name@example.com"
-              value={emailOrUsername}
-              onChange={(e) => {
-                setEmailOrUsername(e.target.value);
-              }}
-            />
-            <StyledCFormLabel htmlFor="floatingInput">
-              Username / Email
-            </StyledCFormLabel>
-          </CFormFloating>
-          <CFormFloating>
-            <StyledCFormInput
-              type="password"
-              id="adminPassword"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />
-            <StyledCFormLabel htmlFor="exampleFormControlTextarea1">
-              Password
-            </StyledCFormLabel>
-          </CFormFloating>
-          <LoginButtonContainer>
-            <LoginButton onClick={handleSave}>Login</LoginButton>
-          </LoginButtonContainer>
+          {!isLoggedIn ? (
+            <>
+              <CFormFloating style={{ marginBottom: '1rem' }}>
+                <StyledCFormInput
+                  type="username"
+                  id="username"
+                  value={username}
+                  onChange={(e) => {
+                    setUserName(e.target.value);
+                  }}
+                />
+                <StyledCFormLabel htmlFor="floatingInput">
+                  Username / Email
+                </StyledCFormLabel>
+              </CFormFloating>
+              <CFormFloating>
+                <StyledCFormInput
+                  type="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                />
+                <StyledCFormLabel htmlFor="exampleFormControlTextarea1">
+                  Password
+                </StyledCFormLabel>
+              </CFormFloating>
+              <LoginButtonContainer>
+                <LoginButton type="submit" onClick={Login}>
+                  Login
+                </LoginButton>
+              </LoginButtonContainer>
+            </>
+          ) : (
+            <>
+              <h1>User is logged in</h1>
+            </>
+          )}
         </FormContainer>
       </LoginDialog>
     </UserLoginLayout>

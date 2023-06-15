@@ -1,8 +1,9 @@
-import React from "react";
-import NavBarButtons from "./NavBarButtons";
-import Button from "@mui/material/Button";
-import { Container, AppBar, NavBarWrapper, HeaderButtons } from "./styled";
-import Image from "next/image";
+import React from 'react';
+import NavBarButtons from './NavBarButtons';
+import HeaderButton from './HeaderButton';
+import Button from '@mui/material/Button';
+import { Container, AppBar, NavBarWrapper, HeaderButtons } from './styled';
+import Image from 'next/image';
 
 function Header(props) {
   return (
@@ -19,8 +20,8 @@ function Header(props) {
               alt="Ain't Board Logo"
             />
             <HeaderButtons>
-              <Button>Login</Button>
-              <Button style={{ backgroundColor: "rgb(250, 250, 235)" }}>
+              <HeaderButton>Login</HeaderButton>
+              <Button style={{ backgroundColor: 'rgb(250, 250, 235)' }}>
                 Join Us!
               </Button>
             </HeaderButtons>

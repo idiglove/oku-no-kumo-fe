@@ -28,3 +28,9 @@ describe('HeaderButtons ', () => {
     expect(getByText(element)).toBeInTheDocument();
   });
 });
+
+test('renders the Login on the Header Page', () => {
+  render(<App />);
+  expect(screen.getByRole('button')).toHaveTextContent(/Doggy Directory/);
+  expect(screen.getByRole('combobox')).toHaveDisplayValue('Select a breed');
+});

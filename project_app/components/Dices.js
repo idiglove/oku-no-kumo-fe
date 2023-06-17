@@ -79,17 +79,17 @@ export function Dice({value}) {
         case 0:
             return <Dice0 height={'52px'} width={'64px'}/>
         case 1:
-            return <Dice0 height={'52px'} width={'64px'}/>
+            return <Dice1 height={'52px'} width={'64px'}/>
         case 2:
-            return <Dice0 height={'52px'} width={'64px'}/>
+            return <Dice2 height={'52px'} width={'64px'}/>
         case 3:
-            return <Dice0 height={'52px'} width={'64px'}/>
+            return <Dice3 height={'52px'} width={'64px'}/>
         case 4:
-            return <Dice0 height={'52px'} width={'64px'}/>
+            return <Dice4 height={'52px'} width={'64px'}/>
         case 5: 
-            return <Dice0 height={'52px'} width={'64px'}/>
+            return <Dice5 height={'52px'} width={'64px'}/>
         case 6:
-            return <Dice0 height={'52px'} width={'64px'}/>
+            return <Dice6 height={'52px'} width={'64px'}/>
     }
 }
 

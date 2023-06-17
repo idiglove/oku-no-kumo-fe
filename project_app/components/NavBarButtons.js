@@ -1,5 +1,6 @@
 import Button from '@mui/material/Button';
 import { NavbarButtonContainer } from './styled';
+import styled from "styled-components";
 
 function NavBarButtons() {
   return (

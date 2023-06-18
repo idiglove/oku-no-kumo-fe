@@ -86,7 +86,7 @@ z-index: 1;
 export const AppBar = styled.div`
 width: 100%;
 background-color: rgb(53, 53, 53);
-min-height: 43rem;
+min-height: ${(props) => props.height || '43rem'};
 box-sizing: border-box;
 display: block;
 
@@ -106,13 +106,9 @@ top: -9rem;
    width: 144px;
    margin:20px;
    height: 44px;
-   border:2px;
-   background: #ffffff;
    font-family: 'Rubik', sans-serif;
    font-weight:400;
    text-transform:capitalize;
-   border-radius: 10px;
-   color: black; 
   }
 `;
 

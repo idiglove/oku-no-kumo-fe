@@ -52,6 +52,6 @@ const AdminLayoutStyle = styled.div`
   display: flex;
   flex-direciton: column;
   height: 100%;
-width: 100%;
+  width: 100%;
 background-color: #353535;
 `;

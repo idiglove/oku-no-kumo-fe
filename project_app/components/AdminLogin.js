@@ -61,6 +61,7 @@ export default function AdminLogin() {
             router.push('/adminpage');
 
         }
+    }
 
   useEffect(() => {
     if (token != null) {
@@ -68,13 +69,6 @@ export default function AdminLogin() {
       router.push('adminpage');
     }
   }, []);
-
-    const handleKeyDown = (event) => {
-        if (event.keyCode === 13 && passwordRef.current === document.activeElement) {
-          // Enter key pressed and password input is focused, trigger login click
-          handleLoginClick();
-        }
-      };
 
     const handleKeyDown = (event) => {
         if (event.keyCode === 13 && passwordRef.current === document.activeElement) {
@@ -136,6 +130,7 @@ export default function AdminLogin() {
             </AdminLoginDialog>
         </FormLayout>
     );
+}
 
 
 const AdminLoginDialog = styled.div`
@@ -156,4 +151,4 @@ const FormLayout = styled.div`
   @media (max-width: 767px) {
     margin-top: 10rem;
   }
-`;
+`

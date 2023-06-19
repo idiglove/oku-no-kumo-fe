@@ -18,7 +18,7 @@ import {DiceRating, Dice} from '../components/Dices';
 
 export default function Reviews() {
     const [games, setGames] = useState([]); 
-    const [reviewOrStrat, setReviewOrStrat] = useState('Review');
+    const [isReview, setIsReview] = useState(true);
 
     const [selectedGame, setSelectedGame] = useState(null);
 
@@ -76,7 +76,7 @@ export default function Reviews() {
     function handleInputChange(e) {
         const value = e.target.value;
         const id = e.target.id;
-        if (reviewOrStrat === 'Review') {
+        if (isReview) {
             setReviewValues((prevState) => ({
                 ...prevState,
                 [id]: value
@@ -113,7 +113,9 @@ export default function Reviews() {
 
     }, [replayability, complexity, aesthetics, valueForMoney, playTime, componentsQuality])
 
-
+    function reviewOrStrat(isReview) {
+        return isReview ? 'Review' : 'Strategy'
+    }
 
 
     function handleSelectGame(e) {
@@ -127,13 +129,13 @@ export default function Reviews() {
             <ReviewArea>
                 <InputContainer>
 
-                    <PageLabel isActive={reviewOrStrat === 'Review'} onClick={() => {
-                        setReviewOrStrat('Review')
+                    <PageLabel isActive={isReview} onClick={() => {
+                        setIsReview(true)
                         setActiveValues(reviewValues);
                     }}>Create A Review</PageLabel>
 
-                    <PageLabel isActive={reviewOrStrat === 'Strategy'} onClick={() => {
-                        setReviewOrStrat('Strategy')
+                    <PageLabel isActive={!isReview} onClick={() => {
+                        setIsReview(false)
                         setActiveValues(stratValues);
                     }}>Create A Strategy</PageLabel>
 
@@ -148,7 +150,7 @@ export default function Reviews() {
                         <StyledCFormLabel
                         htmlFor="title"
                         >
-                            {reviewOrStrat} Title
+                            {reviewOrStrat(isReview)} Title
                         </StyledCFormLabel>
                     </ReviewFormFloating>
 
@@ -171,7 +173,7 @@ export default function Reviews() {
                 </InputContainer>
 
                 <ImageSection>
-                    <h4>Upload your own images related to your {reviewOrStrat}</h4>
+                    <h4>Upload your own images related to your {reviewOrStrat(isReview)}</h4>
 
                     <span>Images from any website is prohibited. Please upoload your own images. Make sure it's good quality too</span>
 
@@ -189,7 +191,7 @@ export default function Reviews() {
 
                 <ContentSection> 
                     <h5>
-                        Put your {reviewOrStrat} content here
+                        Put your {reviewOrStrat(isReview)} content here
                     </h5>
 
                     <StyledCFormTextarea                       onChange={handleInputChange}
@@ -202,7 +204,7 @@ export default function Reviews() {
 
                 <LanguageSection>
                     
-                    <h5>What is your {reviewOrStrat}'s primary language</h5>
+                    <h5>What is your {reviewOrStrat(isReview)}'s primary language</h5>
 
                     <select onChange={handleInputChange}
                       value={activeValues.language}
@@ -215,7 +217,7 @@ export default function Reviews() {
 
                 </LanguageSection>
 
-                {(reviewOrStrat === 'Review') ?
+                {isReview ?
                 <RatingSection>
                     <h6>Reate this boardgame by these categories from 1 - 6. 1 being the lowest, and 5 being the highest</h6>
 
@@ -317,7 +319,7 @@ export default function Reviews() {
                 
                 <YtUrlArea>
                     <h5>
-                        Upload a youtube link that could be your elaborate video about your {reviewOrStrat} 
+                        Upload a youtube link that could be your elaborate video about your {reviewOrStrat(isReview)} 
                     </h5>
 
                     <ReviewFormFloating>
@@ -460,7 +462,7 @@ const RatingSection = styled.div`
 const YtUrlArea = styled.div`
     margin-top: 2rem;
     margin-bottom: 1rem;
-    width: 40rem;
+    width: 50rem;
 
     color: white;
 

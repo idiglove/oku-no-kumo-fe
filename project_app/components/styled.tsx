@@ -383,6 +383,8 @@ export const NavbarButtonContainer = styled.div`
     letter-spacing: 0.025em;
     text-transform: capitalize;
     color: #ffffff;
+    margin: 0;
+    height: fit-content
   }
 `;
 

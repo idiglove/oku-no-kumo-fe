@@ -255,6 +255,9 @@ export const HeaderButtons=styled.div`
 display: flex;
 flex: 1 1 0%;
 justify-content: flex-end;
+position:absolute;
+right:0;
+
 `
 export const HomePageNav=styled.div`
 height: 10rem;
@@ -358,10 +361,13 @@ export const NavbarButtonContainer = styled.div`
   max-width: 40rem;
   display: flex;
   justify-content: space-between;
+  padding-top:100px;
+  margin-right:500px;
 
   Button {
-    padding: 0.7rem 1.7rem;
-    color: rgb(255, 255, 255);
+    padding: 1rem 1.7rem;
+    padding:20px;
+    color: rgb(9, 5, 5);
     background-color: rgb(53, 53, 53);
     border: 2px solid white;
     border-radius: 0.625rem;

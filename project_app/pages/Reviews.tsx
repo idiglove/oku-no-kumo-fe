@@ -5,7 +5,7 @@ import{ReviewBox,NavbarText,InputBar} from "./style";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Image from "next/image";
-
+import Link from 'next/link';
 
 const reviews = [
   {
@@ -71,7 +71,9 @@ export default function Reviews() {
          </Box>
           </InputBar>
       <ReviewBox>
+        <Link href="/createreview">
          <button>Create a Review</button> 
+         </Link>
           <CardComponent />
       </ReviewBox>  
     </>

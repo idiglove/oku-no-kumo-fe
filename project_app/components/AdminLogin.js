@@ -61,6 +61,7 @@ export default function AdminLogin() {
             router.push('/adminpage');
 
         }
+    }
 
   useEffect(() => {
     if (token != null) {
@@ -129,71 +130,6 @@ export default function AdminLogin() {
             </AdminLoginDialog>
         </FormLayout>
     );
-
-    const resBody = await response.json();
-
-    if (!response.ok) {
-      Swal.fire({
-        title: resBody.heading,
-        text: resBody.message,
-        icon: 'error'
-      });
-      return;
-    } else {
-      // Successfully logged in
-      //TO DO: Persist token between browser sessiosn. Send token through http only cookie to secure against xss, then use samesite strict to protect against csrf. this is instead of storing in local storage.
-      const tokenReceived = resBody.access;
-      setToken(tokenReceived);
-      router.push('/adminpage');
-    }
-  }
-
-  return (
-    <LoginLayout>
-      <AdminLoginTitle>Admin Login</AdminLoginTitle>
-
-      <AdminLoginDialog>
-        <DialogTitle>Login</DialogTitle>
-
-        <FormContainer>
-          <DialogText>Welcome!</DialogText>
-
-          <CFormFloating style={{ marginBottom: '1rem' }}>
-            <StyledCFormInput
-              type="email"
-              id="emailOrUsername"
-              placeholder="name@example.com"
-              value={emailOrUsername}
-              onChange={(e) => {
-                setEmailOrUsername(e.target.value);
-              }}
-            />
-            <StyledCFormLabel htmlFor="floatingInput">
-              Username / Email
-            </StyledCFormLabel>
-          </CFormFloating>
-          <CFormFloating>
-            <StyledCFormInput
-              type="password"
-              id="adminPassword"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />
-            <StyledCFormLabel htmlFor="exampleFormControlTextarea1">
-              Password
-            </StyledCFormLabel>
-          </CFormFloating>
-
-          <LoginButtonContainer>
-            <LoginButton onClick={handleLoginClick}>Login</LoginButton>
-          </LoginButtonContainer>
-        </FormContainer>
-      </AdminLoginDialog>
-    </LoginLayout>
-  );
 }
 
 
@@ -215,4 +151,4 @@ const FormLayout = styled.div`
   @media (max-width: 767px) {
     margin-top: 10rem;
   }
-`;
+`

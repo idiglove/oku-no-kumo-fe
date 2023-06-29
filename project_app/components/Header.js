@@ -12,6 +12,16 @@ export default function Header(props) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [isLoggedOut, setIsLoggedOut] = useState(false);
+
+  const handleLogout = () => {
+    setIsLoggedOut(true);
+  };
+
+  if (isLoggedOut) {
+    return <p>You have been logged out successfully.</p>;
+  }
+
   return (
     <>
       <AppBar height={props.height}>
@@ -30,7 +40,7 @@ export default function Header(props) {
               <Modal open={open} onClose={handleClose}>
                 <Login />
               </Modal>
-              <HeaderButton>Join Us!</HeaderButton>
+              <HeaderButton onClick={handleLogout}>Logout</HeaderButton>
             </HeaderButtons>
             <div>
               <NavBarButtons />

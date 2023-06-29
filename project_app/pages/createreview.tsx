@@ -81,16 +81,8 @@ export default function Reviews() {
                 ...prevState,
                 [id]: value
             }));
-            setActiveValues((prevState) => ({
-                ...prevState,
-                [id]: value
-            }));
         } else {
             setStratValues((prevState) => ({
-                ...prevState,
-                [id]: value
-            }));
-            setActiveValues((prevState) => ({
                 ...prevState,
                 [id]: value
             }));
@@ -145,7 +137,7 @@ export default function Reviews() {
                         placeholder="Review Title"
                         id="title"
                         onChange={handleInputChange}
-                        value={activeValues.title}
+                        value={isReview ? reviewValues.title : stratValues.title}
                         />
                         <StyledCFormLabel
                         htmlFor="title"
@@ -157,7 +149,7 @@ export default function Reviews() {
                     <StyledCFormSelect
                       id="game"
                       onChange={handleInputChange}
-                      value={activeValues.game}
+                      value={isReview ? reviewValues.game : stratValues.game}
                     >
                         {games.length === 0 ? 'Loading games...' : games.map(game => {
                             return <option
@@ -195,7 +187,7 @@ export default function Reviews() {
                     </h5>
 
                     <StyledCFormTextarea                       onChange={handleInputChange}
-                      value={activeValues.content}
+                      value={isReview ? reviewValues.content : stratValues.content}
                       id="content"
                     />
 
@@ -207,7 +199,7 @@ export default function Reviews() {
                     <h5>What is your {reviewOrStrat(isReview)}'s primary language</h5>
 
                     <select onChange={handleInputChange}
-                      value={activeValues.language}
+                      value={isReview ? reviewValues.language : stratValues.language}
                       id="language">
                         <option selected disabled value="">Language</option>
                         <option value="Filipino">Filipino</option>
@@ -328,7 +320,7 @@ export default function Reviews() {
                         placeholder="Youtube URL (optional)"
                         id="url"
                         onChange={handleInputChange}
-                        value={activeValues.url}
+                        value={isReview ? reviewValues.url : stratValues.url}
                         />
                         <StyledCFormLabel
                         htmlFor="url"

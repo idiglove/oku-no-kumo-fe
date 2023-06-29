@@ -355,11 +355,7 @@ export const FormContainer = styled.div`
 `;
 
 export const NavbarButtonContainer = styled.div`
-  position: absolute;
   max-width: 40rem;
-  margin: 0px auto;
-  left: 0px;
-  right: 0px;
   display: flex;
   justify-content: space-between;
 

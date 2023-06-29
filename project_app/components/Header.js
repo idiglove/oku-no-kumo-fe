@@ -1,11 +1,17 @@
-import React from "react";
-import NavBarButtons from "./NavBarButtons";
-import Button from "@mui/material/Button";
-import { Container, AppBar, NavBarWrapper, HeaderButtons } from "./styled";
-import Image from "next/image";
-import styled from "styled-components";
+import React from 'react';
+import { useState } from 'react';
+import NavBarButtons from './NavBarButtons';
+import Button from '@mui/material/Button';
+import Login from './Login';
+import Modal from '@mui/material/Modal';
+import { Container, AppBar, NavBarWrapper, HeaderButtons } from './styled';
+import Image from 'next/image';
+import styled from 'styled-components';
 
 export default function Header(props) {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <>
       <AppBar height={props.height}>
@@ -20,10 +26,11 @@ export default function Header(props) {
               alt="Ain't Board Logo"
             />
             <HeaderButtons>
-              <HeaderButton>Login</HeaderButton>
-              <HeaderButton>
-                Join Us!
-              </HeaderButton>
+              <HeaderButton onClick={handleOpen}>Login</HeaderButton>
+              <Modal open={open} onClose={handleClose}>
+                <Login />
+              </Modal>
+              <HeaderButton>Join Us!</HeaderButton>
             </HeaderButtons>
             <div>
               <NavBarButtons />
@@ -36,13 +43,11 @@ export default function Header(props) {
   );
 }
 
-
 const HeaderButton = styled(Button)`
-    background-color: rgb(250, 250, 235) !important;
-    color: rgb(0, 0, 0) !important;
+  background-color: rgb(250, 250, 235) !important;
+  color: rgb(0, 0, 0) !important;
 
-    &:hover {
-        background-color: rgba(25, 118, 210, 0.04) !important;
-    }
-
+  &:hover {
+    background-color: rgba(25, 118, 210, 0.04) !important;
+  }
 `;

@@ -1,10 +1,15 @@
-import { render, screen } from '@testing-library/react';
-import HeaderButtons, { validateInput } from '../styled';
+import React from 'react';
+import '@testing-library/jest-dom/extend-expect';
+import { render } from '@testing-library/react';
+import { HeaderButtons } from '../styled';
+import HeaderButton from '../Header';
 
-describe('HeaderButtons', () => {
-  it('renders the Login on Header page', () => {
-    const buttonText = screen.getByLabelText('Login');
-    render(<HeaderButtons>{buttonText}</HeaderButtons>);
-    expect(buttonText).toBeInTheDocument();
-  });
+test('Button displays "Login"', () => {
+  const { getByText } = render(
+    <HeaderButtons>
+      <HeaderButton />
+    </HeaderButtons>
+  );
+  const loginButton = getByText('Login');
+  expect(loginButton).toBeInTheDocument();
 });

@@ -2,8 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import NavBarButtons from './NavBarButtons';
 import Button from '@mui/material/Button';
-import Login from './Login';
+import UserLogin from './UserLogin';
 import Modal from '@mui/material/Modal';
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
 import { Container, AppBar, NavBarWrapper, HeaderButtons } from './styled';
 import Image from 'next/image';
 import styled from 'styled-components';
@@ -19,7 +21,11 @@ export default function Header(props) {
   };
 
   if (isLoggedOut) {
-    return <p>You have been logged out successfully.</p>;
+    return (
+      <Stack sx={{ width: '100%' }} spacing={2}>
+        <Alert severity="success">You have been logged out successfully.</Alert>
+      </Stack>
+    );
   }
 
   return (
@@ -38,7 +44,7 @@ export default function Header(props) {
             <HeaderButtons>
               <HeaderButton onClick={handleOpen}>Login</HeaderButton>
               <Modal open={open} onClose={handleClose}>
-                <Login />
+                <UserLogin />
               </Modal>
               <HeaderButton onClick={handleLogout}>Logout</HeaderButton>
             </HeaderButtons>

@@ -362,10 +362,10 @@ export const NavbarButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top:100px;
-  margin-right:500px;
+  margin-right:600px;
 
   Button {
-    padding: 1rem 1.7rem;
+    padding: 2rem 4rem;
     padding:20px;
     color: rgb(9, 5, 5);
     background-color: rgb(53, 53, 53);
@@ -389,5 +389,4 @@ export const NavbarButtonContainer = styled.div`
     height: fit-content
   }
 `;
-
 

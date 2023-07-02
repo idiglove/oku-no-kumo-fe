@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import NavBarButtons from './NavBarButtons';
 import Button from '@mui/material/Button';
 import UserLogin from './UserLogin';
@@ -9,6 +8,8 @@ import Stack from '@mui/material/Stack';
 import { Container, AppBar, NavBarWrapper, HeaderButtons } from './styled';
 import Image from 'next/image';
 import styled from 'styled-components';
+
+export const SessionContext = createContext();
 
 export default function Header(props) {
   const [open, setOpen] = useState(false);
@@ -22,9 +23,13 @@ export default function Header(props) {
 
   if (isLoggedOut) {
     return (
-      <Stack sx={{ width: '100%' }} spacing={2}>
-        <Alert severity="success">You have been logged out successfully.</Alert>
-      </Stack>
+      <SessionContext.Provider value={{ isLoggedOut, handleLogout }}>
+        <Stack sx={{ width: '100%' }} spacing={2}>
+          <Alert severity="success">
+            You have been logged out successfully.
+          </Alert>
+        </Stack>
+      </SessionContext.Provider>
     );
   }
 

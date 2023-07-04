@@ -123,7 +123,7 @@ z-index: 5;
 text-align: center;
 margin-block: 0px;
 top: 150px;
-`
+`;
 
 export const ProductContainer=styled.div`
 ul {
@@ -140,7 +140,7 @@ ul link{
   margin-top: 0.5rem;
   color: white;
 }
-`
+`;
 
 export const StyledContainer = styled.div`
 /* padding-left:28%; */
@@ -190,7 +190,7 @@ background:#f5f5df;
 border-radius: 10px;
 position:relative;
 z-index:100;
-`
+`;
 
 
 
@@ -208,7 +208,9 @@ font-weight: 400;
 font-size: 12px;
 line-height: 14px;
 color: #000000;
-`
+`;
+
+
 export const ReviewsBox= styled.div`
 width: 100%;
 min-height: 67rem;
@@ -218,7 +220,7 @@ box-sizing: border-box;
 z-index: 100;
 position: relative;
 overflow: hidden;
-` 
+`;
   
 
 export const LeftWaterContainer=styled.div`
@@ -226,7 +228,7 @@ position: absolute;
 left: 0%;
 bottom: 40.47%;
 fill: #73D1E9;
-`
+`;
 
 
 export const RightWaterContainer=styled.div`
@@ -235,7 +237,7 @@ left: 90.83%;
 right: 0%;
 bottom: 42.35%;
 fill: #73D1E9;
-`
+`;
 
 
 export const MazeContainer=styled.div`
@@ -248,7 +250,7 @@ z-index:99;
 right: 0px;
 text-align: center;
 margin: 0 auto;
-`
+`;
 
 
 export const HeaderButtons=styled.div`
@@ -258,13 +260,13 @@ justify-content: flex-end;
 position:absolute;
 right:0;
 
-`
+`;
 export const HomePageNav=styled.div`
 height: 10rem;
     background-color: rgb(53, 53, 53);
     width: 100%;
     position: absolute;
-`
+`;
 
 export const AboutContainer = styled.div`
   background-color: rgb(53, 53, 53);

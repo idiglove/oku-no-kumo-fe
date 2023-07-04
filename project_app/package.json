@@ -36,6 +36,7 @@
     "@babel/core": "^7.22.1",
     "@babel/preset-env": "^7.22.2",
     "@svgr/webpack": "^6.5.1",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.37",

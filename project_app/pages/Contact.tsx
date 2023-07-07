@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ContactForm from "../components/ContactForm";
 import { ProductContainer } from '../components/styled';
 import {
   NavbarText,
@@ -12,7 +13,8 @@ function Contact() {
   return (
     <AboutWrapperContainer>
       <AboutHeaderWrapper>
-        <Header header={<NavbarText>Contact Us</NavbarText>} />
+        <Header header={<NavbarText></NavbarText>} />
+        <ContactForm/>
       </AboutHeaderWrapper>
       <AboutFooterContainer>
         <ProductContainer />

@@ -4,9 +4,6 @@ import styled from 'styled-components';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-const defaultTheme = createTheme();
 
 export default function ContactForm() {
   const [firstName, setFirstName] = useState('');
@@ -23,7 +20,7 @@ export default function ContactForm() {
       message
     };
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -31,7 +28,8 @@ export default function ContactForm() {
         body: JSON.stringify(formData)
       });
       if (response.ok) {
-        setName('');
+        setFirstName('');
+        setLastName('');
         setEmail('');
         setMessage('');
 

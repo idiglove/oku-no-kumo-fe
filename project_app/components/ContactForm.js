@@ -1,6 +1,6 @@
 import Button from '@mui/material/Button';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -8,20 +8,45 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const defaultTheme = createTheme();
 
-export default function SignUp() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password')
-    });
+export default function ContactForm() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = {
+      firstName,
+      lastName,
+      email,
+      message
+    };
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        setName('');
+        setEmail('');
+        setMessage('');
+
+        alert('Form submitted successfully!');
+      } else {
+        alert('Form submission failed!');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (
     <ContactContainer component="main" maxWidth="xs">
       <h1>Contact Us</h1>
-      <CssBaseline />
       <Box
         sx={{
           marginTop: 4,
@@ -39,8 +64,9 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
-                autoFocus
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                label="FirstName"
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -48,9 +74,9 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="lastName"
-                label="Last Name"
-                name="lastName"
-                autoComplete="family-name"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                label="LastName"
               />
             </Grid>
             <Grid item xs={12}>
@@ -58,19 +84,19 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                label="Email"
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
                 required
                 fullWidth
-                name="password"
-                label="Text"
-                type="password"
-                id="password"
+                id="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                label="Message"
               />
             </Grid>
           </Grid>

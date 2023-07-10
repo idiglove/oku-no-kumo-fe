@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from '@mui/material/Button';
 
 export const LayoutContainer = styled.div`
 width: 100%;
@@ -359,36 +360,15 @@ export const FormContainer = styled.div`
   padding: 2rem;
 `;
 
-export const NavbarButtonContainer = styled.div`
-  max-width: 40rem;
-  display: flex;
-  justify-content: space-between;
-  padding-top:100px;
-  margin-right:600px;
 
-  Button {
-    padding: 2rem 4rem;
-    padding:20px;
-    color: rgb(9, 5, 5);
-    background-color: rgb(53, 53, 53);
-    border: 2px solid white;
-    border-radius: 0.625rem;
-  }
+ 
 
-  p {
-    height: 24px;
-    left: 418px;
-    top: 227px;
-    font-family: 'Rubik', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    text-transform: lowercase;
-    letter-spacing: 0.025em;
-    text-transform: capitalize;
-    color: #ffffff;
-    margin: 0;
-    height: fit-content
+export const HeaderButton = styled(Button)`
+  background-color: rgb(250, 250, 235) !important;
+  color: rgb(0, 0, 0) !important;
+
+  &:hover {
+    background-color: rgba(25, 118, 210, 0.04) !important;
   }
 `;
 

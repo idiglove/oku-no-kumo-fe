@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
   LoginDialog,
   LoginButton,
@@ -10,27 +10,34 @@ import {
 } from './styled';
 import styled from 'styled-components';
 import Button from '@mui/material/Button';
-
 import { CFormInput, CFormFloating, CFormLabel } from '@coreui/react';
 import '@coreui/coreui/dist/css/coreui.min.css';
 
 export default function UserLogin() {
   const [username, setUserName] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const Login = (event) => {
-    event.preventDefault();
-    console.log(username, password);
+  const Login = (e) => {
+    e.preventDefault();
+    console.log(username, email, password);
     const userData = {
       username,
+      email,
       password
     };
     localStorage.setItem('token-info', JSON.stringify(userData));
     setIsLoggedIn(true);
     setUserName('');
+    setEmail('');
     setPassword('');
+  };
+
+  const Logout = () => {
+    localStorage.removeItem('token-info');
+    setIsLoggedIn(false);
   };
 
   return (
@@ -76,6 +83,13 @@ export default function UserLogin() {
           ) : (
             <>
               <h1>User is logged in</h1>
+              <Button
+                variant="contained"
+                style={{ color: 'red' }}
+                onClick={Logout}
+              >
+                logout user
+              </Button>
             </>
           )}
         </FormContainer>
@@ -92,7 +106,6 @@ const StyledCFormInput = styled(CFormInput)`
     color: #ffffff;
   }
 `;
-
 const StyledCFormLabel = styled(CFormLabel)`
   color: gray;
 `;

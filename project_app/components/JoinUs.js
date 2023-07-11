@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 import { CFormInput, CFormFloating, CFormLabel } from '@coreui/react';
 import '@coreui/coreui/dist/css/coreui.min.css';
 
-export default function UserLogin() {
+export default function JoinUs() {
   const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);

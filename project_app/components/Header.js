@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBarButtons from './NavBarButtons';
-import JoinUs from './JoinUs';
+// import JoinUs from './JoinUs';
+// import FooterButton from './FooterButton';
 import Button from '@mui/material/Button';
 import { Container, AppBar, NavBarWrapper, HeaderButtons } from './styled';
 import Image from 'next/image';
@@ -22,7 +23,8 @@ export default function Header(props) {
             />
             <HeaderButtons>
               <HeaderButton>Login</HeaderButton>
-              <HeaderButton> Join Us{/* <JoinUs /> */}</HeaderButton>
+              <HeaderButton>JoinUs</HeaderButton>
+              {/* <FooterButton>JoinUs</FooterButton> */}
             </HeaderButtons>
             <div>
               <NavBarButtons />
@@ -36,6 +38,15 @@ export default function Header(props) {
 }
 
 const HeaderButton = styled(Button)`
+  background-color: rgb(250, 250, 235) !important;
+  color: rgb(0, 0, 0) !important;
+
+  &:hover {
+    background-color: rgba(25, 118, 210, 0.04) !important;
+  }
+`;
+
+const FooterButton = styled(Button)`
   background-color: rgb(250, 250, 235) !important;
   color: rgb(0, 0, 0) !important;
 

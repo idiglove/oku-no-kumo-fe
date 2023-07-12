@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import { DialogTitle, LoginButton } from './styled';
+import { CFormInput, CFormFloating, CFormLabel } from '@coreui/react';
+import '@coreui/coreui/dist/css/coreui.min.css';
 
 export default function ContactForm() {
   const [firstName, setFirstName] = useState('');
@@ -44,74 +47,91 @@ export default function ContactForm() {
 
   return (
     <ContactContainer component="main" maxWidth="xs">
-      <h1>Contact Us</h1>
-      <Box
-        sx={{
-          marginTop: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center'
-        }}
-      >
-        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                autoComplete="given-name"
-                name="firstName"
-                required
-                fullWidth
+      <DialogTitle style={{ textAlign: 'center' }}>Contact Us</DialogTitle>
+      <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+        <Grid container spacing={2}>
+          <Grid item xs={10} sm={6}>
+            <CFormFloating style={{ marginBottom: '1rem' }}>
+              <StyledCFormInput
+                type="firstName"
                 id="firstName"
                 value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                label="FirstName"
+                onChange={(e) => {
+                  setFirstName(e.target.value);
+                }}
               />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                required
-                fullWidth
+              <StyledCFormLabel htmlFor="floatingInput">
+                FirstName
+              </StyledCFormLabel>
+            </CFormFloating>
+          </Grid>
+          <Grid item xs={10} sm={6}>
+            <CFormFloating style={{ marginBottom: '1rem' }}>
+              <StyledCFormInput
+                type="lastName"
                 id="lastName"
                 value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                label="LastName"
+                onChange={(e) => {
+                  setLastName(e.target.value);
+                }}
               />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                required
-                fullWidth
+              <StyledCFormLabel htmlFor="floatingInput">
+                LastName
+              </StyledCFormLabel>
+            </CFormFloating>
+          </Grid>
+          <Grid item xs={12}>
+            <CFormFloating style={{ marginBottom: '1rem' }}>
+              <StyledCFormInput
+                type="email"
                 id="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                label="Email"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
               />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                required
-                fullWidth
+              <StyledCFormLabel htmlFor="floatingInput">Email</StyledCFormLabel>
+            </CFormFloating>
+          </Grid>
+          <Grid item xs={12}>
+            <CFormFloating style={{ marginBottom: '1rem' }}>
+              <StyledCFormInput
+                type="message"
                 id="message"
                 value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                label="Message"
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
               />
-            </Grid>
+              <StyledCFormLabel htmlFor="floatingInput">
+                Message
+              </StyledCFormLabel>
+            </CFormFloating>
           </Grid>
-          <Button type="submit" variant="contained">
-            Submit
-          </Button>
-        </Box>
+        </Grid>
+        <LoginButton type="submit">Submit</LoginButton>
       </Box>
     </ContactContainer>
   );
 }
 const ContactContainer = styled.div`
-  background-color: white;
+  background-color: rgb(35, 76, 76);
   position: absolute;
   top: 2px;
-  margin-top: 260px;
+  margin-top: 240px;
   height: 500px;
   width: 70%;
   margin-left: 200px;
+`;
+const StyledCFormInput = styled(CFormInput)`
+  background-color: #2b2b2b;
+  color: #ffffff;
+  &:focus {
+    background-color: #2b2b2b !important;
+    color: #ffffff;
+  }
+`;
+
+const StyledCFormLabel = styled(CFormLabel)`
+  color: gray;
 `;

@@ -4,29 +4,25 @@ import {
   ImageContainer,
   LeftContainer,
   RightContainer,
-  ProductContainer,
-} from "./styled";
-import Image from "next/image";
-import Link from "next/link";
+  ProductContainer
+} from './styled';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer(props) {
   const titles = [
     {
-      name: "About",
-      link: "/about",
+      name: 'About',
+      link: '/about'
     },
     {
-      name: "FAQ",
-      link: "/faq",
+      name: 'FAQ',
+      link: '/faq'
     },
     {
-      name: "Contact Us",
-      link: "/contact",
-    },
-    {
-      name: "Give Feedback",
-      link: "/feedback",
-    },
+      name: 'Contact Us',
+      link: '/contact'
+    }
   ];
   return (
     <FooterBox>
@@ -53,7 +49,7 @@ export default function Footer(props) {
         <Image
           src="/end.png"
           alt="love"
-          style={{ width: "100%" }}
+          style={{ width: '100%' }}
           width={1440}
           height={60}
         />

@@ -22,10 +22,6 @@ export default function Footer(props) {
     {
       name: 'Contact Us',
       link: '/contact'
-    },
-    {
-      name: 'Give Feedback',
-      link: '/feedback'
     }
   ];
   return (

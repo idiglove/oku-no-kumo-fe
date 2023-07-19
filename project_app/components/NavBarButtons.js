@@ -1,15 +1,15 @@
 import Button from '@mui/material/Button';
-import { NavbarButtonContainer } from './styled';
-import styled from "styled-components";
+// import { NavbarButtonContainer } from './styled';
+import styled from 'styled-components';
 import Link from 'next/link';
 
 function NavBarButtons() {
   return (
     <NavbarButtonContainer>
-        <Link href="/Reviews">
-      <Button label="Events">
-        <p>Reviews</p>
-      </Button>
+      <Link href="/Reviews">
+        <Button label="Events">
+          <p>Reviews</p>
+        </Button>
       </Link>
       <Button label="FAQ">
         <p>Challenges</p>
@@ -21,7 +21,7 @@ function NavBarButtons() {
   );
 }
 
-const Container = styled.div`
+const NavbarButtonContainer = styled.div`
   position: absolute;
   max-width: 40rem;
   margin: 0px auto;
@@ -42,7 +42,7 @@ const Container = styled.div`
     height: 24px;
     left: 418px;
     top: 227px;
-    font-family: "Rubik", sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from '@mui/material/Button';
 
 export const LayoutContainer = styled.div`
 width: 100%;
@@ -86,7 +87,7 @@ z-index: 1;
 export const AppBar = styled.div`
 width: 100%;
 background-color: rgb(53, 53, 53);
-min-height: 43rem;
+min-height:43rem;
 box-sizing: border-box;
 display: block;
 
@@ -257,6 +258,9 @@ export const HeaderButtons=styled.div`
 display: flex;
 flex: 1 1 0%;
 justify-content: flex-end;
+position:absolute;
+right:0;
+
 `;
 export const HomePageNav=styled.div`
 height: 10rem;
@@ -356,38 +360,15 @@ export const FormContainer = styled.div`
   padding: 2rem;
 `;
 
-export const NavbarButtonContainer = styled.div`
-  position: absolute;
-  max-width: 40rem;
-  margin: 0px auto;
-  left: 0px;
-  right: 0px;
-  display: flex;
-  justify-content: space-between;
 
-  Button {
-    padding: 0.7rem 1.7rem;
-    color: rgb(255, 255, 255);
-    background-color: rgb(53, 53, 53);
-    border: 2px solid white;
-    border-radius: 0.625rem;
-  }
+ 
 
-  p {
-    height: 24px;
-    left: 418px;
-    top: 227px;
-    font-family: 'Rubik', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    text-transform: lowercase;
-    letter-spacing: 0.025em;
-    text-transform: capitalize;
-    color: #ffffff;
-    margin: 0;
-    height: fit-content
+export const HeaderButton = styled(Button)`
+  background-color: rgb(250, 250, 235) !important;
+  color: rgb(0, 0, 0) !important;
+
+  &:hover {
+    background-color: rgba(25, 118, 210, 0.04) !important;
   }
 `;
-
 

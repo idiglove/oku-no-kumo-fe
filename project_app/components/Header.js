@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import NavBarButtons from './NavBarButtons';
 // import JoinUs from './JoinUs';
 // import FooterButton from './FooterButton';
@@ -7,7 +7,24 @@ import { Container, AppBar, NavBarWrapper, HeaderButtons } from './styled';
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import UserLogin from './UserLogin';
+import Modal from '@mui/material/Modal';
+// import {
+//   Container,
+//   AppBar,
+//   NavBarWrapper,
+//   HeaderButtons,
+//   HeaderButton
+// } from './styled';
+// import Image from 'next/image';
+
+export const SessionContext = createContext();
+
 export default function Header(props) {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <>
       <AppBar height={props.height}>
@@ -22,9 +39,11 @@ export default function Header(props) {
               alt="Ain't Board Logo"
             />
             <HeaderButtons>
-              <HeaderButton>Login</HeaderButton>
-              <HeaderButton>JoinUs</HeaderButton>
-              {/* <FooterButton>JoinUs</FooterButton> */}
+              <HeaderButton onClick={handleOpen}>Login</HeaderButton>
+              <Modal open={open} onClose={handleClose}>
+                <UserLogin />
+              </Modal>
+              <HeaderButton>Join Us!</HeaderButton>
             </HeaderButtons>
             <div>
               <NavBarButtons />

@@ -1,9 +1,9 @@
-import Footer from "./Footer";
-import Header from "./Header";
-import ToolBar from "./ToolBar";
-import Reviews from "./Reviews";
-import HomePage from "./HomePage";
-import { Typography, LayoutContainer, StyledContainer } from "./styled";
+import Footer from './Footer';
+import Header from './Header';
+import ToolBar from './ToolBar';
+import Reviews from './Reviews';
+import HomePage from './HomePage';
+import { Typography, LayoutContainer, StyledContainer } from './styled';
 
 function Layout(props) {
   return (

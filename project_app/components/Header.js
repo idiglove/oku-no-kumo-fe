@@ -1,30 +1,48 @@
 import React, { createContext, useState } from 'react';
 import NavBarButtons from './NavBarButtons';
-// import JoinUs from './JoinUs';
-// import FooterButton from './FooterButton';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import Button from '@mui/material/Button';
 import { Container, AppBar, NavBarWrapper, HeaderButtons } from './styled';
 import Image from 'next/image';
 import styled from 'styled-components';
-
+import HeaderJoin from './HeaderJoin';
 import UserLogin from './UserLogin';
 import Modal from '@mui/material/Modal';
-// import {
-//   Container,
-//   AppBar,
-//   NavBarWrapper,
-//   HeaderButtons,
-//   HeaderButton
-// } from './styled';
-// import Image from 'next/image';
 
 export const SessionContext = createContext();
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  '& .MuiDialogContent-root': {},
+  '& .MuiDialogActions-root': {}
+}));
+
+function BootstrapDialogTitle() {
+  return (
+    <DialogTitle
+      sx={{ m: 0, p: 2 }}
+      style={{ padding: '30px', backgroundColor: 'blue' }}
+    >
+      <IconButton
+        aria-label="close"
+        sx={{
+          position: 'absolute',
+          right: 8,
+          top: 8,
+          color: (theme) => theme.palette.grey[500]
+        }}
+      >
+        <CloseIcon />
+      </IconButton>
+    </DialogTitle>
+  );
+}
 
 export default function Header(props) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
   return (
     <>
       <AppBar height={props.height}>
@@ -43,7 +61,17 @@ export default function Header(props) {
               <Modal open={open} onClose={handleClose}>
                 <UserLogin />
               </Modal>
-              <HeaderButton>Join Us!</HeaderButton>
+              <BootstrapDialog
+                onClose={handleClose}
+                aria-labelledby="customized-dialog-title"
+                open={open}
+              >
+                <BootstrapDialogTitle
+                  id="customized-dialog-title"
+                  onClose={handleClose}
+                ></BootstrapDialogTitle>
+              </BootstrapDialog>
+              <HeaderJoin />
             </HeaderButtons>
             <div>
               <NavBarButtons />

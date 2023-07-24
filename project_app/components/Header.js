@@ -13,30 +13,10 @@ import UserLogin from './UserLogin';
 import Modal from '@mui/material/Modal';
 
 export const SessionContext = createContext();
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialogContent-root': {},
-  '& .MuiDialogActions-root': {}
-}));
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({}));
 
 function BootstrapDialogTitle() {
-  return (
-    <DialogTitle
-      sx={{ m: 0, p: 2 }}
-      style={{ padding: '30px', backgroundColor: 'blue' }}
-    >
-      <IconButton
-        aria-label="close"
-        sx={{
-          position: 'absolute',
-          right: 8,
-          top: 8,
-          color: (theme) => theme.palette.grey[500]
-        }}
-      >
-        <CloseIcon />
-      </IconButton>
-    </DialogTitle>
-  );
+  return <CloseIcon />;
 }
 
 export default function Header(props) {
@@ -63,6 +43,7 @@ export default function Header(props) {
               </Modal>
               <BootstrapDialog
                 onClose={handleClose}
+                style={{ position: 'absolute', left: '280px', bottom: '320px' }}
                 aria-labelledby="customized-dialog-title"
                 open={open}
               >

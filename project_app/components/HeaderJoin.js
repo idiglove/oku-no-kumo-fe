@@ -10,7 +10,7 @@ export default function FooterButton() {
 
   return (
     <div>
-      <JoinButton onClick={handleOpen}>JoinUs</JoinButton>
+      <JoinButton onClick={handleOpen}>Join Us</JoinButton>
       <Modal open={open} onClose={handleClose}>
         <JoinUs />
       </Modal>

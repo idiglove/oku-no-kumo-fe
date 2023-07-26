@@ -1,8 +1,6 @@
 import React, { createContext, useState } from 'react';
 import NavBarButtons from './NavBarButtons';
 import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Button from '@mui/material/Button';
 import { Container, AppBar, NavBarWrapper, HeaderButtons } from './styled';
@@ -44,11 +42,9 @@ export default function Header(props) {
               <BootstrapDialog
                 onClose={handleClose}
                 style={{ position: 'absolute', left: '280px', bottom: '320px' }}
-                aria-labelledby="customized-dialog-title"
                 open={open}
               >
                 <BootstrapDialogTitle
-                  id="customized-dialog-title"
                   onClose={handleClose}
                 ></BootstrapDialogTitle>
               </BootstrapDialog>

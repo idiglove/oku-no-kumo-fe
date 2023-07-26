@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import { LoginDialog, DialogText, DialogTitle, FormContainer } from './styled';
+import {
+  LoginDialog,
+  DialogText,
+  DialogTitle,
+  FormContainer,
+  LoginButton
+} from './styled';
 import styled from 'styled-components';
 import Button from '@mui/material/Button';
 import { CFormInput, CFormFloating, CFormLabel } from '@coreui/react';
@@ -62,18 +68,21 @@ export default function JoinUs() {
           />
           <StyledCFormLabel htmlFor="floatingInput">Password</StyledCFormLabel>
         </CFormFloating>
+        <p style={{ color: 'white' }}>Choose an Avatar</p>
         <div style={{ display: 'flex' }}>
-          <p>Choose an Avatar</p>
-          <Image src="/avatar.png" alt="image" width={100} height={100} />
-          <Image src="/avatar.png" alt="image" width={100} height={100} />
+          <Image src="/BOY.svg" alt="image" width={100} height={100} />
+          <Image src="/DRAGON.svg" alt="image" width={100} height={100} />
+          <Image src="/WIZARD.svg" alt="image" width={100} height={100} />
+          <Image src="/ALPACA.svg" alt="image" width={100} height={100} />
         </div>
-        <Button
-          variant="contained"
-          style={{ color: 'red' }}
-          onClick={handleSignUp}
-        >
-          Sign Up
-        </Button>
+        <div>
+          <LoginButton
+            style={{ color: 'black', marginLeft: '200px' }}
+            onClick={handleSignUp}
+          >
+            SignUp
+          </LoginButton>
+        </div>
       </FormContainer>
     </LoginDialog>
   );

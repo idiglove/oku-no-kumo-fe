@@ -1,7 +1,7 @@
-import Image from "next/image";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import { Card, StyledText } from "./styled";
+import Image from 'next/image';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import { Card, StyledText } from './styled';
 
 function CardComponent() {
   // @todo - alt for the images will be coming from the BE
@@ -18,7 +18,7 @@ function CardComponent() {
       </CardContent>
       <CardActions>
         <Image src="/Dice.png" width={35} height={35} alt="image" />
-        <div style={{ marginLeft: "100px" }}>
+        <div style={{ marginLeft: '100px' }}>
           <Image src="/chat.png" width={12} height={12} alt="image" />
           <Image src="/love.png" width={12} height={12} alt="image" />
         </div>

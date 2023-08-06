@@ -1,4 +1,5 @@
 import Button from '@mui/material/Button';
+import Reviews from '../components/Reviews';
 // import { NavbarButtonContainer } from './styled';
 import styled from 'styled-components';
 import Link from 'next/link';

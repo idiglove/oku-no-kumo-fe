@@ -1,6 +1,6 @@
 import React from 'react';
-import { SessionContext } from './SessionContext'; // Assuming SessionContext is imported from a separate file
-import { Stack, Alert } from '@mui/material'; // Assuming you're using Material-UI
+import { SessionContext } from './SessionContext';
+import { Stack, Alert } from '@mui/material';
 
 function LogoutComponent() {
   const isLoggedOut = true;

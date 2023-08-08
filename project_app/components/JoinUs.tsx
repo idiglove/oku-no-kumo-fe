@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
+import {
+  LoginDialog,
+  DialogText,
+  DialogTitle,
+  FormContainer,
+  LoginButton
+} from './styled';
 import styled from 'styled-components';
 import Button from '@mui/material/Button';
-import CloseIcon from '@mui/icons-material/Close';
-import { DialogTitle, FormContainer } from './styled';
 import { CFormInput, CFormFloating, CFormLabel } from '@coreui/react';
 import '@coreui/coreui/dist/css/coreui.min.css';
 
-const JoinUs = () => {
+export default function JoinUs() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isModalOpen, setModalOpen] = useState(true);
@@ -31,17 +36,12 @@ const JoinUs = () => {
   if (!isModalOpen) {
     return null;
   }
+
   return (
-    <div>
-      <DialogTitle>
-        JoinUs
-        <CloseIcon
-          style={{ color: 'white', marginLeft: '1200px' }}
-          onClick={closeModal}
-        ></CloseIcon>
-      </DialogTitle>
+    <LoginDialog>
+      <DialogTitle>JoinUs</DialogTitle>
       <FormContainer>
-        <p style={{ color: 'white' }}>Please Fill Out and Submit</p>
+        <DialogText>Fill out and Submit</DialogText>
         <CFormFloating style={{ marginBottom: '1rem' }}>
           <StyledCFormInput type="firstName" id="firstName" />
           <StyledCFormLabel htmlFor="floatingInput">firstName</StyledCFormLabel>
@@ -68,22 +68,26 @@ const JoinUs = () => {
           />
           <StyledCFormLabel htmlFor="floatingInput">Password</StyledCFormLabel>
         </CFormFloating>
+        <p style={{ color: 'white' }}>Choose an Avatar</p>
         <div style={{ display: 'flex' }}>
-          <p>Choose an Avatar</p>
-          <Image src="/avatar.png" alt="image" width={100} height={100} />
-          <Image src="/avatar.png" alt="image" width={100} height={100} />
+          <Image src="/BOY.svg" alt="image" width={100} height={100} />
+          <Image src="/DRAGON.svg" alt="image" width={100} height={100} />
+          <Image src="/WIZARD.svg" alt="image" width={100} height={100} />
+          <Image src="/ALPACA.svg" alt="image" width={100} height={100} />
         </div>
-        <Button
-          variant="contained"
-          style={{ color: 'red' }}
-          onClick={handleSignUp}
-        >
-          Join Us
-        </Button>
+        <div>
+          <LoginButton
+            style={{ color: 'black', marginLeft: '200px' }}
+            onClick={handleSignUp}
+          >
+            SignUp
+          </LoginButton>
+        </div>
       </FormContainer>
-    </div>
+    </LoginDialog>
   );
-};
+}
+
 const StyledCFormInput = styled(CFormInput)`
   background-color: #2b2b2b;
   color: #ffffff;
@@ -92,8 +96,7 @@ const StyledCFormInput = styled(CFormInput)`
     color: #ffffff;
   }
 `;
+
 const StyledCFormLabel = styled(CFormLabel)`
   color: gray;
 `;
-
-export default JoinUs;

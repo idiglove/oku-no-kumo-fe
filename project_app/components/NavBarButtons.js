@@ -7,7 +7,7 @@ import Link from 'next/link';
 function NavBarButtons() {
   return (
     <NavbarButtonContainer>
-      <Link href="/Reviews">
+      <Link href="/reviews">
         <Button label="Events">
           <p>Reviews</p>
         </Button>

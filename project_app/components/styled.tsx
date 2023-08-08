@@ -362,8 +362,16 @@ export const FormContainer = styled.div`
 
 
  
-
 export const HeaderButton = styled(Button)`
+  background-color: rgb(250, 250, 235) !important;
+  color: rgb(0, 0, 0) !important;
+
+  &:hover {
+    background-color: rgba(25, 118, 210, 0.04) !important;
+  }
+`;
+
+export const JoinButton = styled(Button)`
   background-color: rgb(250, 250, 235) !important;
   color: rgb(0, 0, 0) !important;
 

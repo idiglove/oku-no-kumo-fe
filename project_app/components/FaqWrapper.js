@@ -1,29 +1,56 @@
 import { AboutContainer } from './styled';
 import TextField from '@mui/material/TextField';
-import styled from 'styled-components';
+import Box from '@mui/material/Box';
 
-function FaqWrapper() {
+function FaqWrapper({ label = 'FAQ1' }) {
   return (
     <AboutContainer>
       <Box component="form">
         <div>
           <TextField
+            label={label}
             select
-            label="FAQ1"
-            style={{ width: '500px', color: 'white', marginTop: '80px' }}
+            sx={{
+              backgroundColor: 'rgb(53, 53, 53)',
+              border: '3px solid white',
+              color: 'white',
+              width: '500px',
+              marginTop: '80px'
+            }}
+            InputLabelProps={{
+              sx: {
+                color: 'white',
+                textTransform: 'capitalize',
+                justifyContent: 'center'
+              }
+            }}
           ></TextField>
         </div>
         <div>
           <TextField
+            label={label}
             select
-            label="FAQ1"
-            style={{
-              width: '500px',
-              height: '200px',
-              color: 'white'
+            sx={{
+              backgroundColor: 'rgb(53, 53, 53)',
+              border: '3px solid white',
+              width: '500px'
+            }}
+            InputLabelProps={{
+              sx: {
+                color: 'white',
+                textTransform: 'capitalize',
+                justifyContent: 'center'
+              }
             }}
           >
-            <p style={{ backgroundColor: 'rgb(53, 53, 53)', color: 'white' }}>
+            <div
+              style={{
+                backgroundColor: 'rgb(53, 53, 53)',
+                color: 'white',
+                height: '100%',
+                width: '100%'
+              }}
+            >
               FAQ Content here -<br></br>
               We are in a very early stage of development, thus bugs and hiccups
               are expected.<br></br>
@@ -33,17 +60,12 @@ function FaqWrapper() {
               <br></br> any feedback is welcome to make this place the best! So
               please contact us to give any feedback here.
               <br></br>
-            </p>
+            </div>
           </TextField>
         </div>
       </Box>
     </AboutContainer>
   );
 }
-const MenuItem = styled.div`
-  /* color: white; */
-`;
-
-const Box = styled.div``;
 
 export default FaqWrapper;

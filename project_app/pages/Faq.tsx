@@ -2,7 +2,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HomePage from '../components/HomePage';
 import { ProductContainer } from '../components/styled';
-import FaqWrapper from "../components/FaqWrapper"
+import FaqWrapper from "../components/FaqWrapper";
+import FaqTest from "../components/FaqTest";
+
 
 import {
   NavbarText,
@@ -18,8 +20,7 @@ function Faq() {
         <Header header={<NavbarText>FAQ</NavbarText>} />
         <HomePage />
       </AboutHeaderWrapper>
-       {/* <InputField /> */}
-       <FaqWrapper/>
+       <FaqTest/>
       <AboutFooterContainer>
         <ProductContainer />
         <Footer />
@@ -27,5 +28,7 @@ function Faq() {
     </AboutWrapperContainer>
   );
 }
+
+
 
 export default Faq

@@ -17,13 +17,13 @@ export default function JoinUs() {
   const [password, setPassword] = useState('');
   const [isModalOpen, setModalOpen] = useState(true);
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
+  // const handleEmailChange = (event) => {
+  //   setEmail(event.target.value);
+  // };
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
+  // const handlePasswordChange = (event) => {
+  //   setPassword(event.target.value);
+  // };
 
   const handleSignUp = () => {
     console.log(email);
@@ -55,7 +55,7 @@ export default function JoinUs() {
             type="email"
             id="email"
             value={email}
-            onChange={handleEmailChange}
+           
           />
           <StyledCFormLabel htmlFor="floatingInput">Email</StyledCFormLabel>
         </CFormFloating>
@@ -64,7 +64,7 @@ export default function JoinUs() {
             type="password"
             id="password"
             value={password}
-            onChange={handlePasswordChange}
+            
           />
           <StyledCFormLabel htmlFor="floatingInput">Password</StyledCFormLabel>
         </CFormFloating>

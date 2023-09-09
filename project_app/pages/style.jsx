@@ -92,4 +92,3 @@ position:relative;
 background-color: rgb(53, 53, 53);
 width:100%;
 `
-export default styled

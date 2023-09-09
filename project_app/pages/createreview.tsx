@@ -1,6 +1,4 @@
-
-import { useState, useEffect } 
-from "react";
+import React, { ChangeEvent,useState, useEffect } from 'react';
 import Header from "../components/Header";
 import styled from "styled-components";
 
@@ -73,21 +71,38 @@ export default function Reviews() {
         fetchGames();
     }, []);
 
-    function handleInputChange(e) {
-        const value = e.target.value;
-        const id = e.target.id;
-        if (isReview) {
-            setReviewValues((prevState) => ({
-                ...prevState,
-                [id]: value
-            }));
-        } else {
-            setStratValues((prevState) => ({
-                ...prevState,
-                [id]: value
-            }));
-        }
+    // function handleInputChange(e) {
+    //     const value = e.target.value;
+    //     const id = e.target.id;
+    //     if (isReview) {
+    //         setReviewValues((prevState) => ({
+    //             ...prevState,
+    //             [id]: value
+    //         }));
+    //     } else {
+    //         setStratValues((prevState) => ({
+    //             ...prevState,
+    //             [id]: value
+    //         }));
+    //     }
+    // }
+
+    function handleInputChange(e: ChangeEvent<HTMLInputElement>) {
+    const value = e.target.value;
+    const id = e.target.id;
+    if (isReview) {
+        setReviewValues((prevState) => ({
+            ...prevState,
+            [id]: value
+        }));
+    } else {
+        setStratValues((prevState) => ({
+            ...prevState,
+            [id]: value
+        }));
     }
+}
+
 
     function computeAverage(numbers) {
         if (numbers.length === 0) {

@@ -7,7 +7,7 @@ import {
   AboutWrapperContainer,
   AboutFooterContainer,
   AboutHeaderWrapper
-} from './style';
+} from '../components/style';
 
 function Contact() {
   return (

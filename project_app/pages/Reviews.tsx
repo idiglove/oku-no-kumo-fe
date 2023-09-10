@@ -1,7 +1,7 @@
 import CardComponent from "../components/CardComponent";
 import Header from "../components/Header";
 import MenuItem from '@mui/material/MenuItem';
-import{ReviewBox,NavbarText,InputBar} from "./style";
+import{ReviewBox,NavbarText,InputBar} from "../components/style";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Image from "next/image";

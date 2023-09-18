@@ -1,5 +1,5 @@
 services:
   - name: project_app
     type: web
-    buildCommand: next build
-    startCommand: next start
+    buildCommand: npm run build
+    startCommand: npm run dev

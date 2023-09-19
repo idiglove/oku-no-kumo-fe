@@ -201,10 +201,10 @@ export default function Reviews() {
                         Put your {reviewOrStrat(isReview)} content here
                     </h5>
 
-                    <StyledCFormTextarea                       onChange={handleInputChange}
+                    {/* <StyledCFormTextarea                       onChange={handleInputChange}
                       value={isReview ? reviewValues.content : stratValues.content}
                       id="content"
-                    />
+                    /> */}
 
 
                 </ContentSection>

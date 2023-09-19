@@ -87,21 +87,21 @@ export default function Reviews() {
         }
     }
 
-//     function handleInputChange(e: ChangeEvent<HTMLInputElement>) {
-//     const value = e.target.value;
-//     const id = e.target.id;
-//     if (isReview) {
-//         setReviewValues((prevState) => ({
-//             ...prevState,
-//             [id]: value
-//         }));
-//     } else {
-//         setStratValues((prevState) => ({
-//             ...prevState,
-//             [id]: value
-//         }));
-//     }
-// }
+    function handleInputChange(e) {
+    const value = e.target.value;
+    const id = e.target.id;
+    if (isReview) {
+        setReviewValues((prevState) => ({
+            ...prevState,
+            [id]: value
+        }));
+    } else {
+        setStratValues((prevState) => ({
+            ...prevState,
+            [id]: value
+        }));
+    }
+}
 
 
     function computeAverage(numbers) {
@@ -201,10 +201,10 @@ export default function Reviews() {
                         Put your {reviewOrStrat(isReview)} content here
                     </h5>
 
-                    {/* <StyledCFormTextarea                       onChange={handleInputChange}
+                    <StyledCFormTextarea                       onChange={handleInputChange}
                       value={isReview ? reviewValues.content : stratValues.content}
                       id="content"
-                    /> */}
+                    />
 
 
                 </ContentSection>

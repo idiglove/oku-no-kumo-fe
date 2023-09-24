@@ -36,9 +36,14 @@ export default function Header(props) {
             />
             <HeaderButtons>
               <HeaderButton onClick={handleOpen}>Login</HeaderButton>
-              <Modal open={open} onClose={handleClose}>
+              <>
+                <Modal open={open} onClose={handleClose}>
+                  <UserLogin />
+                </Modal>
+              </>
+              {/* <Modal open={open} onClose={handleClose}>
                 <UserLogin />
-              </Modal>
+              </Modal> */}
               <BootstrapDialog
                 onClose={handleClose}
                 style={{ position: 'absolute', left: '280px', bottom: '320px' }}

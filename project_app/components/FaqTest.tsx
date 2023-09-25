@@ -7,7 +7,7 @@ export default function BasicAccordion() {
      <CustomAccordion
         title="FAQ 1"
         content={
-        <></>
+    <div></div>
         }
       />
        <CustomAccordion

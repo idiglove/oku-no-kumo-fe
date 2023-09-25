@@ -1,25 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Header from "../components/Header";
 import styled from "styled-components";
-
 import Footer from "../components/Footer";
-
 import "@coreui/coreui/dist/css/coreui.min.css";
-
 import { CFormInput, CFormFloating, CFormLabel } from "@coreui/react";
-
-
 import {StyledCFormTextarea, StyledCFormInput, StyledCFormLabel, FormLayout, FormTitle, FormDialog, DialogTitle, FormContainer, DialogText, ActionButtonContainer, ActionButton, StyledCFormSelect, StyledFormLabel} from '../components/formstyled';
-
 import {DiceRating, Dice} from '../components/Dices';
 
 
 export default function Reviews() {
     const [games, setGames] = useState([]); 
     const [isReview, setIsReview] = useState(true);
-
     const [selectedGame, setSelectedGame] = useState(null);
-
     const [reviewValues, setReviewValues] = useState({
         title: '',
         content: '',
@@ -47,7 +39,6 @@ export default function Reviews() {
     const [valueForMoney, setValueForMoney] = useState(1);
     const [playTime, setPlayTime] = useState(1);
     const [componentsQuality, setComponentsQuality] = useState(1);
-
     const [averageRating, setAverageRating] = useState(1)
     
     async function fetchGames() {

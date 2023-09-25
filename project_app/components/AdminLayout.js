@@ -27,7 +27,6 @@ export default function AdminLayout(props) {
             alt="Ain't Board Logo"
           />
         </LogoContainer>
-        {/* <Content>{props.children}</Content> */}
       </AdminLayoutStyle>
     </>
   );

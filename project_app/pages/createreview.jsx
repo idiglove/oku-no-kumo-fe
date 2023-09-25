@@ -14,21 +14,21 @@ export default function Reviews() {
     const [selectedGame, setSelectedGame] = useState(null);
     const [reviewValues, setReviewValues] = useState({
         title: '',
-        content: '',
+        // content: '',
         language: '',
         url: '',
     });
 
     const [stratValues, setStratValues] = useState({
         title: '',
-        content: '',
+        // content: '',
         language: '',
         url: '',
     });
 
     const [activeValues, setActiveValues] = useState({
         title: '',
-        content: '',
+        // content: '',
         language: '',
         url: '',
     });

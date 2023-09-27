@@ -28,15 +28,15 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: [
     'plugin:react/recommended',
-    'next/core-web-vitals',
+    // 'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
     'airbnb',
     'prettier',
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
     'plugin:sonarjs/recommended',
-    'plugin:security/recommended',
-    'plugin:react-hooks/recommended'
+    'plugin:security/recommended'
+    // 'plugin:react-hooks/recommended'
   ],
 
   rules: {

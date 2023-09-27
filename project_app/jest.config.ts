@@ -7,4 +7,3 @@ module.exports = {
     "testEnvironment": "jsdom"
 }
 export default config;
-

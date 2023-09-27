@@ -14,9 +14,7 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:jsx-a11y/recommended",
-    // "plugin:react-hooks/recommended",
-    // always put prettier at last
-    "prettier"
+    "plugin:react-hooks/recommended"
   ],
   "globals": {
     "Atomics": "readonly",

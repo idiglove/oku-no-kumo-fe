@@ -35,7 +35,8 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
     'plugin:sonarjs/recommended',
-    'plugin:security/recommended'
+    'plugin:security/recommended',
+    'plugin:react-hooks/recommended'
   ],
 
   rules: {

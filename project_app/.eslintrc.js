@@ -1,5 +1,4 @@
 module.exports = {
-  root: true,
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -27,7 +26,6 @@ module.exports = {
 
   plugins: ['@typescript-eslint'],
   extends: [
-    'plugin:react/recommended',
     'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
     'airbnb',

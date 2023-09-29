@@ -1,15 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
-  swcMinify: false
-  // swcMinify: true
+  reactStrictMode: true,
+  swcMinify: true
 };
 
 module.exports = {
-  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js']
-};
-module.exports = {
-  distDir: 'build',
   // images: {
   //   unoptimized: true
   // },

@@ -51,21 +51,11 @@ export default function JoinUs() {
           <StyledCFormLabel htmlFor="floatingInput">lastName</StyledCFormLabel>
         </CFormFloating>
         <CFormFloating style={{ marginBottom: '1rem' }}>
-          <StyledCFormInput
-            type="email"
-            id="email"
-            value={email}
-           
-          />
+          <StyledCFormInput type="email" id="email" value={email} />
           <StyledCFormLabel htmlFor="floatingInput">Email</StyledCFormLabel>
         </CFormFloating>
         <CFormFloating style={{ marginBottom: '1rem' }}>
-          <StyledCFormInput
-            type="password"
-            id="password"
-            value={password}
-            
-          />
+          <StyledCFormInput type="password" id="password" value={password} />
           <StyledCFormLabel htmlFor="floatingInput">Password</StyledCFormLabel>
         </CFormFloating>
         <p style={{ color: 'white' }}>Choose an Avatar</p>

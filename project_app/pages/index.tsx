@@ -8,7 +8,7 @@ type ToolBarProps = {
 };
 
 
-export default function Home(props:ToolBarProps) {
+function Home(props:ToolBarProps) {
   return (
     <div>
       <Head>
@@ -29,3 +29,5 @@ export default function Home(props:ToolBarProps) {
     </div>
   );
 }
+
+export default Home

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { GlobalStateContext } from './_app';
 
 
-export default function admin() {
+function admin() {
     const router = useRouter();
     const { token } = useContext(GlobalStateContext);
 
@@ -31,3 +31,4 @@ export default function admin() {
     )
 
 }
+export default admin

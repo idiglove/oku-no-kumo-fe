@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 import { CFormInput, CFormFloating, CFormLabel } from '@coreui/react';
 import '@coreui/coreui/dist/css/coreui.min.css';
 
-export default function UserLogin() {
+function UserLogin() {
   const [username, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -108,3 +108,4 @@ const StyledCFormInput = styled(CFormInput)`
 const StyledCFormLabel = styled(CFormLabel)`
   color: gray;
 `;
+export default UserLogin;

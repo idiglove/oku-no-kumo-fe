@@ -26,7 +26,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-,"pages/index.jsx", "components/HomePage.js", "components/Header.js", "components/UserLogin.js", "components/NavBarButtons.js", "components/Layout.js", "components/ContactForm.js", "components/CardComponent.js", "pages/createreview.jsx", "components/style.jsx", "pages/addgame.jsx", "components/JoinUs.js" ],
+,"pages/index.jsx", "components/HomePage.js", "components/Header.js", "components/UserLogin.js", "components/NavBarButtons.js", "components/Layout.js", "components/ContactForm.js", "components/CardComponent.js", "pages/createreview.jsx", "components/style.jsx", "pages/addgame.jsx", "components/JoinUs.js", "components/HeaderJoin.js" ],
   "exclude": [
     "node_modules"
   ]

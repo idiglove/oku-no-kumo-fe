@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import Modal from '@mui/material/Modal';
 import { JoinButton } from './styled';
 import JoinUs from './JoinUs';
-import Modal from '@mui/material/Modal';
 
 export default function FooterButton() {
   const [open, setOpen] = useState(false);
@@ -11,11 +11,10 @@ export default function FooterButton() {
   return (
     <div>
       <JoinButton onClick={handleOpen}>Join Us</JoinButton>
-      <>
-        <Modal open={open} onClose={handleClose}>
+
+      <Modal open={open} onClose={handleClose}>
         <JoinUs />
       </Modal>
-      </>
     </div>
   );
 }

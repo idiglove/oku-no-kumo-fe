@@ -17,7 +17,6 @@
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "noImplicitAny": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve"
@@ -26,7 +25,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-,"pages/index.jsx", "components/HomePage.js", "components/Header.js", "components/UserLogin.js", "components/NavBarButtons.js", "components/Layout.js", "components/ContactForm.js", "components/CardComponent.js", "pages/createreview.jsx", "components/style.jsx", "pages/addgame.jsx", "components/JoinUs.js", "components/HeaderJoin.js" ],
+,"pages/index.tsx", "components/HomePage.js", "components/Header.js", "components/UserLogin.js", "components/NavBarButtons.js", "components/Layout.js", "components/ContactForm.js", "components/CardComponent.js" ],
   "exclude": [
     "node_modules"
   ]

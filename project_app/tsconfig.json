@@ -8,7 +8,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "noImplicitAny": false,
-    "strict":false,
+    "strict":true,
     "paths": {
       "react": [ "./node_modules/@types/react" ]
     },

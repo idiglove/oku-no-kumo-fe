@@ -73,9 +73,10 @@ export default function Reviews() {
         fetchGames();
     }, []);
 
-    function handleInputChange(e) {
-        const value = e.target.value;
-        const id = e.target.id;
+
+    function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
+        const value = event.target.value;
+        const id = event.target.id;
         if (isReview) {
             setReviewValues((prevState) => ({
                 ...prevState,
@@ -110,8 +111,8 @@ export default function Reviews() {
     }
 
 
-    function handleSelectGame(e) {
-        setSelectedGame(e.target.value)
+    function handleSelectGame(event: React.ChangeEvent<HTMLInputElement>) {
+        setSelectedGame(event.target.value)
     }
 
     return (

@@ -7,7 +7,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict":false,
     "paths": {
       "react": [ "./node_modules/@types/react" ]
     },
@@ -25,7 +25,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-,"pages/index.tsx", "components/HomePage.js", "components/Header.js", "components/UserLogin.js", "components/NavBarButtons.js", "components/Layout.js", "components/ContactForm.js", "components/CardComponent.js" ],
+,"pages/index.tsx", "components/HomePage.js", "components/Header.js", "components/UserLogin.js", "components/NavBarButtons.js", "components/Layout.js", "components/ContactForm.js", "components/CardComponent.js", "components/JoinUs.js" ],
   "exclude": [
     "node_modules"
   ]

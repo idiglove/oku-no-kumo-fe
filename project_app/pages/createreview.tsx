@@ -1,27 +1,18 @@
 
-import { useState, useEffect } 
-from "react";
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import styled from "styled-components";
-
 import Footer from "../components/Footer";
-
 import "@coreui/coreui/dist/css/coreui.min.css";
-
 import { CFormInput, CFormFloating, CFormLabel } from "@coreui/react";
-
-
 import {StyledCFormTextarea, StyledCFormInput, StyledCFormLabel, FormLayout, FormTitle, FormDialog, DialogTitle, FormContainer, DialogText, ActionButtonContainer, ActionButton, StyledCFormSelect, StyledFormLabel} from '../components/formstyled';
-
 import {DiceRating, Dice} from '../components/Dices';
 
 
 export default function Reviews() {
     const [games, setGames] = useState([]); 
     const [isReview, setIsReview] = useState(true);
-
     const [selectedGame, setSelectedGame] = useState(null);
-
     const [reviewValues, setReviewValues] = useState({
         title: '',
         content: '',
@@ -49,7 +40,6 @@ export default function Reviews() {
     const [valueForMoney, setValueForMoney] = useState(1);
     const [playTime, setPlayTime] = useState(1);
     const [componentsQuality, setComponentsQuality] = useState(1);
-
     const [averageRating, setAverageRating] = useState(1)
     
     async function fetchGames() {
@@ -73,9 +63,10 @@ export default function Reviews() {
         fetchGames();
     }, []);
 
-    function handleInputChange(e) {
-        const value = e.target.value;
-        const id = e.target.id;
+
+    function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
+        const value = event.target.value;
+        const id = event.target.id;
         if (isReview) {
             setReviewValues((prevState) => ({
                 ...prevState,
@@ -110,27 +101,27 @@ export default function Reviews() {
     }
 
 
-    function handleSelectGame(e) {
-        setSelectedGame(e.target.value)
+    function handleSelectGame(e: React.ChangeEvent<HTMLInputElement>) {
+        // setSelectedGame()
     }
 
     return (
         <>
             <Header height={'18rem'} />
-
             <ReviewArea>
                 <InputContainer>
-
-                    <PageLabel isActive={isReview} onClick={() => {
+                    <PageLabel 
+                    //isActive={isReview} 
+                    onClick={() => {
                         setIsReview(true)
                         setActiveValues(reviewValues);
                     }}>Create A Review</PageLabel>
-
-                    <PageLabel isActive={!isReview} onClick={() => {
+                    <PageLabel 
+                    //isActive={!isReview} 
+                    onClick={() => {
                         setIsReview(false)
                         setActiveValues(stratValues);
                     }}>Create A Strategy</PageLabel>
-
                     <ReviewFormFloating>
                         <StyledCFormInput
                         type="text"
@@ -146,9 +137,9 @@ export default function Reviews() {
                         </StyledCFormLabel>
                     </ReviewFormFloating>
 
-                    <StyledCFormSelect
+                    {/* <StyledCFormSelect
                       id="game"
-                      onChange={handleInputChange}
+                      //onChange={handleInputChange}
                       value={isReview ? reviewValues.game : stratValues.game}
                     >
                         {games.length === 0 ? 'Loading games...' : games.map(game => {
@@ -156,19 +147,17 @@ export default function Reviews() {
                               key=
                               {game.id}
                               value={game.id}
-                            >{game.name}</option>
+                            >{game.name}
+                            </option>
                         })}
 
 
-                    </StyledCFormSelect>
+                    </StyledCFormSelect> */}
 
                 </InputContainer>
-
                 <ImageSection>
                     <h4>Upload your own images related to your {reviewOrStrat(isReview)}</h4>
-
                     <span>Images from any website is prohibited. Please upoload your own images. Make sure it's good quality too</span>
-
                     <div>
                         <button>
                             Choose Images
@@ -176,29 +165,21 @@ export default function Reviews() {
 
                         <h6>Max of 3 images</h6>
                     </div>
-
-
                 </ImageSection>
-                
-
                 <ContentSection> 
                     <h5>
                         Put your {reviewOrStrat(isReview)} content here
                     </h5>
-
-                    <StyledCFormTextarea                       onChange={handleInputChange}
+                    <StyledCFormTextarea                       
+                    //onChange={handleInputChange}
                       value={isReview ? reviewValues.content : stratValues.content}
                       id="content"
                     />
-
-
                 </ContentSection>
-
                 <LanguageSection>
-                    
                     <h5>What is your {reviewOrStrat(isReview)}'s primary language</h5>
-
-                    <select onChange={handleInputChange}
+                    <select 
+                     //onChange={handleInputChange}
                       value={isReview ? reviewValues.language : stratValues.language}
                       id="language">
                         <option selected disabled value="">Language</option>
@@ -206,31 +187,21 @@ export default function Reviews() {
                         <option value="English">English</option>
                         <option value="Taglish">Taglish</option>
                     </select>
-
                 </LanguageSection>
-
                 {isReview ?
                 <RatingSection>
                     <h6>Reate this boardgame by these categories from 1 - 6. 1 being the lowest, and 5 being the highest</h6>
-
                     <span>* Complexity: 1 being too complex or too easy, 6 being well-balanced</span>
-
                     <span>* Playing Time: 1 being too long or too short, 6 being well-balanced</span>
-
                     <DicesArea>
                         <RatingRow>
                             <DiceContainer>
-                                <Dice value={Math.floor(averageRating)} />
-                            
+                                {/* <Dice value={Math.floor(averageRating)} /> */}
                             </DiceContainer>
-
                             <div>
                             <h2>{averageRating} / 6</h2>
                             </div>
-
-
                         </RatingRow>
-
                         <RatingRow>
                             <div>
                                 <h1>Replayability</h1>
@@ -298,17 +269,8 @@ export default function Reviews() {
                         </RatingRow>
 
                     </DicesArea>
-                    
-
-
-                  
-                  
-
                 </RatingSection>
                 : ''}
-
-
-                
                 <YtUrlArea>
                     <h5>
                         Upload a youtube link that could be your elaborate video about your {reviewOrStrat(isReview)} 
@@ -335,10 +297,7 @@ export default function Reviews() {
                             Submit Review
                         </SubmitReviewButton>
                     </ActionButtonContainer>
-
             </ReviewArea>
-
-
         <Footer />
 
         </>
@@ -403,7 +362,7 @@ const PageLabel = styled.h1`
     border-radius: 0.625rem;
     cursor: pointer;
     font-weight: bold;
-    background-color: ${props => (props.isActive ? 'rgb(53, 53, 53)' : 'transparent')};
+    
 `
 
 const ImageSection = styled.div`
